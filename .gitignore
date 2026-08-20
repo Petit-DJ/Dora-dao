@@ -9,6 +9,7 @@ build/
 .next/
 .vinxi/
 .nitro/
+.tanstack/
 .wrangler/
 out/
 *.tsbuildinfo
