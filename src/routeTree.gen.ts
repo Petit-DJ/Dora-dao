@@ -9,60 +9,30 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as VoicesRouteImport } from './routes/voices'
-import { Route as ReferRouteImport } from './routes/refer'
-import { Route as PastInitiativesRouteImport } from './routes/past-initiatives'
-import { Route as HackWithDoraRouteImport } from './routes/hack-with-dora'
-import { Route as Doradao1RouteImport } from './routes/doradao-1'
-import { Route as DoradaoRouteImport } from './routes/doradao'
-import { Route as ContributorsRouteImport } from './routes/contributors'
-import { Route as ChaptersRouteImport } from './routes/chapters'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
+import { Route as ChaptersRouteImport } from './routes/chapters'
+import { Route as ContributorsRouteImport } from './routes/contributors'
+import { Route as DoradaoRouteImport } from './routes/doradao'
+import { Route as Doradao1RouteImport } from './routes/doradao-1'
+import { Route as HackWithDoraRouteImport } from './routes/hack-with-dora'
+import { Route as PastInitiativesRouteImport } from './routes/past-initiatives'
+import { Route as ReferRouteImport } from './routes/refer'
+import { Route as VoicesRouteImport } from './routes/voices'
 import { Route as PartnerIndexRouteImport } from './routes/partner.index'
-import { Route as ProgramsW3mRouteImport } from './routes/programs.w3m'
-import { Route as ProgramsGwy26RouteImport } from './routes/programs.gwy-26'
-import { Route as ProgramsGwy25RouteImport } from './routes/programs.gwy-25'
-import { Route as ProgramsDorahacksRouteImport } from './routes/programs.dorahacks'
-import { Route as ProgramsBuildspaceRouteImport } from './routes/programs.buildspace'
-import { Route as PartnerVolunteerRouteImport } from './routes/partner.volunteer'
-import { Route as PartnerEcosystemRouteImport } from './routes/partner.ecosystem'
-import { Route as PartnerCsrRouteImport } from './routes/partner.csr'
 import { Route as PartnerCorporateRouteImport } from './routes/partner.corporate'
+import { Route as PartnerCsrRouteImport } from './routes/partner.csr'
+import { Route as PartnerEcosystemRouteImport } from './routes/partner.ecosystem'
+import { Route as PartnerVolunteerRouteImport } from './routes/partner.volunteer'
+import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
+import { Route as ProgramsBuildspaceRouteImport } from './routes/programs.buildspace'
+import { Route as ProgramsDorahacksRouteImport } from './routes/programs.dorahacks'
+import { Route as ProgramsGwy25RouteImport } from './routes/programs.gwy-25'
+import { Route as ProgramsGwy26RouteImport } from './routes/programs.gwy-26'
+import { Route as ProgramsW3mRouteImport } from './routes/programs.w3m'
 
-const VoicesRoute = VoicesRouteImport.update({
-  id: '/voices',
-  path: '/voices',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReferRoute = ReferRouteImport.update({
-  id: '/refer',
-  path: '/refer',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PastInitiativesRoute = PastInitiativesRouteImport.update({
-  id: '/past-initiatives',
-  path: '/past-initiatives',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HackWithDoraRoute = HackWithDoraRouteImport.update({
-  id: '/hack-with-dora',
-  path: '/hack-with-dora',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Doradao1Route = Doradao1RouteImport.update({
-  id: '/doradao-1',
-  path: '/doradao-1',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DoradaoRoute = DoradaoRouteImport.update({
-  id: '/doradao',
-  path: '/doradao',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContributorsRoute = ContributorsRouteImport.update({
-  id: '/contributors',
-  path: '/contributors',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ChaptersRoute = ChaptersRouteImport.update({
@@ -70,14 +40,39 @@ const ChaptersRoute = ChaptersRouteImport.update({
   path: '/chapters',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ContributorsRoute = ContributorsRouteImport.update({
+  id: '/contributors',
+  path: '/contributors',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProgramsIndexRoute = ProgramsIndexRouteImport.update({
-  id: '/programs/',
-  path: '/programs/',
+const DoradaoRoute = DoradaoRouteImport.update({
+  id: '/doradao',
+  path: '/doradao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Doradao1Route = Doradao1RouteImport.update({
+  id: '/doradao-1',
+  path: '/doradao-1',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HackWithDoraRoute = HackWithDoraRouteImport.update({
+  id: '/hack-with-dora',
+  path: '/hack-with-dora',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PastInitiativesRoute = PastInitiativesRouteImport.update({
+  id: '/past-initiatives',
+  path: '/past-initiatives',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferRoute = ReferRouteImport.update({
+  id: '/refer',
+  path: '/refer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VoicesRoute = VoicesRouteImport.update({
+  id: '/voices',
+  path: '/voices',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PartnerIndexRoute = PartnerIndexRouteImport.update({
@@ -85,39 +80,9 @@ const PartnerIndexRoute = PartnerIndexRouteImport.update({
   path: '/partner/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProgramsW3mRoute = ProgramsW3mRouteImport.update({
-  id: '/programs/w3m',
-  path: '/programs/w3m',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgramsGwy26Route = ProgramsGwy26RouteImport.update({
-  id: '/programs/gwy-26',
-  path: '/programs/gwy-26',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgramsGwy25Route = ProgramsGwy25RouteImport.update({
-  id: '/programs/gwy-25',
-  path: '/programs/gwy-25',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgramsDorahacksRoute = ProgramsDorahacksRouteImport.update({
-  id: '/programs/dorahacks',
-  path: '/programs/dorahacks',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgramsBuildspaceRoute = ProgramsBuildspaceRouteImport.update({
-  id: '/programs/buildspace',
-  path: '/programs/buildspace',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnerVolunteerRoute = PartnerVolunteerRouteImport.update({
-  id: '/partner/volunteer',
-  path: '/partner/volunteer',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnerEcosystemRoute = PartnerEcosystemRouteImport.update({
-  id: '/partner/ecosystem',
-  path: '/partner/ecosystem',
+const PartnerCorporateRoute = PartnerCorporateRouteImport.update({
+  id: '/partner/corporate',
+  path: '/partner/corporate',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PartnerCsrRoute = PartnerCsrRouteImport.update({
@@ -125,9 +90,44 @@ const PartnerCsrRoute = PartnerCsrRouteImport.update({
   path: '/partner/csr',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PartnerCorporateRoute = PartnerCorporateRouteImport.update({
-  id: '/partner/corporate',
-  path: '/partner/corporate',
+const PartnerEcosystemRoute = PartnerEcosystemRouteImport.update({
+  id: '/partner/ecosystem',
+  path: '/partner/ecosystem',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnerVolunteerRoute = PartnerVolunteerRouteImport.update({
+  id: '/partner/volunteer',
+  path: '/partner/volunteer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsIndexRoute = ProgramsIndexRouteImport.update({
+  id: '/programs/',
+  path: '/programs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsBuildspaceRoute = ProgramsBuildspaceRouteImport.update({
+  id: '/programs/buildspace',
+  path: '/programs/buildspace',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsDorahacksRoute = ProgramsDorahacksRouteImport.update({
+  id: '/programs/dorahacks',
+  path: '/programs/dorahacks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsGwy25Route = ProgramsGwy25RouteImport.update({
+  id: '/programs/gwy-25',
+  path: '/programs/gwy-25',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsGwy26Route = ProgramsGwy26RouteImport.update({
+  id: '/programs/gwy-26',
+  path: '/programs/gwy-26',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsW3mRoute = ProgramsW3mRouteImport.update({
+  id: '/programs/w3m',
+  path: '/programs/w3m',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -292,53 +292,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/voices': {
-      id: '/voices'
-      path: '/voices'
-      fullPath: '/voices'
-      preLoaderRoute: typeof VoicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/refer': {
-      id: '/refer'
-      path: '/refer'
-      fullPath: '/refer'
-      preLoaderRoute: typeof ReferRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/past-initiatives': {
-      id: '/past-initiatives'
-      path: '/past-initiatives'
-      fullPath: '/past-initiatives'
-      preLoaderRoute: typeof PastInitiativesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/hack-with-dora': {
-      id: '/hack-with-dora'
-      path: '/hack-with-dora'
-      fullPath: '/hack-with-dora'
-      preLoaderRoute: typeof HackWithDoraRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/doradao-1': {
-      id: '/doradao-1'
-      path: '/doradao-1'
-      fullPath: '/doradao-1'
-      preLoaderRoute: typeof Doradao1RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/doradao': {
-      id: '/doradao'
-      path: '/doradao'
-      fullPath: '/doradao'
-      preLoaderRoute: typeof DoradaoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contributors': {
-      id: '/contributors'
-      path: '/contributors'
-      fullPath: '/contributors'
-      preLoaderRoute: typeof ContributorsRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/chapters': {
@@ -348,18 +306,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChaptersRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/contributors': {
+      id: '/contributors'
+      path: '/contributors'
+      fullPath: '/contributors'
+      preLoaderRoute: typeof ContributorsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/programs/': {
-      id: '/programs/'
-      path: '/programs'
-      fullPath: '/programs/'
-      preLoaderRoute: typeof ProgramsIndexRouteImport
+    '/doradao': {
+      id: '/doradao'
+      path: '/doradao'
+      fullPath: '/doradao'
+      preLoaderRoute: typeof DoradaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doradao-1': {
+      id: '/doradao-1'
+      path: '/doradao-1'
+      fullPath: '/doradao-1'
+      preLoaderRoute: typeof Doradao1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hack-with-dora': {
+      id: '/hack-with-dora'
+      path: '/hack-with-dora'
+      fullPath: '/hack-with-dora'
+      preLoaderRoute: typeof HackWithDoraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/past-initiatives': {
+      id: '/past-initiatives'
+      path: '/past-initiatives'
+      fullPath: '/past-initiatives'
+      preLoaderRoute: typeof PastInitiativesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refer': {
+      id: '/refer'
+      path: '/refer'
+      fullPath: '/refer'
+      preLoaderRoute: typeof ReferRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/voices': {
+      id: '/voices'
+      path: '/voices'
+      fullPath: '/voices'
+      preLoaderRoute: typeof VoicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/partner/': {
@@ -369,53 +362,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PartnerIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/programs/w3m': {
-      id: '/programs/w3m'
-      path: '/programs/w3m'
-      fullPath: '/programs/w3m'
-      preLoaderRoute: typeof ProgramsW3mRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/programs/gwy-26': {
-      id: '/programs/gwy-26'
-      path: '/programs/gwy-26'
-      fullPath: '/programs/gwy-26'
-      preLoaderRoute: typeof ProgramsGwy26RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/programs/gwy-25': {
-      id: '/programs/gwy-25'
-      path: '/programs/gwy-25'
-      fullPath: '/programs/gwy-25'
-      preLoaderRoute: typeof ProgramsGwy25RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/programs/dorahacks': {
-      id: '/programs/dorahacks'
-      path: '/programs/dorahacks'
-      fullPath: '/programs/dorahacks'
-      preLoaderRoute: typeof ProgramsDorahacksRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/programs/buildspace': {
-      id: '/programs/buildspace'
-      path: '/programs/buildspace'
-      fullPath: '/programs/buildspace'
-      preLoaderRoute: typeof ProgramsBuildspaceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partner/volunteer': {
-      id: '/partner/volunteer'
-      path: '/partner/volunteer'
-      fullPath: '/partner/volunteer'
-      preLoaderRoute: typeof PartnerVolunteerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partner/ecosystem': {
-      id: '/partner/ecosystem'
-      path: '/partner/ecosystem'
-      fullPath: '/partner/ecosystem'
-      preLoaderRoute: typeof PartnerEcosystemRouteImport
+    '/partner/corporate': {
+      id: '/partner/corporate'
+      path: '/partner/corporate'
+      fullPath: '/partner/corporate'
+      preLoaderRoute: typeof PartnerCorporateRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/partner/csr': {
@@ -425,11 +376,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PartnerCsrRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/partner/corporate': {
-      id: '/partner/corporate'
-      path: '/partner/corporate'
-      fullPath: '/partner/corporate'
-      preLoaderRoute: typeof PartnerCorporateRouteImport
+    '/partner/ecosystem': {
+      id: '/partner/ecosystem'
+      path: '/partner/ecosystem'
+      fullPath: '/partner/ecosystem'
+      preLoaderRoute: typeof PartnerEcosystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partner/volunteer': {
+      id: '/partner/volunteer'
+      path: '/partner/volunteer'
+      fullPath: '/partner/volunteer'
+      preLoaderRoute: typeof PartnerVolunteerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/': {
+      id: '/programs/'
+      path: '/programs'
+      fullPath: '/programs/'
+      preLoaderRoute: typeof ProgramsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/buildspace': {
+      id: '/programs/buildspace'
+      path: '/programs/buildspace'
+      fullPath: '/programs/buildspace'
+      preLoaderRoute: typeof ProgramsBuildspaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/dorahacks': {
+      id: '/programs/dorahacks'
+      path: '/programs/dorahacks'
+      fullPath: '/programs/dorahacks'
+      preLoaderRoute: typeof ProgramsDorahacksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/gwy-25': {
+      id: '/programs/gwy-25'
+      path: '/programs/gwy-25'
+      fullPath: '/programs/gwy-25'
+      preLoaderRoute: typeof ProgramsGwy25RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/gwy-26': {
+      id: '/programs/gwy-26'
+      path: '/programs/gwy-26'
+      fullPath: '/programs/gwy-26'
+      preLoaderRoute: typeof ProgramsGwy26RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/w3m': {
+      id: '/programs/w3m'
+      path: '/programs/w3m'
+      fullPath: '/programs/w3m'
+      preLoaderRoute: typeof ProgramsW3mRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
