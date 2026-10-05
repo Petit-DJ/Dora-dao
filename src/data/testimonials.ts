@@ -1,4 +1,7 @@
-import { img } from "./site";
+import voices1 from "@/assets/voices/voices.jpg";
+import voices2 from "@/assets/voices/voices2.jpg";
+import voices3 from "@/assets/voices/voices3.jpg";
+import voices4 from "@/assets/voices/voices4.jpg";
 
 export type GalleryItem =
   | { id: string; kind: "video"; thumb: string; videoUrl: string; caption: string }
@@ -68,15 +71,75 @@ export const socialPosts: Extract<GalleryItem, { kind: "social" }>[] = [
 ];
 
 export const gallery: GalleryItem[] = [
-  { id: "g1", kind: "video", thumb: img("vid1", 600, 400), videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", caption: "“DoraDAO gave me a family” — Ayesha, India" },
-  { id: "g2", kind: "quote", quote: "I found my voice here. GWY gave me the courage to chase my dreams.", author: "Priya", place: "India" },
-  { id: "g3", kind: "photo", src: img("conf1", 600, 800), caption: "Global Conference, Bali 2025", tall: true },
-  { id: "g4", kind: "confession", text: "I joined to learn to code. I stayed because of the people." },
-  { id: "g5", kind: "video", thumb: img("vid2", 600, 400), videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", caption: "World Tour recap — Manila" },
-  { id: "g6", kind: "photo", src: img("event2", 600, 450), caption: "GWY Fellowship demo day" },
-  { id: "g7", kind: "quote", quote: "Different countries, different languages, same dream.", author: "Maria", place: "Philippines" },
-  { id: "g8", kind: "photo", src: img("event3", 600, 800), caption: "Founders meetup, Lagos", tall: true },
-  { id: "g9", kind: "video", thumb: img("vid3", 600, 400), videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", caption: "“The best community I've ever been part of”" },
-  { id: "g10", kind: "confession", text: "My first job offer came from someone I met at a Dora session." },
-  { id: "g11", kind: "photo", src: img("event4", 600, 450), caption: "Product launch night, Berlin" },
+  {
+    id: "g1",
+    kind: "video",
+    thumb: "https://i.ytimg.com/vi/2FP-bJYxtHE/hq2.jpg",
+    videoUrl: "https://www.youtube.com/embed/2FP-bJYxtHE",
+    caption: "“DoraDAO gave me a family” — Ayesha, India",
+  },
+  {
+    id: "g2",
+    kind: "quote",
+    quote: "I found my voice here. GWY gave me the courage to chase my dreams.",
+    author: "Priya",
+    place: "India",
+  },
+  {
+    id: "g3",
+    kind: "photo",
+    src: voices1,
+    caption: "Global Conference, Bali 2025",
+    tall: true,
+  },
+  {
+    id: "g4",
+    kind: "confession",
+    text: "I joined to learn to code. I stayed because of the people.",
+  },
+  {
+    id: "g5",
+    kind: "video",
+    thumb: "https://i.ytimg.com/vi/zwLdmc9e9Ug/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/zwLdmc9e9Ug",
+    caption: "World Tour recap — Manila",
+  },
+  {
+    id: "g6",
+    kind: "photo",
+    src: voices2,
+    caption: "GWY Fellowship demo day",
+  },
+  {
+    id: "g7",
+    kind: "quote",
+    quote: "Different countries, different languages, same dream.",
+    author: "Maria",
+    place: "Philippines",
+  },
+  {
+    id: "g8",
+    kind: "photo",
+    src: voices3,
+    caption: "Founders meetup, Lagos",
+    tall: true,
+  },
+  {
+    id: "g9",
+    kind: "video",
+    thumb: "https://i.ytimg.com/vi/aIS-pntkmq8/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/aIS-pntkmq8",
+    caption: "“The best community I've ever been part of”",
+  },
+  {
+    id: "g10",
+    kind: "confession",
+    text: "My first job offer came from someone I met at a Dora session.",
+  },
+  {
+    id: "g11",
+    kind: "photo",
+    src: voices4,
+    caption: "Product launch night, Berlin",
+  },
 ];

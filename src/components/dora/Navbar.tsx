@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { ChevronDown, Menu, Sparkles, X, ArrowUpRight } from "lucide-react";
 import { scrollToId } from "./shared";
+import doraLogo from "@/assets/dora_logo.png";
 
 type NavDropdownItem = {
   label: string;
@@ -134,13 +135,13 @@ export function Navbar() {
             }}
             className="group flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-full"
           >
-            <span
-              className={`font-display font-bold tracking-tight text-foreground transition-all duration-300 group-hover:text-primary ${
-                scrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"
+            <img
+              src={doraLogo}
+              alt="Dora DAO"
+              className={`w-auto object-contain transition-all duration-300 ${
+                scrolled ? "h-7 md:h-8" : "h-8 md:h-9"
               }`}
-            >
-              Dora <span className="text-primary">DAO</span>
-            </span>
+            />
           </Link>
 
           {/* Desktop Navigation */}
