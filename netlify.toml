@@ -8,5 +8,8 @@
   status = 200
 
 [functions]
-  directory = "dist/server"
-  node_bundler = "none"
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[functions."server"]
+  included_files = ["dist/server/**"]
