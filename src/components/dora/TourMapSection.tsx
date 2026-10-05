@@ -1,12 +1,18 @@
-import { lazy, Suspense, useEffect, useState } from "react";
-
-const LazyTourMapInner = lazy(() => import("./TourMapInner"));
+import { useEffect, useState, type ComponentType } from "react";
 
 export function TourMapSection() {
-  const [mounted, setMounted] = useState(false);
+  const [MapComponent, setMapComponent] = useState<ComponentType | null>(null);
 
   useEffect(() => {
-    setMounted(true);
+    let active = true;
+    import("./TourMapInner").then((mod) => {
+      if (active) {
+        setMapComponent(() => mod.default);
+      }
+    });
+    return () => {
+      active = false;
+    };
   }, []);
 
   return (
@@ -17,10 +23,8 @@ export function TourMapSection() {
           <p>Flags show planned countries by continent, planned states by country, then exact approved stops as you zoom.</p>
         </div>
 
-        {mounted ? (
-          <Suspense fallback={<div className="dora-map-shell"><div className="dora-leaflet-map" /></div>}>
-            <LazyTourMapInner />
-          </Suspense>
+        {MapComponent ? (
+          <MapComponent />
         ) : (
           <div className="dora-map-shell">
             <div className="dora-leaflet-map" />
@@ -32,4 +36,3 @@ export function TourMapSection() {
     </section>
   );
 }
-
