@@ -3,10 +3,10 @@ import { Sun, ArrowRight, ChevronDown } from "lucide-react";
 import { programTabs } from "./ProgramTabs";
 import { partnerTabs } from "./PartnerTabs";
 
-type NavKey = "fellowship" | "doradao" | "programs" | "chapters" | "partner" | "contributors" | "refer";
+type NavKey = "fellowship" | "doradao" | "programs" | "chapters" | "partner" | "contributors" | "refer" | "past";
 
 const links: { key: NavKey; label: string; to: string }[] = [
-  { key: "fellowship", label: "Fellowship", to: "/" },
+  { key: "fellowship", label: "Fellowship", to: "/fellowship" },
   { key: "doradao", label: "DoraDAO", to: "/doradao" },
   { key: "programs", label: "Programs", to: "/programs" },
   // { key: "past", label: "Past", to: "/past-initiatives" },
@@ -24,7 +24,7 @@ export function SiteNav({ active, ctaLabel = "Apply", ctaHref = "https://luma.co
   return (
     <header className="sticky top-4 z-50 mx-auto w-[min(94%,1100px)]">
       <nav className="chapter-glass flex items-center justify-between px-4 py-2.5 rounded-full">
-        <Link to="/" className="flex items-center gap-2.5 font-display text-base font-bold text-foreground">
+        <Link to="/fellowship" className="flex items-center gap-2.5 font-display text-base font-bold text-foreground">
           <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-coral text-primary-foreground shadow-glow">
             <Sun className="h-3.5 w-3.5" />
           </span>

@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" role="img" aria-label="World Tour ft. Dora">
+  <!-- Globe -->
+  <circle cx="38" cy="40" r="28" fill="none" stroke="#1a4a3a" stroke-width="2.5"/>
+  <ellipse cx="38" cy="40" rx="14" ry="28" fill="none" stroke="#1a4a3a" stroke-width="1.5"/>
+  <line x1="10" y1="40" x2="66" y2="40" stroke="#1a4a3a" stroke-width="1.5"/>
+  <path d="M22 18 Q38 30 54 18" fill="none" stroke="#1a4a3a" stroke-width="1.5"/>
+  <path d="M22 62 Q38 50 54 62" fill="none" stroke="#1a4a3a" stroke-width="1.5"/>
+  <!-- Route path -->
+  <path d="M10 40 Q20 28 38 32 Q56 36 66 40" fill="none" stroke="#c85a2a" stroke-width="2" stroke-dasharray="4 2"/>
+  <!-- Text: World Tour -->
+  <text x="78" y="32" font-family="Bree Serif, Georgia, serif" font-size="18" font-weight="700" fill="#1a4a3a">World Tour</text>
+  <!-- Text: ft. DORA -->
+  <text x="78" y="56" font-family="Bree Serif, Georgia, serif" font-size="15" font-weight="600" fill="#c85a2a">ft. DORA</text>
+  <!-- Small flag pins on globe -->
+  <circle cx="45" cy="30" r="3" fill="#c85a2a"/>
+  <circle cx="28" cy="48" r="3" fill="#1a4a3a"/>
+</svg>

@@ -11,18 +11,24 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ChaptersRouteImport } from './routes/chapters'
+import { Route as CodeOfConductRouteImport } from './routes/code-of-conduct'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ContributorsRouteImport } from './routes/contributors'
 import { Route as DoradaoRouteImport } from './routes/doradao'
 import { Route as Doradao1RouteImport } from './routes/doradao-1'
+import { Route as FellowshipRouteImport } from './routes/fellowship'
 import { Route as HackWithDoraRouteImport } from './routes/hack-with-dora'
 import { Route as PastInitiativesRouteImport } from './routes/past-initiatives'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ReferRouteImport } from './routes/refer'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VoicesRouteImport } from './routes/voices'
 import { Route as PartnerIndexRouteImport } from './routes/partner.index'
 import { Route as PartnerCorporateRouteImport } from './routes/partner.corporate'
 import { Route as PartnerCsrRouteImport } from './routes/partner.csr'
 import { Route as PartnerEcosystemRouteImport } from './routes/partner.ecosystem'
 import { Route as PartnerVolunteerRouteImport } from './routes/partner.volunteer'
+import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
 import { Route as ProgramsBuildspaceRouteImport } from './routes/programs.buildspace'
 import { Route as ProgramsDorahacksRouteImport } from './routes/programs.dorahacks'
@@ -40,6 +46,16 @@ const ChaptersRoute = ChaptersRouteImport.update({
   path: '/chapters',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CodeOfConductRoute = CodeOfConductRouteImport.update({
+  id: '/code-of-conduct',
+  path: '/code-of-conduct',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContributorsRoute = ContributorsRouteImport.update({
   id: '/contributors',
   path: '/contributors',
@@ -55,6 +71,11 @@ const Doradao1Route = Doradao1RouteImport.update({
   path: '/doradao-1',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FellowshipRoute = FellowshipRouteImport.update({
+  id: '/fellowship',
+  path: '/fellowship',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HackWithDoraRoute = HackWithDoraRouteImport.update({
   id: '/hack-with-dora',
   path: '/hack-with-dora',
@@ -65,9 +86,19 @@ const PastInitiativesRoute = PastInitiativesRouteImport.update({
   path: '/past-initiatives',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReferRoute = ReferRouteImport.update({
   id: '/refer',
   path: '/refer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const VoicesRoute = VoicesRouteImport.update({
@@ -98,6 +129,11 @@ const PartnerEcosystemRoute = PartnerEcosystemRouteImport.update({
 const PartnerVolunteerRoute = PartnerVolunteerRouteImport.update({
   id: '/partner/volunteer',
   path: '/partner/volunteer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsSlugRoute = ProductsSlugRouteImport.update({
+  id: '/products/$slug',
+  path: '/products/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramsIndexRoute = ProgramsIndexRouteImport.update({
@@ -134,17 +170,23 @@ const ProgramsW3mRoute = ProgramsW3mRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/chapters': typeof ChaptersRoute
+  '/code-of-conduct': typeof CodeOfConductRoute
+  '/contact': typeof ContactRoute
   '/contributors': typeof ContributorsRoute
   '/doradao': typeof DoradaoRoute
   '/doradao-1': typeof Doradao1Route
+  '/fellowship': typeof FellowshipRoute
   '/hack-with-dora': typeof HackWithDoraRoute
   '/past-initiatives': typeof PastInitiativesRoute
+  '/privacy': typeof PrivacyRoute
   '/refer': typeof ReferRoute
+  '/terms': typeof TermsRoute
   '/voices': typeof VoicesRoute
   '/partner/corporate': typeof PartnerCorporateRoute
   '/partner/csr': typeof PartnerCsrRoute
   '/partner/ecosystem': typeof PartnerEcosystemRoute
   '/partner/volunteer': typeof PartnerVolunteerRoute
+  '/products/$slug': typeof ProductsSlugRoute
   '/programs/buildspace': typeof ProgramsBuildspaceRoute
   '/programs/dorahacks': typeof ProgramsDorahacksRoute
   '/programs/gwy-25': typeof ProgramsGwy25Route
@@ -156,17 +198,23 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/chapters': typeof ChaptersRoute
+  '/code-of-conduct': typeof CodeOfConductRoute
+  '/contact': typeof ContactRoute
   '/contributors': typeof ContributorsRoute
   '/doradao': typeof DoradaoRoute
   '/doradao-1': typeof Doradao1Route
+  '/fellowship': typeof FellowshipRoute
   '/hack-with-dora': typeof HackWithDoraRoute
   '/past-initiatives': typeof PastInitiativesRoute
+  '/privacy': typeof PrivacyRoute
   '/refer': typeof ReferRoute
+  '/terms': typeof TermsRoute
   '/voices': typeof VoicesRoute
   '/partner/corporate': typeof PartnerCorporateRoute
   '/partner/csr': typeof PartnerCsrRoute
   '/partner/ecosystem': typeof PartnerEcosystemRoute
   '/partner/volunteer': typeof PartnerVolunteerRoute
+  '/products/$slug': typeof ProductsSlugRoute
   '/programs/buildspace': typeof ProgramsBuildspaceRoute
   '/programs/dorahacks': typeof ProgramsDorahacksRoute
   '/programs/gwy-25': typeof ProgramsGwy25Route
@@ -179,17 +227,23 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/chapters': typeof ChaptersRoute
+  '/code-of-conduct': typeof CodeOfConductRoute
+  '/contact': typeof ContactRoute
   '/contributors': typeof ContributorsRoute
   '/doradao': typeof DoradaoRoute
   '/doradao-1': typeof Doradao1Route
+  '/fellowship': typeof FellowshipRoute
   '/hack-with-dora': typeof HackWithDoraRoute
   '/past-initiatives': typeof PastInitiativesRoute
+  '/privacy': typeof PrivacyRoute
   '/refer': typeof ReferRoute
+  '/terms': typeof TermsRoute
   '/voices': typeof VoicesRoute
   '/partner/corporate': typeof PartnerCorporateRoute
   '/partner/csr': typeof PartnerCsrRoute
   '/partner/ecosystem': typeof PartnerEcosystemRoute
   '/partner/volunteer': typeof PartnerVolunteerRoute
+  '/products/$slug': typeof ProductsSlugRoute
   '/programs/buildspace': typeof ProgramsBuildspaceRoute
   '/programs/dorahacks': typeof ProgramsDorahacksRoute
   '/programs/gwy-25': typeof ProgramsGwy25Route
@@ -203,17 +257,23 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/chapters'
+    | '/code-of-conduct'
+    | '/contact'
     | '/contributors'
     | '/doradao'
     | '/doradao-1'
+    | '/fellowship'
     | '/hack-with-dora'
     | '/past-initiatives'
+    | '/privacy'
     | '/refer'
+    | '/terms'
     | '/voices'
     | '/partner/corporate'
     | '/partner/csr'
     | '/partner/ecosystem'
     | '/partner/volunteer'
+    | '/products/$slug'
     | '/programs/buildspace'
     | '/programs/dorahacks'
     | '/programs/gwy-25'
@@ -225,17 +285,23 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/chapters'
+    | '/code-of-conduct'
+    | '/contact'
     | '/contributors'
     | '/doradao'
     | '/doradao-1'
+    | '/fellowship'
     | '/hack-with-dora'
     | '/past-initiatives'
+    | '/privacy'
     | '/refer'
+    | '/terms'
     | '/voices'
     | '/partner/corporate'
     | '/partner/csr'
     | '/partner/ecosystem'
     | '/partner/volunteer'
+    | '/products/$slug'
     | '/programs/buildspace'
     | '/programs/dorahacks'
     | '/programs/gwy-25'
@@ -247,17 +313,23 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/chapters'
+    | '/code-of-conduct'
+    | '/contact'
     | '/contributors'
     | '/doradao'
     | '/doradao-1'
+    | '/fellowship'
     | '/hack-with-dora'
     | '/past-initiatives'
+    | '/privacy'
     | '/refer'
+    | '/terms'
     | '/voices'
     | '/partner/corporate'
     | '/partner/csr'
     | '/partner/ecosystem'
     | '/partner/volunteer'
+    | '/products/$slug'
     | '/programs/buildspace'
     | '/programs/dorahacks'
     | '/programs/gwy-25'
@@ -270,17 +342,23 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ChaptersRoute: typeof ChaptersRoute
+  CodeOfConductRoute: typeof CodeOfConductRoute
+  ContactRoute: typeof ContactRoute
   ContributorsRoute: typeof ContributorsRoute
   DoradaoRoute: typeof DoradaoRoute
   Doradao1Route: typeof Doradao1Route
+  FellowshipRoute: typeof FellowshipRoute
   HackWithDoraRoute: typeof HackWithDoraRoute
   PastInitiativesRoute: typeof PastInitiativesRoute
+  PrivacyRoute: typeof PrivacyRoute
   ReferRoute: typeof ReferRoute
+  TermsRoute: typeof TermsRoute
   VoicesRoute: typeof VoicesRoute
   PartnerCorporateRoute: typeof PartnerCorporateRoute
   PartnerCsrRoute: typeof PartnerCsrRoute
   PartnerEcosystemRoute: typeof PartnerEcosystemRoute
   PartnerVolunteerRoute: typeof PartnerVolunteerRoute
+  ProductsSlugRoute: typeof ProductsSlugRoute
   ProgramsBuildspaceRoute: typeof ProgramsBuildspaceRoute
   ProgramsDorahacksRoute: typeof ProgramsDorahacksRoute
   ProgramsGwy25Route: typeof ProgramsGwy25Route
@@ -306,6 +384,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChaptersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/code-of-conduct': {
+      id: '/code-of-conduct'
+      path: '/code-of-conduct'
+      fullPath: '/code-of-conduct'
+      preLoaderRoute: typeof CodeOfConductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contributors': {
       id: '/contributors'
       path: '/contributors'
@@ -327,6 +419,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Doradao1RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fellowship': {
+      id: '/fellowship'
+      path: '/fellowship'
+      fullPath: '/fellowship'
+      preLoaderRoute: typeof FellowshipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/hack-with-dora': {
       id: '/hack-with-dora'
       path: '/hack-with-dora'
@@ -341,11 +440,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PastInitiativesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/refer': {
       id: '/refer'
       path: '/refer'
       fullPath: '/refer'
       preLoaderRoute: typeof ReferRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/voices': {
@@ -388,6 +501,13 @@ declare module '@tanstack/react-router' {
       path: '/partner/volunteer'
       fullPath: '/partner/volunteer'
       preLoaderRoute: typeof PartnerVolunteerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/$slug': {
+      id: '/products/$slug'
+      path: '/products/$slug'
+      fullPath: '/products/$slug'
+      preLoaderRoute: typeof ProductsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programs/': {
@@ -438,17 +558,23 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ChaptersRoute: ChaptersRoute,
+  CodeOfConductRoute: CodeOfConductRoute,
+  ContactRoute: ContactRoute,
   ContributorsRoute: ContributorsRoute,
   DoradaoRoute: DoradaoRoute,
   Doradao1Route: Doradao1Route,
+  FellowshipRoute: FellowshipRoute,
   HackWithDoraRoute: HackWithDoraRoute,
   PastInitiativesRoute: PastInitiativesRoute,
+  PrivacyRoute: PrivacyRoute,
   ReferRoute: ReferRoute,
+  TermsRoute: TermsRoute,
   VoicesRoute: VoicesRoute,
   PartnerCorporateRoute: PartnerCorporateRoute,
   PartnerCsrRoute: PartnerCsrRoute,
   PartnerEcosystemRoute: PartnerEcosystemRoute,
   PartnerVolunteerRoute: PartnerVolunteerRoute,
+  ProductsSlugRoute: ProductsSlugRoute,
   ProgramsBuildspaceRoute: ProgramsBuildspaceRoute,
   ProgramsDorahacksRoute: ProgramsDorahacksRoute,
   ProgramsGwy25Route: ProgramsGwy25Route,

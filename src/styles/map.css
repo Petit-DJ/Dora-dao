@@ -1,0 +1,674 @@
+/* @import "leaflet/dist/leaflet.css"; */
+
+/*
+ * Map-scoped design tokens — these are C's bespoke palette variables,
+ * scoped to .where-dora-section so they never bleed into B's theme.
+ */
+.where-dora-section {
+  --paper: oklch(0.966 0.023 83);
+  --ink: oklch(0.22 0.045 68);
+  --sun: oklch(0.86 0.17 91);
+  --primary: oklch(0.31 0.091 163);
+  --primary-foreground: oklch(0.97 0.012 83);
+  --map: oklch(0.9 0.028 167);
+  --card: oklch(0.99 0.008 82);
+  --coral: oklch(0.63 0.19 35);
+  --muted-foreground: oklch(0.46 0.028 133);
+  --map-rust: oklch(0.575 0.112 49);
+  --gather: oklch(0.7066 0.1875 34.08);
+  --grow: oklch(0.8419 0.1684 90.43);
+  --give: oklch(0.5202 0.1031 154.14);
+  --move: oklch(0.5921 0.1238 249.27);
+  --make: oklch(0.5778 0.2196 322.12);
+  --border: oklch(0.84 0.024 79);
+
+  --font-sans: "Nunito Sans", sans-serif;
+  --font-display: "Bree Serif", serif;
+  --font-poster: "Bowlby One SC", sans-serif;
+  --font-editorial: "Cormorant Garamond", serif;
+  --font-hand: "Caveat", cursive;
+}
+
+/* Map CSS extracted from Codebase C */
+.where-dora-section {
+  overflow: hidden;
+  padding-block: clamp(3rem, 5vw, 4.75rem);
+  background: var(--paper);
+  background-image: radial-gradient(color-mix(in oklab, var(--ink) 7%, transparent) .65px, transparent .65px);
+  background-size: 6px 6px;
+}
+
+.where-dora-heading {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.where-dora-heading h2 {
+  max-width: 12ch;
+  color: var(--primary);
+  font-family: var(--font-editorial);
+  font-size: clamp(3.4rem, 8vw, 7.5rem);
+  font-weight: 600;
+  line-height: .82;
+}
+
+.where-dora-heading>p {
+  max-width: 33rem;
+  align-self: end;
+  color: var(--muted-foreground);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height: 1.65;
+}
+
+.dora-map-shell {
+  position: relative;
+  height: clamp(31rem, 64vw, 40rem);
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--ink) 17%, transparent);
+  border-radius: .75rem;
+  background: var(--map);
+  box-shadow: 0 20px 45px color-mix(in oklab, var(--ink) 16%, transparent), 7px 8px 0 var(--sun);
+}
+
+.dora-map-shell:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  border-radius: 0;
+}
+
+.dora-leaflet-map {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--map);
+  font-family: var(--font-sans);
+}
+
+.dora-leaflet-map .leaflet-tile-pane {
+  filter: saturate(.72) sepia(.08) brightness(1.02);
+}
+
+.dora-leaflet-map .leaflet-tile-pane img.leaflet-tile {
+  mix-blend-mode: normal !important;
+}
+
+.dora-map-controls {
+  position: absolute;
+  z-index: 1000;
+  top: 1rem;
+  left: 1rem;
+  display: grid;
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--ink) 18%, transparent);
+  border-radius: .5rem;
+  background: var(--card);
+  box-shadow: 0 5px 16px color-mix(in oklab, var(--ink) 18%, transparent);
+}
+
+.dora-map-controls button {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--primary);
+}
+
+.dora-map-controls button:last-child {
+  border-bottom: 0;
+}
+
+.dora-map-key {
+  position: absolute;
+  z-index: 500;
+  right: 1rem;
+  bottom: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+  max-width: calc(100% - 2rem);
+  padding: .65rem .8rem;
+  border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--card) 94%, transparent);
+  box-shadow: 0 5px 18px color-mix(in oklab, var(--ink) 12%, transparent);
+  font-size: .7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.dora-map-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.dora-map-key i {
+  display: grid;
+  width: .85rem;
+  min-width: .85rem;
+  height: .85rem;
+  place-items: center;
+  font-style: normal;
+}
+
+.dora-map-key .key-approved,
+.dora-map-key .key-soon {
+  width: auto;
+  min-width: 1.35rem;
+  border: 1px solid var(--ink);
+  border-radius: .1rem;
+  font-size: .5rem;
+}
+
+.dora-map-key .key-approved {
+  background: var(--primary);
+  color: var(--paper);
+}
+
+.dora-map-key .key-soon {
+  background: var(--sun);
+}
+
+.dora-flag-icon,
+.dora-coming-soon-icon {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.dora-flag {
+  position: relative;
+  width: 5.75rem;
+  height: 4.375rem;
+  filter: drop-shadow(0 4px 3px color-mix(in oklab, var(--ink) 28%, transparent));
+  transition: transform .2s ease;
+  transform-origin: 8px bottom;
+}
+
+.dora-flag:hover {
+  transform: translateY(-3px) rotate(-2deg);
+}
+
+.dora-flag-pole {
+  position: absolute;
+  left: .35rem;
+  top: .15rem;
+  bottom: .2rem;
+  width: .18rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+}
+
+.dora-flag-pole::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -.28rem;
+  width: .5rem;
+  height: .5rem;
+  transform: translateX(-50%);
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.dora-flag-cloth {
+  position: absolute;
+  left: .48rem;
+  top: .35rem;
+  display: grid;
+  width: 5.05rem;
+  height: 2.9rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1.5px solid var(--ink);
+  border-radius: .18rem .28rem .28rem .18rem;
+  background: var(--sun);
+  clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%);
+}
+
+.dora-flag-cloth::after {
+  content: "";
+  position: absolute;
+  inset: .2rem .5rem .2rem .2rem;
+  border: 1px dashed color-mix(in oklab, var(--ink) 25%, transparent);
+  border-radius: .1rem;
+  pointer-events: none;
+}
+
+.dora-flag-cloth img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 4.05rem;
+  height: 2.15rem;
+  object-fit: contain;
+}
+
+.dora-flag-status,
+.dora-summary-status {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: .18rem;
+  font-size: .48rem;
+  font-weight: 1000;
+  line-height: 1;
+}
+
+.dora-flag-status {
+  right: .15rem;
+  bottom: .15rem;
+  min-width: 1.7rem;
+  height: 1.15rem;
+}
+
+.dora-flag-status.is-approved,
+.dora-summary-status.is-approved {
+  background: var(--primary);
+  color: var(--paper);
+}
+
+.dora-flag-shadow {
+  position: absolute;
+  left: -.05rem;
+  bottom: 0;
+  width: 1.45rem;
+  height: .32rem;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--ink) 18%, transparent);
+}
+
+.dora-summary-icon {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.dora-summary-flag {
+  position: relative;
+  width: 4.375rem;
+  height: 3.5rem;
+  filter: drop-shadow(0 3px 2px color-mix(in oklab, var(--ink) 24%, transparent));
+  transition: transform .18s ease;
+  transform-origin: .35rem bottom;
+}
+
+.dora-summary-flag:hover {
+  z-index: 2;
+  transform: translateY(-3px) scale(1.06);
+}
+
+.dora-summary-pole {
+  position: absolute;
+  left: .3rem;
+  inset-block: .1rem .05rem;
+  width: .15rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+}
+
+.dora-summary-cloth {
+  position: absolute;
+  left: .42rem;
+  top: .25rem;
+  display: grid;
+  width: 3.55rem;
+  height: 2.1rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1.5px solid var(--ink);
+  background: var(--sun);
+  clip-path: polygon(0 0, 100% 0, 86% 50%, 100% 100%, 0 100%);
+}
+
+.dora-summary-cloth img {
+  display: block;
+  width: 2.85rem;
+  height: 1.55rem;
+  object-fit: contain;
+}
+
+.dora-summary-count {
+  position: absolute;
+  right: -.1rem;
+  bottom: .05rem;
+  display: grid;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  place-items: center;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  padding-inline: .3rem;
+  background: var(--coral);
+  color: var(--paper);
+  font-size: .65rem;
+  font-weight: 1000;
+  line-height: 1;
+}
+
+.dora-summary-status {
+  left: .5rem;
+  bottom: .15rem;
+  min-width: 1.55rem;
+  height: 1rem;
+}
+
+.dora-summary-flag.is-compact {
+  width: 3.5rem;
+  height: 2.8rem;
+}
+
+.dora-summary-flag.is-compact .dora-summary-cloth {
+  width: 2.85rem;
+  height: 1.7rem;
+}
+
+.dora-summary-flag.is-compact .dora-summary-cloth img {
+  width: 2.25rem;
+  height: 1.2rem;
+}
+
+.dora-summary-flag.is-compact .dora-summary-count {
+  right: -.05rem;
+  width: auto;
+  min-width: 1.45rem;
+  height: 1.35rem;
+  font-size: .48rem;
+}
+
+.dora-map-level {
+  position: absolute;
+  z-index: 500;
+  top: 1rem;
+  left: 4.55rem;
+  border: 1px solid color-mix(in oklab, var(--ink) 18%, transparent);
+  border-radius: 999px;
+  padding: .48rem .75rem;
+  background: color-mix(in oklab, var(--card) 94%, transparent);
+  box-shadow: 0 4px 14px color-mix(in oklab, var(--ink) 12%, transparent);
+  color: var(--primary);
+  font-size: .65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.dora-leaflet-map .leaflet-tooltip {
+  border: 1px solid var(--ink);
+  border-radius: .3rem;
+  background: var(--card);
+  box-shadow: 3px 3px 0 color-mix(in oklab, var(--ink) 20%, transparent);
+  color: var(--ink);
+  font-size: .68rem;
+  font-weight: 900;
+}
+
+.dora-soon-flag {
+  position: relative;
+  width: 2.375rem;
+  height: 2.875rem;
+  filter: drop-shadow(0 2px 1px color-mix(in oklab, var(--ink) 25%, transparent));
+  transition: transform .18s ease;
+  transform-origin: 4px bottom;
+}
+
+.dora-soon-flag:hover {
+  transform: translateY(-2px) rotate(-3deg) scale(1.08);
+}
+
+.dora-soon-pole {
+  position: absolute;
+  left: .18rem;
+  inset-block: .1rem .05rem;
+  width: .12rem;
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+.dora-soon-cloth {
+  position: absolute;
+  left: .28rem;
+  top: .25rem;
+  display: grid;
+  width: 2rem;
+  height: 1.45rem;
+  place-items: center;
+  border: 1px solid var(--ink);
+  background: var(--sun);
+  color: var(--ink);
+  clip-path: polygon(0 0, 100% 0, 84% 50%, 100% 100%, 0 100%);
+}
+
+.dora-soon-cloth b {
+  padding-right: .15rem;
+  font-family: var(--font-sans);
+  font-size: .82rem;
+  line-height: 1;
+}
+
+.dora-leaflet-map .leaflet-popup-content-wrapper {
+  overflow: hidden;
+  border: 1.5px solid var(--ink);
+  border-radius: .55rem;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: 5px 6px 0 color-mix(in oklab, var(--ink) 24%, transparent);
+}
+
+.dora-leaflet-map .leaflet-popup-tip {
+  border: 1px solid var(--ink);
+  background: var(--card);
+}
+
+.dora-leaflet-map .leaflet-popup-content {
+  margin: 0;
+}
+
+.dora-leaflet-map .leaflet-popup-close-button {
+  z-index: 2;
+  top: .35rem;
+  right: .35rem;
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border: 1px solid color-mix(in oklab, var(--ink) 18%, transparent);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 1.2rem;
+}
+
+.dora-map-popup {
+  display: grid;
+  min-width: 14.25rem;
+  gap: .6rem;
+  padding: 1rem;
+  border-top: .48rem solid var(--sun);
+}
+
+.dora-popup-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding-right: 1.7rem;
+}
+
+.dora-popup-topline>span:last-child {
+  color: var(--muted-foreground);
+  font-size: .58rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.dora-map-popup strong {
+  padding-top: .2rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  line-height: 1.05;
+}
+
+.dora-map-popup p {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin: 0;
+  color: var(--ink);
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.dora-map-popup p svg {
+  width: .9rem;
+  height: .9rem;
+  flex: none;
+  color: var(--coral);
+}
+
+.dora-map-popup .dora-popup-description {
+  padding-top: .55rem;
+  border-top: 1px dashed color-mix(in oklab, var(--ink) 24%, transparent);
+  color: var(--muted-foreground);
+  font-size: .75rem;
+  line-height: 1.45;
+}
+
+.dora-leaflet-map .leaflet-control-attribution {
+  background: color-mix(in oklab, var(--paper) 86%, transparent);
+  color: var(--muted-foreground);
+  font-size: .6rem;
+}
+
+.dora-leaflet-map .leaflet-control-attribution a {
+  color: var(--primary);
+}
+
+.dora-map-note {
+  margin: .9rem .2rem 0;
+  color: var(--muted-foreground);
+  font-size: .75rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.dora-popup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .65rem;
+  padding-top: .35rem;
+}
+
+.dora-planned-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .4rem;
+  padding-top: .35rem;
+}
+
+.dora-planned-actions button {
+  width: 100%;
+  padding-inline: .55rem;
+}
+
+.dora-ticket-status {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  color: var(--ink);
+  font-size: .65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.dora-ticket-status svg {
+  width: .9rem;
+  height: .9rem;
+  color: var(--coral);
+}
+
+.dora-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  border-radius: 999px;
+  padding: .28rem .55rem;
+  background: var(--sun);
+  color: var(--ink);
+  font-size: .63rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.dora-soon-badge svg {
+  width: .8rem;
+  height: .8rem;
+}
+
+.dora-soon-popup {
+  border-top-color: var(--coral);
+}
+
+.event-category {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  border-radius: 999px;
+  padding: .28rem .6rem;
+  background: var(--map-rust);
+  color: var(--paper);
+  font-size: .65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.event-category.category-gather {
+  background: var(--gather);
+}
+
+.event-category.category-grow {
+  background: var(--grow);
+  color: var(--ink);
+}
+
+.event-category.category-give {
+  background: var(--give);
+}
+
+.event-category.category-move {
+  background: var(--move);
+}
+
+.event-category.category-make {
+  background: var(--make);
+}
+
+/* Leaflet compatibility with B's global image styles */
+.dora-leaflet-map .leaflet-tile {
+  width: 256px !important;
+  height: 256px !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.dora-leaflet-map .leaflet-tile-container img {
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.dora-leaflet-map .leaflet-container {
+  overflow: hidden;
+}
+
+.where-dora-section>.home-shell {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}

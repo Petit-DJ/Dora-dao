@@ -128,7 +128,7 @@ function DoraDAOPage() {
                 Join the community <ArrowUpRight className="h-4 w-4" />
               </a>
               <Link
-                to="/"
+                to="/fellowship"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-white/80"
               >
                 Explore GWY Fellowship

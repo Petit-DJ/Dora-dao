@@ -1,0 +1,1677 @@
+warning: in the working copy of 'src/routeTree.gen.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/routes/index.tsx', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 3367a317..b74834b5 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -44,11 +44,13 @@[m
+         "date-fns": "^4.1.0",[m
+         "embla-carousel-react": "^8.6.0",[m
+         "input-otp": "^1.4.2",[m
+[32m+[m[32m        "leaflet": "^1.9.4",[m
+         "lucide-react": "^0.575.0",[m
+         "react": "^19.2.0",[m
+         "react-day-picker": "^9.14.0",[m
+         "react-dom": "^19.2.0",[m
+         "react-hook-form": "^7.71.2",[m
+[32m+[m[32m        "react-leaflet": "^5.0.0",[m
+         "react-resizable-panels": "^4.6.5",[m
+         "recharts": "^2.15.4",[m
+         "sonner": "^2.0.7",[m
+[36m@@ -62,6 +64,7 @@[m
+       "devDependencies": {[m
+         "@eslint/js": "^9.32.0",[m
+         "@lovable.dev/vite-tanstack-config": "2.13.1",[m
+[32m+[m[32m        "@types/leaflet": "^1.9.22",[m
+         "@types/node": "^22.16.5",[m
+         "@types/react": "^19.2.0",[m
+         "@types/react-dom": "^19.2.0",[m
+[36m@@ -3073,6 +3076,17 @@[m
+       "integrity": "sha512-JtyZR+mqgBibTo8xea3B6ZRmzZiM/YeVBtUkas6zMuXjAlfIFIW2FgqeM9eLyvEaYX66vr6DJMK+4U6LV0KhNw==",[m
+       "license": "MIT"[m
+     },[m
+[32m+[m[32m    "node_modules/@react-leaflet/core": {[m
+[32m+[m[32m      "version": "3.0.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@react-leaflet/core/-/core-3.0.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-3EWmekh4Nz+pGcr+xjf0KNyYfC3U2JjnkWsh0zcqaexYqmmB5ZhH37kz41JXGmKzpaMZCnPofBBm64i+YrEvGQ==",[m
+[32m+[m[32m      "license": "Hippocratic-2.1",[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "leaflet": "^1.9.0",[m
+[32m+[m[32m        "react": "^19.0.0",[m
+[32m+[m[32m        "react-dom": "^19.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/@rolldown/binding-android-arm-eabi": {[m
+       "version": "1.2.5",[m
+       "resolved": "https://registry.npmjs.org/@rolldown/binding-android-arm-eabi/-/binding-android-arm-eabi-1.2.5.tgz",[m
+[36m@@ -5012,6 +5026,13 @@[m
+       "dev": true,[m
+       "license": "MIT"[m
+     },[m
+[32m+[m[32m    "node_modules/@types/geojson": {[m
+[32m+[m[32m      "version": "7946.0.16",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.16.tgz",[m
+[32m+[m[32m      "integrity": "sha512-6C8nqWur3j98U6+lXDfTUWIfgvZU+EumvpHKcYjujKH7woYyLj2sUmff0tRhrqM7BohUw7Pz3ZB1jj2gW9Fvmg==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+     "node_modules/@types/json-schema": {[m
+       "version": "7.0.15",[m
+       "resolved": "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz",[m
+[36m@@ -5019,6 +5040,16 @@[m
+       "dev": true,[m
+       "license": "MIT"[m
+     },[m
+[32m+[m[32m    "node_modules/@types/leaflet": {[m
+[32m+[m[32m      "version": "1.9.22",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/leaflet/-/leaflet-1.9.22.tgz",[m
+[32m+[m[32m      "integrity": "sha512-h3lhECYEKDasG7LFHu+GiHqAvsgLuQvlJvVZzJDGONo3sEL+wUOqSFLnwkZlK0qVxnxbuGFW8iBlJNYs5wgndA==",[m
+[32m+[m[32m      "dev": true,[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@types/geojson": "*"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/@types/node": {[m
+       "version": "22.20.1",[m
+       "resolved": "https://registry.npmjs.org/@types/node/-/node-22.20.1.tgz",[m
+[36m@@ -6818,6 +6849,12 @@[m
+         "shell-quote": "^1.8.4"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/leaflet": {[m
+[32m+[m[32m      "version": "1.9.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/leaflet/-/leaflet-1.9.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==",[m
+[32m+[m[32m      "license": "BSD-2-Clause"[m
+[32m+[m[32m    },[m
+     "node_modules/levn": {[m
+       "version": "0.4.1",[m
+       "resolved": "https://registry.npmjs.org/levn/-/levn-0.4.1.tgz",[m
+[36m@@ -7624,6 +7661,20 @@[m
+       "integrity": "sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==",[m
+       "license": "MIT"[m
+     },[m
+[32m+[m[32m    "node_modules/react-leaflet": {[m
+[32m+[m[32m      "version": "5.0.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-leaflet/-/react-leaflet-5.0.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-CWbTpr5vcHw5bt9i4zSlPEVQdTVcML390TjeDG0cK59z1ylexpqC6M1PJFjV8jD7CF+ACBFsLIDs6DRMoLEofw==",[m
+[32m+[m[32m      "license": "Hippocratic-2.1",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@react-leaflet/core": "^3.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "leaflet": "^1.9.0",[m
+[32m+[m[32m        "react": "^19.0.0",[m
+[32m+[m[32m        "react-dom": "^19.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/react-refresh": {[m
+       "version": "0.18.0",[m
+       "resolved": "https://registry.npmjs.org/react-refresh/-/react-refresh-0.18.0.tgz",[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex 9985761f..5259af76 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -50,11 +50,13 @@[m
+     "date-fns": "^4.1.0",[m
+     "embla-carousel-react": "^8.6.0",[m
+     "input-otp": "^1.4.2",[m
+[32m+[m[32m    "leaflet": "^1.9.4",[m
+     "lucide-react": "^0.575.0",[m
+     "react": "^19.2.0",[m
+     "react-day-picker": "^9.14.0",[m
+     "react-dom": "^19.2.0",[m
+     "react-hook-form": "^7.71.2",[m
+[32m+[m[32m    "react-leaflet": "^5.0.0",[m
+     "react-resizable-panels": "^4.6.5",[m
+     "recharts": "^2.15.4",[m
+     "sonner": "^2.0.7",[m
+[36m@@ -68,6 +70,7 @@[m
+   "devDependencies": {[m
+     "@eslint/js": "^9.32.0",[m
+     "@lovable.dev/vite-tanstack-config": "2.13.1",[m
+[32m+[m[32m    "@types/leaflet": "^1.9.22",[m
+     "@types/node": "^22.16.5",[m
+     "nitro": "^3.0.260603-beta",[m
+     "@types/react": "^19.2.0",[m
+[1mdiff --git a/src/components/SiteFooter.tsx b/src/components/SiteFooter.tsx[m
+[1mindex 28e36294..0a364df6 100644[m
+[1m--- a/src/components/SiteFooter.tsx[m
+[1m+++ b/src/components/SiteFooter.tsx[m
+[36m@@ -29,7 +29,7 @@[m [mexport function SiteFooter() {[m
+           <div>[m
+             <div className="chapter-num">explore</div>[m
+             <ul className="mt-3 space-y-2 text-sm">[m
+[31m-              <li><Link to="/" className="text-foreground/75 hover:text-coral transition">Fellowship 2.0</Link></li>[m
+[32m+[m[32m              <li><Link to="/fellowship" className="text-foreground/75 hover:text-coral transition">Fellowship 2.0</Link></li>[m
+               <li><Link to="/doradao" className="text-foreground/75 hover:text-coral transition">About DoraDAO</Link></li>[m
+               <li><Link to="/past-initiatives" className="text-foreground/75 hover:text-coral transition">Past Initiatives</Link></li>[m
+               <li><Link to="/chapters" className="text-foreground/75 hover:text-coral transition">City Chapters</Link></li>[m
+[1mdiff --git a/src/components/SiteNav.tsx b/src/components/SiteNav.tsx[m
+[1mindex aa7336e2..e89dde27 100644[m
+[1m--- a/src/components/SiteNav.tsx[m
+[1m+++ b/src/components/SiteNav.tsx[m
+[36m@@ -3,10 +3,10 @@[m [mimport { Sun, ArrowRight, ChevronDown } from "lucide-react";[m
+ import { programTabs } from "./ProgramTabs";[m
+ import { partnerTabs } from "./PartnerTabs";[m
+ [m
+[31m-type NavKey = "fellowship" | "doradao" | "programs" | "chapters" | "partner" | "contributors" | "refer";[m
+[32m+[m[32mtype NavKey = "fellowship" | "doradao" | "programs" | "chapters" | "partner" | "contributors" | "refer" | "past";[m
+ [m
+ const links: { key: NavKey; label: string; to: string }[] = [[m
+[31m-  { key: "fellowship", label: "Fellowship", to: "/" },[m
+[32m+[m[32m  { key: "fellowship", label: "Fellowship", to: "/fellowship" },[m
+   { key: "doradao", label: "DoraDAO", to: "/doradao" },[m
+   { key: "programs", label: "Programs", to: "/programs" },[m
+   // { key: "past", label: "Past", to: "/past-initiatives" },[m
+[36m@@ -24,7 +24,7 @@[m [mexport function SiteNav({ active, ctaLabel = "Apply", ctaHref = "https://luma.co[m
+   return ([m
+     <header className="sticky top-4 z-50 mx-auto w-[min(94%,1100px)]">[m
+       <nav className="chapter-glass flex items-center justify-between px-4 py-2.5 rounded-full">[m
+[31m-        <Link to="/" className="flex items-center gap-2.5 font-display text-base font-bold text-foreground">[m
+[32m+[m[32m        <Link to="/fellowship" className="flex items-center gap-2.5 font-display text-base font-bold text-foreground">[m
+           <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-coral text-primary-foreground shadow-glow">[m
+             <Sun className="h-3.5 w-3.5" />[m
+           </span>[m
+[1mdiff --git a/src/routeTree.gen.ts b/src/routeTree.gen.ts[m
+[1mindex a5fad946..3f4773a1 100644[m
+[1m--- a/src/routeTree.gen.ts[m
+[1m+++ b/src/routeTree.gen.ts[m
+[36m@@ -11,18 +11,24 @@[m
+ import { Route as rootRouteImport } from './routes/__root'[m
+ import { Route as IndexRouteImport } from './routes/index'[m
+ import { Route as ChaptersRouteImport } from './routes/chapters'[m
+[32m+[m[32mimport { Route as CodeOfConductRouteImport } from './routes/code-of-conduct'[m
+[32m+[m[32mimport { Route as ContactRouteImport } from './routes/contact'[m
+ import { Route as ContributorsRouteImport } from './routes/contributors'[m
+ import { Route as DoradaoRouteImport } from './routes/doradao'[m
+ import { Route as Doradao1RouteImport } from './routes/doradao-1'[m
+[32m+[m[32mimport { Route as FellowshipRouteImport } from './routes/fellowship'[m
+ import { Route as HackWithDoraRouteImport } from './routes/hack-with-dora'[m
+ import { Route as PastInitiativesRouteImport } from './routes/past-initiatives'[m
+[32m+[m[32mimport { Route as PrivacyRouteImport } from './routes/privacy'[m
+ import { Route as ReferRouteImport } from './routes/refer'[m
+[32m+[m[32mimport { Route as TermsRouteImport } from './routes/terms'[m
+ import { Route as VoicesRouteImport } from './routes/voices'[m
+ import { Route as PartnerIndexRouteImport } from './routes/partner.index'[m
+ import { Route as PartnerCorporateRouteImport } from './routes/partner.corporate'[m
+ import { Route as PartnerCsrRouteImport } from './routes/partner.csr'[m
+ import { Route as PartnerEcosystemRouteImport } from './routes/partner.ecosystem'[m
+ import { Route as PartnerVolunteerRouteImport } from './routes/partner.volunteer'[m
+[32m+[m[32mimport { Route as ProductsSlugRouteImport } from './routes/products.$slug'[m
+ import { Route as ProgramsIndexRouteImport } from './routes/programs.index'[m
+ import { Route as ProgramsBuildspaceRouteImport } from './routes/programs.buildspace'[m
+ import { Route as ProgramsDorahacksRouteImport } from './routes/programs.dorahacks'[m
+[36m@@ -40,6 +46,16 @@[m [mconst ChaptersRoute = ChaptersRouteImport.update({[m
+   path: '/chapters',[m
+   getParentRoute: () => rootRouteImport,[m
+ } as any)[m
+[32m+[m[32mconst CodeOfConductRoute = CodeOfConductRouteImport.update({[m
+[32m+[m[32m  id: '/code-of-conduct',[m
+[32m+[m[32m  path: '/code-of-conduct',[m
+[32m+[m[32m  getParentRoute: () => rootRouteImport,[m
+[32m+[m[32m} as any)[m
+[32m+[m[32mconst ContactRoute = ContactRouteImport.update({[m
+[32m+[m[32m  id: '/contact',[m
+[32m+[m[32m  path: '/contact',[m
+[32m+[m[32m  getParentRoute: () => rootRouteImport,[m
+[32m+[m[32m} as any)[m
+ const ContributorsRoute = ContributorsRouteImport.update({[m
+   id: '/contributors',[m
+   path: '/contributors',[m
+[36m@@ -55,6 +71,11 @@[m [mconst Doradao1Route = Doradao1RouteImport.update({[m
+   path: '/doradao-1',[m
+   getParentRoute: () => rootRouteImport,[m
+ } as any)[m
+[32m+[m[32mconst FellowshipRoute = FellowshipRouteImport.update({[m
+[32m+[m[32m  id: '/fellowship',[m
+[32m+[m[32m  path: '/fellowship',[m
+[32m+[m[32m  getParentRoute: () => rootRouteImport,[m
+[32m+[m[32m} as any)[m
+ const HackWithDoraRoute = HackWithDoraRouteImport.update({[m
+   id: '/hack-with-dora',[m
+   path: '/hack-with-dora',[m
+[36m@@ -65,11 +86,21 @@[m [mconst PastInitiativesRoute = PastInitiativesRouteImport.update({[m
+   path: '/past-initiatives',[m
+   getParentRoute: () => rootRouteImport,[m
+ } as any)[m
+[32m+[m[32mconst PrivacyRoute = PrivacyRouteImport.update({[m
+[32m+[m[32m  id: '/privacy',[m
+[32m+[m[32m  path: '/privacy',[m
+[32m+[m[32m  getParentRoute: () => rootRouteImport,[m
+[32m+[m[32m} as any)[m
+ const ReferRoute = ReferRouteImport.update({[m
+   id: '/refer',[m
+   path: '/refer',[m
+   getParentRoute: () => rootRouteImport,[m
+ } as any)[m
+[32m+[m[32mconst TermsRoute = TermsRouteImport.update({[m
+[32m+[m[32m  id: '/terms',[m
+[32m+[m[32m  path: '/terms',[m
+[32m+[m[32m  getParentRoute: () => rootRouteImport,[m
+[32m+[m[32m} as any)[m
+ const VoicesRoute = VoicesRouteImport.update({[m
+   id: '/voices',[m
+   path: '/voices',[m
+[36m@@ -100,6 +131,11 @@[m [mconst PartnerVolunteerRoute = PartnerVolunteerRouteImport.update({[m
+   path: '/partner/volunteer',[m
+   getParentRoute: () => rootRouteImport,[m
+ } as any)[m
+[32m+[m[32mconst ProductsSlugRoute = ProductsSlugRouteImport.update({[m
+[32m+[m[32m  id: '/products/$slug',[m
+[32m+[m[32m  path: '/products/$slug',[m
+[32m+[m[32m  getParentRoute: () => rootRouteImport,[m
+[32m+[m[32m} as any)[m
+ const ProgramsIndexRoute = ProgramsIndexRouteImport.update({[m
+   id: '/programs/',[m
+   path: '/programs/',[m
+[36m@@ -134,17 +170,23 @@[m [mconst ProgramsW3mRoute = ProgramsW3mRouteImport.update({[m
+ export interface FileRoutesByFullPath {[m
+   '/': typeof IndexRoute[m
+   '/chapters': typeof ChaptersRoute[m
+[32m+[m[32m  '/code-of-conduct': typeof CodeOfConductRoute[m
+[32m+[m[32m  '/contact': typeof ContactRoute[m
+   '/contributors': typeof ContributorsRoute[m
+   '/doradao': typeof DoradaoRoute[m
+   '/doradao-1': typeof Doradao1Route[m
+[32m+[m[32m  '/fellowship': typeof FellowshipRoute[m
+   '/hack-with-dora': typeof HackWithDoraRoute[m
+   '/past-initiatives': typeof PastInitiativesRoute[m
+[32m+[m[32m  '/privacy': typeof PrivacyRoute[m
+   '/refer': typeof ReferRoute[m
+[32m+[m[32m  '/terms': typeof TermsRoute[m
+   '/voices': typeof VoicesRoute[m
+   '/partner/corporate': typeof PartnerCorporateRoute[m
+   '/partner/csr': typeof PartnerCsrRoute[m
+   '/partner/ecosystem': typeof PartnerEcosystemRoute[m
+   '/partner/volunteer': typeof PartnerVolunteerRoute[m
+[32m+[m[32m  '/products/$slug': typeof ProductsSlugRoute[m
+   '/programs/buildspace': typeof ProgramsBuildspaceRoute[m
+   '/programs/dorahacks': typeof ProgramsDorahacksRoute[m
+   '/programs/gwy-25': typeof ProgramsGwy25Route[m
+[36m@@ -156,17 +198,23 @@[m [mexport interface FileRoutesByFullPath {[m
+ export interface FileRoutesByTo {[m
+   '/': typeof IndexRoute[m
+   '/chapters': typeof ChaptersRoute[m
+[32m+[m[32m  '/code-of-conduct': typeof CodeOfConductRoute[m
+[32m+[m[32m  '/contact': typeof ContactRoute[m
+   '/contributors': typeof ContributorsRoute[m
+   '/doradao': typeof DoradaoRoute[m
+   '/doradao-1': typeof Doradao1Route[m
+[32m+[m[32m  '/fellowship': typeof FellowshipRoute[m
+   '/hack-with-dora': typeof HackWithDoraRoute[m
+   '/past-initiatives': typeof PastInitiativesRoute[m
+[32m+[m[32m  '/privacy': typeof PrivacyRoute[m
+   '/refer': typeof ReferRoute[m
+[32m+[m[32m  '/terms': typeof TermsRoute[m
+   '/voices': typeof VoicesRoute[m
+   '/partner/corporate': typeof PartnerCorporateRoute[m
+   '/partner/csr': typeof PartnerCsrRoute[m
+   '/partner/ecosystem': typeof PartnerEcosystemRoute[m
+   '/partner/volunteer': typeof PartnerVolunteerRoute[m
+[32m+[m[32m  '/products/$slug': typeof ProductsSlugRoute[m
+   '/programs/buildspace': typeof ProgramsBuildspaceRoute[m
+   '/programs/dorahacks': typeof ProgramsDorahacksRoute[m
+   '/programs/gwy-25': typeof ProgramsGwy25Route[m
+[36m@@ -179,17 +227,23 @@[m [mexport interface FileRoutesById {[m
+   __root__: typeof rootRouteImport[m
+   '/': typeof IndexRoute[m
+   '/chapters': typeof ChaptersRoute[m
+[32m+[m[32m  '/code-of-conduct': typeof CodeOfConductRoute[m
+[32m+[m[32m  '/contact': typeof ContactRoute[m
+   '/contributors': typeof ContributorsRoute[m
+   '/doradao': typeof DoradaoRoute[m
+   '/doradao-1': typeof Doradao1Route[m
+[32m+[m[32m  '/fellowship': typeof FellowshipRoute[m
+   '/hack-with-dora': typeof HackWithDoraRoute[m
+   '/past-initiatives': typeof PastInitiativesRoute[m
+[32m+[m[32m  '/privacy': typeof PrivacyRoute[m
+   '/refer': typeof ReferRoute[m
+[32m+[m[32m  '/terms': typeof TermsRoute[m
+   '/voices': typeof VoicesRoute[m
+   '/partner/corporate': typeof PartnerCorporateRoute[m
+   '/partner/csr': typeof PartnerCsrRoute[m
+   '/partner/ecosystem': typeof PartnerEcosystemRoute[m
+   '/partner/volunteer': typeof PartnerVolunteerRoute[m
+[32m+[m[32m  '/products/$slug': typeof ProductsSlugRoute[m
+   '/programs/buildspace': typeof ProgramsBuildspaceRoute[m
+   '/programs/dorahacks': typeof ProgramsDorahacksRoute[m
+   '/programs/gwy-25': typeof ProgramsGwy25Route[m
+[36m@@ -203,17 +257,23 @@[m [mexport interface FileRouteTypes {[m
+   fullPaths:[m
+     | '/'[m
+     | '/chapters'[m
+[32m+[m[32m    | '/code-of-conduct'[m
+[32m+[m[32m    | '/contact'[m
+     | '/contributors'[m
+     | '/doradao'[m
+     | '/doradao-1'[m
+[32m+[m[32m    | '/fellowship'[m
+     | '/hack-with-dora'[m
+     | '/past-initiatives'[m
+[32m+[m[32m    | '/privacy'[m
+     | '/refer'[m
+[32m+[m[32m    | '/terms'[m
+     | '/voices'[m
+     | '/partner/corporate'[m
+     | '/partner/csr'[m
+     | '/partner/ecosystem'[m
+     | '/partner/volunteer'[m
+[32m+[m[32m    | '/products/$slug'[m
+     | '/programs/buildspace'[m
+     | '/programs/dorahacks'[m
+     | '/programs/gwy-25'[m
+[36m@@ -225,17 +285,23 @@[m [mexport interface FileRouteTypes {[m
+   to:[m
+     | '/'[m
+     | '/chapters'[m
+[32m+[m[32m    | '/code-of-conduct'[m
+[32m+[m[32m    | '/contact'[m
+     | '/contributors'[m
+     | '/doradao'[m
+     | '/doradao-1'[m
+[32m+[m[32m    | '/fellowship'[m
+     | '/hack-with-dora'[m
+     | '/past-initiatives'[m
+[32m+[m[32m    | '/privacy'[m
+     | '/refer'[m
+[32m+[m[32m    | '/terms'[m
+     | '/voices'[m
+     | '/partner/corporate'[m
+     | '/partner/csr'[m
+     | '/partner/ecosystem'[m
+     | '/partner/volunteer'[m
+[32m+[m[32m    | '/products/$slug'[m
+     | '/programs/buildspace'[m
+     | '/programs/dorahacks'[m
+     | '/programs/gwy-25'[m
+[36m@@ -247,17 +313,23 @@[m [mexport interface FileRouteTypes {[m
+     | '__root__'[m
+     | '/'[m
+     | '/chapters'[m
+[32m+[m[32m    | '/code-of-conduct'[m
+[32m+[m[32m    | '/contact'[m
+     | '/contributors'[m
+     | '/doradao'[m
+     | '/doradao-1'[m
+[32m+[m[32m    | '/fellowship'[m
+     | '/hack-with-dora'[m
+     | '/past-initiatives'[m
+[32m+[m[32m    | '/privacy'[m
+     | '/refer'[m
+[32m+[m[32m    | '/terms'[m
+     | '/voices'[m
+     | '/partner/corporate'[m
+     | '/partner/csr'[m
+     | '/partner/ecosystem'[m
+     | '/partner/volunteer'[m
+[32m+[m[32m    | '/products/$slug'[m
+     | '/programs/buildspace'[m
+     | '/programs/dorahacks'[m
+     | '/programs/gwy-25'[m
+[36m@@ -270,17 +342,23 @@[m [mexport interface FileRouteTypes {[m
+ export interface RootRouteChildren {[m
+   IndexRoute: typeof IndexRoute[m
+   ChaptersRoute: typeof ChaptersRoute[m
+[32m+[m[32m  CodeOfConductRoute: typeof CodeOfConductRoute[m
+[32m+[m[32m  ContactRoute: typeof ContactRoute[m
+   ContributorsRoute: typeof ContributorsRoute[m
+   DoradaoRoute: typeof DoradaoRoute[m
+   Doradao1Route: typeof Doradao1Route[m
+[32m+[m[32m  FellowshipRoute: typeof FellowshipRoute[m
+   HackWithDoraRoute: typeof HackWithDoraRoute[m
+   PastInitiativesRoute: typeof PastInitiativesRoute[m
+[32m+[m[32m  PrivacyRoute: typeof PrivacyRoute[m
+   ReferRoute: typeof ReferRoute[m
+[32m+[m[32m  TermsRoute: typeof TermsRoute[m
+   VoicesRoute: typeof VoicesRoute[m
+   PartnerCorporateRoute: typeof PartnerCorporateRoute[m
+   PartnerCsrRoute: typeof PartnerCsrRoute[m
+   PartnerEcosystemRoute: typeof PartnerEcosystemRoute[m
+   PartnerVolunteerRoute: typeof PartnerVolunteerRoute[m
+[32m+[m[32m  ProductsSlugRoute: typeof ProductsSlugRoute[m
+   ProgramsBuildspaceRoute: typeof ProgramsBuildspaceRoute[m
+   ProgramsDorahacksRoute: typeof ProgramsDorahacksRoute[m
+   ProgramsGwy25Route: typeof ProgramsGwy25Route[m
+[36m@@ -306,6 +384,20 @@[m [mdeclare module '@tanstack/react-router' {[m
+       preLoaderRoute: typeof ChaptersRouteImport[m
+       parentRoute: typeof rootRouteImport[m
+     }[m
+[32m+[m[32m    '/code-of-conduct': {[m
+[32m+[m[32m      id: '/code-of-conduct'[m
+[32m+[m[32m      path: '/code-of-conduct'[m
+[32m+[m[32m      fullPath: '/code-of-conduct'[m
+[32m+[m[32m      preLoaderRoute: typeof CodeOfConductRouteImport[m
+[32m+[m[32m      parentRoute: typeof rootRouteImport[m
+[32m+[m[32m    }[m
+[32m+[m[32m    '/contact': {[m
+[32m+[m[32m      id: '/contact'[m
+[32m+[m[32m      path: '/contact'[m
+[32m+[m[32m      fullPath: '/contact'[m
+[32m+[m[32m      preLoaderRoute: typeof ContactRouteImport[m
+[32m+[m[32m      parentRoute: typeof rootRouteImport[m
+[32m+[m[32m    }[m
+     '/contributors': {[m
+       id: '/contributors'[m
+       path: '/contributors'[m
+[36m@@ -327,6 +419,13 @@[m [mdeclare module '@tanstack/react-router' {[m
+       preLoaderRoute: typeof Doradao1RouteImport[m
+       parentRoute: typeof rootRouteImport[m
+     }[m
+[32m+[m[32m    '/fellowship': {[m
+[32m+[m[32m      id: '/fellowship'[m
+[32m+[m[32m      path: '/fellowship'[m
+[32m+[m[32m      fullPath: '/fellowship'[m
+[32m+[m[32m      preLoaderRoute: typeof FellowshipRouteImport[m
+[32m+[m[32m      parentRoute: typeof rootRouteImport[m
+[32m+[m[32m    }[m
+     '/hack-with-dora': {[m
+       id: '/hack-with-dora'[m
+       path: '/hack-with-dora'[m
+[36m@@ -341,6 +440,13 @@[m [mdeclare module '@tanstack/react-router' {[m
+       preLoaderRoute: typeof PastInitiativesRouteImport[m
+       parentRoute: typeof rootRouteImport[m
+     }[m
+[32m+[m[32m    '/privacy': {[m
+[32m+[m[32m      id: '/privacy'[m
+[32m+[m[32m      path: '/privacy'[m
+[32m+[m[32m      fullPath: '/privacy'[m
+[32m+[m[32m      preLoaderRoute: typeof PrivacyRouteImport[m
+[32m+[m[32m      parentRoute: typeof rootRouteImport[m
+[32m+[m[32m    }[m
+     '/refer': {[m
+       id: '/refer'[m
+       path: '/refer'[m
+[36m@@ -348,6 +454,13 @@[m [mdeclare module '@tanstack/react-router' {[m
+       preLoaderRoute: typeof ReferRouteImport[m
+       parentRoute: typeof rootRouteImport[m
+     }[m
+[32m+[m[32m    '/terms': {[m
+[32m+[m[32m      id: '/terms'[m
+[32m+[m[32m      path: '/terms'[m
+[32m+[m[32m      fullPath: '/terms'[m
+[32m+[m[32m      preLoaderRoute: typeof TermsRouteImport[m
+[32m+[m[32m      parentRoute: typeof rootRouteImport[m
+[32m+[m[32m    }[m
+     '/voices': {[m
+       id: '/voices'[m
+       path: '/voices'[m
+[36m@@ -390,6 +503,13 @@[m [mdeclare module '@tanstack/react-router' {[m
+       preLoaderRoute: typeof PartnerVolunteerRouteImport[m
+       parentRoute: typeof rootRouteImport[m
+     }[m
+[32m+[m[32m    '/products/$slug': {[m
+[32m+[m[32m      id: '/products/$slug'[m
+[32m+[m[32m      path: '/products/$slug'[m
+[32m+[m[32m      fullPath: '/products/$slug'[m
+[32m+[m[32m      preLoaderRoute: typeof ProductsSlugRouteImport[m
+[32m+[m[32m      parentRoute: typeof rootRouteImport[m
+[32m+[m[32m    }[m
+     '/programs/': {[m
+       id: '/programs/'[m
+       path: '/programs'[m
+[36m@@ -438,17 +558,23 @@[m [mdeclare module '@tanstack/react-router' {[m
+ const rootRouteChildren: RootRouteChildren = {[m
+   IndexRoute: IndexRoute,[m
+   ChaptersRoute: ChaptersRoute,[m
+[32m+[m[32m  CodeOfConductRoute: CodeOfConductRoute,[m
+[32m+[m[32m  ContactRoute: ContactRoute,[m
+   ContributorsRoute: ContributorsRoute,[m
+   DoradaoRoute: DoradaoRoute,[m
+   Doradao1Route: Doradao1Route,[m
+[32m+[m[32m  FellowshipRoute: FellowshipRoute,[m
+   HackWithDoraRoute: HackWithDoraRoute,[m
+   PastInitiativesRoute: PastInitiativesRoute,[m
+[32m+[m[32m  PrivacyRoute: PrivacyRoute,[m
+   ReferRoute: ReferRoute,[m
+[32m+[m[32m  TermsRoute: TermsRoute,[m
+   VoicesRoute: VoicesRoute,[m
+   PartnerCorporateRoute: PartnerCorporateRoute,[m
+   PartnerCsrRoute: PartnerCsrRoute,[m
+   PartnerEcosystemRoute: PartnerEcosystemRoute,[m
+   PartnerVolunteerRoute: PartnerVolunteerRoute,[m
+[32m+[m[32m  ProductsSlugRoute: ProductsSlugRoute,[m
+   ProgramsBuildspaceRoute: ProgramsBuildspaceRoute,[m
+   ProgramsDorahacksRoute: ProgramsDorahacksRoute,[m
+   ProgramsGwy25Route: ProgramsGwy25Route,[m
+[1mdiff --git a/src/routes/__root.tsx b/src/routes/__root.tsx[m
+[1mindex 8892c843..447a38b4 100644[m
+[1m--- a/src/routes/__root.tsx[m
+[1m+++ b/src/routes/__root.tsx[m
+[36m@@ -90,9 +90,10 @@[m [mexport const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()([m
+       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },[m
+       {[m
+         rel: "stylesheet",[m
+[31m-        href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@500;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap",[m
+[32m+[m[32m        href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Caveat:wght@500;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500&family=Nunito:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",[m
+       },[m
+       { rel: "stylesheet", href: appCss },[m
+[32m+[m[32m      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },[m
+     ],[m
+   }),[m
+   shellComponent: RootShell,[m
+[1mdiff --git a/src/routes/doradao-1.tsx b/src/routes/doradao-1.tsx[m
+[1mindex 1eda7b0b..5bdddb27 100644[m
+[1m--- a/src/routes/doradao-1.tsx[m
+[1m+++ b/src/routes/doradao-1.tsx[m
+[36m@@ -385,7 +385,7 @@[m [mfunction DoraDAO1Page() {[m
+             </p>[m
+             <div className="mt-7 flex flex-wrap items-center justify-center gap-3">[m
+               <Link[m
+[31m-                to="/"[m
+[32m+[m[32m                to="/fellowship"[m
+                 className="inline-flex items-center gap-2 rounded-full bg-coral px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow hover:opacity-95"[m
+               >[m
+                 Apply to Fellowship 2.0 <ArrowUpRight className="h-4 w-4" />[m
+[1mdiff --git a/src/routes/doradao.tsx b/src/routes/doradao.tsx[m
+[1mindex 24712658..6bbcc421 100644[m
+[1m--- a/src/routes/doradao.tsx[m
+[1m+++ b/src/routes/doradao.tsx[m
+[36m@@ -128,7 +128,7 @@[m [mfunction DoraDAOPage() {[m
+                 Join the community <ArrowUpRight className="h-4 w-4" />[m
+               </a>[m
+               <Link[m
+[31m-                to="/"[m
+[32m+[m[32m                to="/fellowship"[m
+                 className="inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-white/80"[m
+               >[m
+                 Explore GWY Fellowship[m
+[1mdiff --git a/src/routes/index.tsx b/src/routes/index.tsx[m
+[1mindex 35017e83..471fef5a 100644[m
+[1m--- a/src/routes/index.tsx[m
+[1m+++ b/src/routes/index.tsx[m
+[36m@@ -1,824 +1,59 @@[m
+[31m-import { createFileRoute, Link } from "@tanstack/react-router";[m
+[31m-import heroBeach from "@/assets/hero-beach.webp";[m
+[31m-import hackCollage from "@/assets/hack-collage.webp";[m
+[31m-import * as React from "react";[m
+[31m-import { ScrollToTop } from "@/components/ScrollToTop";[m
+[31m-import { SpeakersShowcase } from "@/components/SpeakersShowcase";[m
+[31m-import { SponsorsSection } from "@/components/SponsorsCarousel";[m
+[31m-import { ChevronDown, Star, Lightbulb, Users } from "lucide-react";[m
+[31m-import { speakerGrads, homeSpeakers, allSpeakers, getInitials, pastSponsors } from "@/lib/voices";[m
+[31m-import { CursorTrail } from "@/components/CursorTrail";[m
+[31m-import { Countdown } from "@/components/Countdown";[m
+[31m-import { SiteNav } from "@/components/SiteNav";[m
+[31m-import { SiteFooter } from "@/components/SiteFooter";[m
+[31m-import { ApplyBar } from "@/components/ApplyBar";[m
+[31m-import {[m
+[31m-  Sparkles,[m
+[31m-  ArrowUpRight,[m
+[31m-  ArrowRight,[m
+[31m-  Sun,[m
+[31m-  Moon,[m
+[31m-  Calendar,[m
+[31m-  MapPin,[m
+[31m-  Globe,[m
+[31m-  Flower2,[m
+[31m-  Mic,[m
+[31m-  Gift,[m
+[31m-  Rocket,[m
+[31m-  Heart,[m
+[31m-  Wand2,[m
+[31m-  Trophy,[m
+[31m-  Code2,[m
+[31m-  Megaphone,[m
+[31m-  PenTool,[m
+[31m-  Briefcase,[m
+[31m-  Palette,[m
+[31m-  DollarSign,[m
+[31m-  Zap,[m
+[31m-} from "lucide-react";[m
+[32m+[m[32mimport { createFileRoute } from "@tanstack/react-router";[m
+[32m+[m[32mimport { Navbar } from "@/components/dora/Navbar";[m
+[32m+[m[32mimport { Hero } from "@/components/dora/Hero";[m
+[32m+[m[32mimport { About } from "@/components/dora/About";[m
+[32m+[m[32m// import { WorldMap } from "@/components/dora/WorldMap";[m
+[32m+[m[32mimport { TourMapSection } from "@/components/dora/TourMapSection";[m
+[32m+[m[32mimport { Programs } from "@/components/dora/Programs";[m
+[32m+[m[32mimport { Testimonials } from "@/components/dora/Testimonials";[m
+[32m+[m[32mimport { Sessions } from "@/components/dora/Sessions";[m
+[32m+[m[32mimport { Products } from "@/components/dora/Products";[m
+[32m+[m[32mimport { Island } from "@/components/dora/Island";[m
+[32m+[m[32mimport { ImportantDays } from "@/components/dora/ImportantDays";[m
+[32m+[m[32mimport { Faq } from "@/components/dora/Faq";[m
+[32m+[m[32mimport { Footer } from "@/components/dora/Footer";[m
+[32m+[m[32mimport { FindYourPlace } from "@/components/dora/FindYourPlace";[m
+[32m+[m[32mimport { UpcomingEvents } from "@/components/dora/UpcomingEvents";[m
+[32m+[m[32mimport { WorkWithUs } from "@/components/dora/WorkWithUs";[m
+[32m+[m
+[32m+[m[32mconst title = "Dora DAO — A global community of builders";[m
+[32m+[m[32mconst description = "Dora DAO is a global, member-owned community: programs, sessions, products, GWY Island and more.";[m
+ [m
+ export const Route = createFileRoute("/")({[m
+   head: () => ({[m
+     meta: [[m
+[31m-      { title: "GWY Fellowship 2.0 — Girls Who Yap × AI" },[m
+[31m-      {[m
+[31m-        name: "description",[m
+[31m-        content:[m
+[31m-          "A women-first, creator-led 4-week fellowship demystifying AI. Build, yap, ship & earn. Applications close July 15.",[m
+[31m-      },[m
+[31m-      { property: "og:title", content: "GWY Fellowship 2.0" },[m
+[31m-      {[m
+[31m-        property: "og:description",[m
+[31m-        content:[m
+[31m-          "Soft skies. Bold algorithms. Join the Girls Who Yap Fellowship — creators, builders, PMs, marketers welcome.",[m
+[31m-      },[m
+[31m-      { property: "og:image", content: heroBeach },[m
+[32m+[m[32m      { title },[m
+[32m+[m[32m      { name: "description", content: description },[m
+[32m+[m[32m      { property: "og:title", content: title },[m
+[32m+[m[32m      { property: "og:description", content: description },[m
+[32m+[m[32m      { property: "og:type", content: "website" },[m
+       { name: "twitter:card", content: "summary_large_image" },[m
+[31m-      { name: "twitter:image", content: heroBeach },[m
+     ],[m
+   }),[m
+[31m-  component: Landing,[m
+[32m+[m[32m  component: Home,[m
+ });[m
+ [m
+[31m-const partners = [[m
+[31m-  "DoraDAO", "Open to All", "Creators", "Developers", "Designers", "Founders", [m
+[31m-  "Vibe Coders", "Indie Hackers", "Startup Builders", "Agentic Labs", "Marketers",[m
+[31m-];[m
+[31m-[m
+[31m-const roles = [[m
+[31m-  { i: PenTool, t: "Creators" },[m
+[31m-  { i: Code2, t: "Builders" },[m
+[31m-  { i: Briefcase, t: "PMs" },[m
+[31m-  { i: Megaphone, t: "Marketers" },[m
+[31m-  { i: Palette, t: "Designers" },[m
+[31m-  { i: Wand2, t: "AI-curious" },[m
+[31m-];[m
+[31m-[m
+[31m-const weeks = [[m
+[31m-  { w: "Week 01", t: "Tune in", d: "Live yap sessions with founders & researchers." },[m
+[31m-  { w: "Week 02", t: "Build out loud", d: "Ship demos. Post threads. Bounties drop." },[m
+[31m-  { w: "Week 03", t: "DoraHack", d: "A 72 hour sprint — ship products, not projects." },[m
+[31m-  { w: "Week 04", t: "Launch & land", d: "Product Hunt day, IRL VC nights, Dora Delight." },[m
+[31m-];[m
+[31m-[m
+[31m-const stats = [[m
+[31m-  { k: "3M+", v: "reach" },[m
+[31m-  { k: "40K+", v: "community" },[m
+[31m-  { k: "10K+", v: "creators" },[m
+[31m-  { k: "30+", v: "events" },[m
+[31m-];[m
+[31m-[m
+[31m-[m
+[31m-const peek = [[m
+[31m-  {[m
+[31m-    cap: "Web3 Meetup",[m
+[31m-    grad: "from-[oklch(0.78_0.2_40)] to-[oklch(0.55_0.18_20)]",[m
+[31m-    emoji: "🤝",[m
+[31m-    img: "/peek/w3m.webp",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    cap: "DoraDelight Treat",[m
+[31m-    grad: "from-[oklch(0.88_0.12_50)] to-[oklch(0.72_0.2_25)]",[m
+[31m-    emoji: "🍦",[m
+[31m-    img: "/peek/Doradelight2.webp",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    cap: "Graduation Ceremony",[m
+[31m-    grad: "from-[oklch(0.7_0.2_320)] to-[oklch(0.45_0.15_290)]",[m
+[31m-    emoji: "🎓",[m
+[31m-    img: "/peek/grad.webp",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    cap: "GWY Conf",[m
+[31m-    grad: "from-[oklch(0.75_0.18_350)] to-[oklch(0.5_0.18_320)]",[m
+[31m-    emoji: "🎙️",[m
+[31m-    img: "/peek/gwy_conf.webp",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    cap: "GWY Night Camp Party",[m
+[31m-    grad: "from-[oklch(0.88_0.12_25)] to-[oklch(0.72_0.18_350)]",[m
+[31m-    emoji: "🏕️",[m
+[31m-    img: "/peek/night_camp.webp",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    cap: "Closing Ceremony",[m
+[31m-    grad: "from-[oklch(0.75_0.18_350)] to-[oklch(0.6_0.2_320)]", [m
+[31m-    emoji: "💖",[m
+[31m-    img: "/peek/closing.webp",[m
+[31m-  }[m
+[31m-];[m
+[31m-[m
+[31m-[m
+[31m-const speakers = homeSpeakers;[m
+[31m-[m
+[31m-const partnersList = [[m
+[31m-  { n: "DoraDAO", kind: "Company" },[m
+[31m-  { n: "OpenLab", kind: "Community" },[m
+[31m-  { n: "NovaAgents", kind: "Company" },[m
+[31m-  { n: "ToolForge", kind: "Community" },[m
+[31m-  { n: "ShipWeekly", kind: "Company" },[m
+[31m-  { n: "Anthropic", kind: "Company" },[m
+[31m-  { n: "Beach Capital", kind: "Investor" },[m
+[31m-  { n: "Yappers.ai", kind: "Community" },[m
+[31m-  { n: "Agentic Labs", kind: "Company" },[m
+[31m-  { n: "PalmStack", kind: "Community" },[m
+[31m-];[m
+[31m-[m
+[31m-const socials = [[m
+[31m-  // { label: "Discord", href: "https://discord.gg/CRaEtrtZ2v" },[m
+[31m-  { label: "Twitter", href: "https://x.com/connectdoradao" },[m
+[31m-  { label: "Instagram", href: "https://www.instagram.com/connectdoradao/" },[m
+[31m-  { label: "LinkedIn", href: "https://www.linkedin.com/company/doradao/" },[m
+[31m-  { label: "Luma", href: "https://lu.ma/connectdoradao" },[m
+[31m-];[m
+[31m-[m
+[31m-[m
+[31m-const timelineEvents = [[m
+[31m-  { date: "3rd June", title: "Applications Open", desc: "GWY Fellowship Application Registration Open" },[m
+[31m-  { date: "15th June", title: "Applications under Review", desc: "Applications are reviewed by our selection committee" },[m
+[31m-  { date: "15th July", title: "Application Close", desc: "The final cohort gets selected based on creativity, ideas and builder energy" },[m
+[31m-  { date: "25th July", title: "Fellowship Kickoff", desc: "Founder-led sessions, creator talks, weekly challenges and hands-on learning begin" },[m
+[31m-  { date: "5th-8th Aug", title: "DoraHack 2.0", desc: "Build, ship and Launch on Product Hunt, Peerlist etc. User Acquisition Challenges" },[m
+[31m-  { date: "25th Aug", title: "Surprise", desc: "To be revealed soon" },[m
+[31m-  { date: "31st Aug", title: "Graduation", desc: "Showcase your products, celebrate your journey and launch your ideas into the world" },[m
+[31m-];[m
+[31m-[m
+[31m-[m
+[31m-const faqs = [[m
+[31m-  { q: "Who is this fellowship for?", a: "Creators, builders, product managers, marketers — anyone who wants to play with AI. No prior ML background needed; curiosity and consistency matter more." },[m
+[31m-  { q: "Is it really free?", a: "Yes. The fellowship is fully sponsored by our partners. You only invest your time and energy." },[m
+[31m-  // { q: "How much time should I commit?", a: "Plan for ~6–8 hours a week across live sessions, building, and yapping." },[m
+[31m-  { q: "Is it virtual or in-person?", a: "The 4-week program is fully virtual so anyone, anywhere can join." },[m
+[31m-  { q: "How many hours a week should I set aside?", a: "Plan for around 4–5 hours a week — covering live sessions, building time, and any bounty or challenge work you want to take on." },[m
+[31m-  { q: "Are sessions live or recorded?", a: "Sessions are live. Recordings are made available afterward so you can catch up if something comes up." },[m
+[31m-  { q: "What time are the sessions held?", a: "Most sessions are scheduled in the evening IST (7–9 PM). Each session runs approximately 45–70 minutes." },[m
+[31m-  { q: "Is attendance mandatory for every event?", a: "It's flexible. We'd love to see you show up live, but we understand life happens — recordings mean you won't miss the content." }, { q: "Do I need a project idea before applying?", a: "Nope. You'll explore problem spaces in week 1 and lock your build by week 2 with mentor help." },[m
+[31m-  { q: "Can men or non-binary folks apply?", a: "GWY is women-first and centers women & non-binary creators. Allies can join as mentors, speakers and supporters." },[m
+[31m-  { q: "What happens after the fellowship?", a: "You join the alumni circle with continued access to mentors, future grants, hackathons, and speaker opportunities." },[m
+[31m-] as const;[m
+[31m-[m
+[31m-function Chapter({[m
+[31m-  kicker, title, children, dark = false, id, wide = false,[m
+[31m-}: {[m
+[31m-  kicker: string; title: React.ReactNode;[m
+[31m-  children: React.ReactNode; dark?: boolean; id?: string; wide?: boolean;[m
+[31m-}) {[m
+[31m-  return ([m
+[31m-    <section id={id} className={`relative mx-auto ${wide ? "w-[min(96%,1200px)]" : "w-[min(94%,1100px)]"} py-8 md:py-12`}>[m
+[31m-      <div className={`${dark ? "chapter-glass-dark" : "chapter-glass"} px-6 md:px-12 py-8 md:py-12`}>[m
+[31m-        <div className="flex items-center gap-3">[m
+[31m-          <span className="horizon-line flex-1" />[m
+[31m-          <span className="chapter-num whitespace-nowrap">✿ {kicker} ✿</span>[m
+[31m-          <span className="horizon-line flex-1" />[m
+[31m-        </div>[m
+[31m-        <h2 className={`mt-5 font-display font-bold text-3xl md:text-5xl leading-[1.05] max-w-3xl ${dark ? "text-white" : ""}`}>[m
+[31m-          {title}[m
+[31m-        </h2>[m
+[31m-        <div className="mt-8">{children}</div>[m
+[31m-      </div>[m
+[31m-    </section>[m
+[31m-  );[m
+[31m-}[m
+[31m-[m
+[31m-function SkyDecor() {[m
+[31m-  // Continuous sunset beach storyline — sky glows + floating beach props[m
+[32m+[m[32mfunction Home() {[m
+   return ([m
+[31m-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">[m
+[31m-      <div className="absolute left-1/2 top-[7vh] -translate-x-1/2 h-64 w-64 rounded-full bg-[radial-gradient(circle,oklch(0.92_0.18_60/0.7),transparent_70%)] blur-2xl" />[m
+[31m-      <div className="absolute -right-32 top-[40vh] h-96 w-96 rounded-full bg-[radial-gradient(circle,oklch(0.7_0.22_15/0.45),transparent_70%)] blur-3xl" />[m
+[31m-      <div className="absolute -left-32 top-[70vh] h-96 w-96 rounded-full bg-[radial-gradient(circle,oklch(0.55_0.2_320/0.45),transparent_70%)] blur-3xl" />[m
+[31m-      <div className="absolute left-1/3 bottom-[8vh] h-80 w-80 rounded-full bg-[radial-gradient(circle,oklch(0.85_0.18_50/0.5),transparent_70%)] blur-3xl" />[m
+[31m-    </div>[m
+[31m-  );[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-function Stars() {[m
+[31m-  // sparse stars over the twilight/night band[m
+[31m-  const stars = Array.from({ length: 26 }, (_, i) => i);[m
+[31m-  return ([m
+[31m-    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>[m
+[31m-      {stars.map((i) => {[m
+[31m-        const left = (i * 137) % 100;[m
+[31m-        const top = (i * 53) % 100;[m
+[31m-        const size = 2 + (i % 3);[m
+[31m-        const delay = (i % 7) * 0.4;[m
+[31m-        return ([m
+[31m-          <span[m
+[31m-            key={i}[m
+[31m-            className="absolute rounded-full bg-white animate-twinkle"[m
+[31m-            style={{[m
+[31m-              left: `${left}%`,[m
+[31m-              top: `${top}%`,[m
+[31m-              width: size,[m
+[31m-              height: size,[m
+[31m-              animationDelay: `${delay}s`,[m
+[31m-              boxShadow: "0 0 6px oklch(1 0 0 / 0.9)",[m
+[31m-            }}[m
+[31m-          />[m
+[31m-        );[m
+[31m-      })}[m
+[31m-    </div>[m
+[31m-  );[m
+[31m-}[m
+[31m-[m
+[31m-function Landing() {[m
+[31m-  return ([m
+[31m-    <div className="relative min-h-screen overflow-hidden bg-journey text-foreground">[m
+[31m-      <CursorTrail />[m
+[31m-      <SkyDecor />[m
+[31m-[m
+[31m-      <div className="relative z-10">[m
+[31m-        {/* hero-scoped beach decor lives inside the hero card below */}[m
+[31m-[m
+[31m-        <SiteNav active="fellowship" />[m
+[31m-[m
+[31m-        {/* HERO */}[m
+[31m-        <section id="top" className="relative mx-auto w-[min(94%,1100px)] mt-6">[m
+[31m-          <div className="relative overflow-hidden rounded-[2rem] shadow-card">[m
+[31m-            <img[m
+[31m-              src={heroBeach}[m
+[31m-              alt="Pink sunset beach"[m
+[31m-              width={1920} height={1080}[m
+[31m-              className="absolute inset-0 h-full w-full object-cover"[m
+[31m-            />[m
+[31m-            <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 via-transparent to-foreground/55" />[m
+[31m-[m
+[31m-            <div className="relative px-6 pt-24 pb-10 md:px-12 md:pt-36 md:pb-14 min-h-[80svh] flex flex-col justify-end">[m
+[31m-              <span className="font-hand text-3xl md:text-5xl text-[oklch(0.95_0.15_95)] drop-shadow-[0_2px_8px_oklch(0.3_0.1_30/0.6)]">[m
+[31m-                hey bestie <Flower2 className="inline h-6 w-6 md:h-8 md:w-8" />[m
+[31m-              </span>[m
+[31m-              <h1 className="mt-3 font-display font-extrabold text-white leading-[0.95] tracking-tight text-[clamp(2.6rem,8vw,6.2rem)] drop-shadow-[0_4px_20px_oklch(0.2_0.1_30/0.5)]">[m
+[31m-                Girls Who <br className="hidden sm:block" />[m
+[31m-                Yap{" "}[m
+[31m-                <span className="inline-flex items-end align-baseline">[m
+[31m-                  <span className="bg-coral text-primary-foreground px-4 py-0 rounded-[1.5rem] shadow-glow rotate-[-1deg] inline-block">[m
+[31m-                    Fellowship 2.0[m
+[31m-                  </span>[m
+[31m-                </span>[m
+[31m-              </h1>[m
+[31m-              <p className="mt-5 max-w-xl text-white/95 text-base md:text-lg drop-shadow-[0_2px_8px_oklch(0.2_0.1_30/0.6)]">[m
+[31m-                A 4-week women-first cohort to play with AI, ship in public, and find your people.[m
+[31m-              </p>[m
+[31m-[m
+[31m-              <div className="mt-6 flex flex-wrap items-center gap-2.5 text-xs text-white">[m
+[31m-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/30 px-3 py-1.5">[m
+[31m-                  <Calendar className="h-3.5 w-3.5" /> 4 weeks[m
+[31m-                </span>[m
+[31m-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/30 px-3 py-1.5">[m
+[31m-                  <Globe className="h-3.5 w-3.5" /> Virtual + IRL[m
+[31m-                </span>[m
+[31m-[m
+[31m-              </div>[m
+[31m-[m
+[31m-              <div className="mt-6 flex flex-wrap items-center gap-3">[m
+[31m-                <a[m
+[31m-                  href="https://luma.com/1o24ny1d" target="_blank" rel="noreferrer"[m
+[31m-                  className="inline-flex items-center gap-2 rounded-full bg-coral text-primary-foreground shadow-glow hover:scale-[1.03] transition px-6 py-3 text-sm font-semibold"[m
+[31m-                >[m
+[31m-                  Apply now <ArrowRight className="h-4 w-4" />[m
+[31m-                </a>[m
+[31m-                <Countdown />[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-          </div>[m
+[31m-        </section>[m
+[31m-[m
+[31m-        {/* PARTNERS MARQUEE — the horizon strip */}[m
+[31m-        <section className="relative mt-6 overflow-hidden">[m
+[31m-          <div className="mx-auto w-[min(94%,1100px)] mb-2 text-[10px] uppercase tracking-[0.3em] text-foreground/55 font-semibold">[m
+[31m-            ✿ your roles, your people, your playground ✿[m
+[31m-          </div>[m
+[31m-          <div className="flex animate-marquee whitespace-nowrap gap-10 py-3">[m
+[31m-            {[...partners, ...partners, ...partners].map((p, i) => ([m
+[31m-              <span key={i} className="font-display font-semibold text-xl md:text-2xl text-foreground/70">[m
+[31m-                {p} <span className="text-coral mx-2">✿</span>[m
+[31m-              </span>[m
+[31m-            ))}[m
+[31m-          </div>[m
+[31m-        </section>[m
+[31m-[m
+[31m-        {/* INVITE — Who's invited */}[m
+[31m-        <Chapter[m
+[31m-          id="story"[m
+[31m-          kicker="the invite"[m
+[31m-          title={<>Anyone who wants to <span className="text-coral">play with AI</span>.</>}[m
+[31m-        >[m
+[31m-          <p className="text-foreground/75 text-base md:text-lg max-w-xl">[m
+[31m-            Creators, builders, PMs, marketers, designers — if you're curious about AI and ready to yap, you're in.[m
+[31m-          </p>[m
+[31m-          <div className="mt-7 flex flex-wrap gap-2">[m
+[31m-            {roles.map((r) => ([m
+[31m-              <span key={r.t} className="inline-flex items-center gap-2 rounded-full bg-white/70 border border-white/80 px-4 py-2 text-sm font-medium">[m
+[31m-                <r.i className="h-3.5 w-3.5 text-coral" /> {r.t}[m
+[31m-              </span>[m
+[31m-            ))}[m
+[31m-          </div>[m
+[31m-        </Chapter>[m
+[31m-[m
+[31m-        {/* FELLOWSHIP — what it is + this year's shape (2 columns) */}[m
+[31m-        <Chapter[m
+[31m-          kicker="the fellowship"[m
+[31m-          wide[m
+[31m-          title={<>The GWY <span className="text-coral">Fellowship</span>.</>}[m
+[31m-        >[m
+[31m-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">[m
+[31m-            <div>[m
+[31m-              <span className="chapter-num">what it is</span>[m
+[31m-              <h3 className="mt-3 font-display font-semibold text-2xl md:text-3xl leading-tight">[m
+[31m-                A women-first cohort to demystify AI — together, out loud.[m
+[31m-              </h3>[m
+[31m-              <p className="mt-4 text-foreground/75 text-base leading-relaxed">[m
+[31m-                GWY Fellowship is a community-led program by Girls Who Yap × DoraDAO. We pair[m
+[31m-                hands-on AI experiments with public storytelling — so you don't just learn the[m
+[31m-                tools, you build a body of work and a circle of friends shipping alongside you.[m
+[31m-              </p>[m
+[31m-              <p className="mt-3 text-foreground/75 text-base leading-relaxed">[m
+[31m-                Cohort 2.0 runs across <strong>sessions </strong>, Open to creators, builders, PMs, marketers and designers —[m
+[31m-                anyone ready to play.[m
+[31m-              </p>[m
+[31m-              <div className="mt-5 flex flex-wrap gap-2 text-xs text-foreground/70">[m
+[31m-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/60 border border-white/70 px-3 py-1.5"><Calendar className="h-3.5 w-3.5 text-coral"/> 4 weeks</span>[m
+[31m-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/60 border border-white/70 px-3 py-1.5"><Globe className="h-3.5 w-3.5 text-coral"/> Virtual</span>[m
+[31m-                {/* <span className="inline-flex items-center gap-1.5 rounded-full bg-white/60 border border-white/70 px-3 py-1.5"><MapPin className="h-3.5 w-3.5 text-coral"/> Finale · Delhi</span> */}[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-            <div>[m
+[31m-              <span className="chapter-num">this year, week by week</span>[m
+[31m-              <div className="mt-3 grid sm:grid-cols-2 gap-3">[m
+[31m-                {weeks.map((w, i) => ([m
+[31m-                  <div key={w.t} className="flex gap-3 p-4 rounded-2xl bg-white/65 border border-white/80 shadow-soft">[m
+[31m-                    <div className="shrink-0 h-9 w-9 rounded-full bg-coral grid place-items-center text-primary-foreground shadow-glow font-mono text-[11px]">[m
+[31m-                      0{i + 1}[m
+[31m-                    </div>[m
+[31m-                    <div>[m
+[31m-                      <div className="text-[10px] uppercase tracking-widest text-foreground/50 font-mono">{w.w}</div>[m
+[31m-                      <div className="font-display font-semibold text-base mt-0.5">{w.t}</div>[m
+[31m-                      <div className="text-xs text-foreground/70 mt-1 leading-snug">{w.d}</div>[m
+[31m-                    </div>[m
+[31m-                  </div>[m
+[31m-                ))}[m
+[31m-              </div>[m
+[31m-              <div className="mt-4 flex flex-wrap gap-x-3 gap-y-1.5 text-xs text-foreground/65">[m
+[31m-                <span className="inline-flex items-center gap-1.5"><Mic className="h-3.5 w-3.5 text-coral"/> Weekly yap sessions</span>[m
+[31m-                <span className="inline-flex items-center gap-1.5"><DollarSign className="h-3.5 w-3.5 text-coral"/> Bounties</span>[m
+[31m-                <span className="inline-flex items-center gap-1.5"><Heart className="h-3.5 w-3.5 text-coral"/> Dora Delight</span>[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-          </div>[m
+[31m-        </Chapter>[m
+[31m-[m
+[31m-        {/* WHAT YOU'LL GET — tangible outcomes */}[m
+[31m-        <Chapter[m
+[31m-          kicker="what you'll actually get"[m
+[31m-          title={<>Not just learning. <span className="text-coral">Real outcomes.</span></>}[m
+[31m-        >[m
+[31m-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">[m
+[31m-            {[[m
+[31m-              {  title: "A certificate", body: "Something you can actually show off." },[m
+[31m-              {  title: "Bounties & earning", body: "Create + get paid. Real opportunities to earn while you build." },[m
+[31m-              {  title: "A strong network", body: "People you'll keep building with long after the cohort ends." },[m
+[31m-              {  title: "Exclusive merch", body: "Because you earned it. Not everyone gets this." },[m
+[31m-              {  title: "Dora Delight Treat", body: "Our signature ritual. You'll never forget this." },[m
+[31m-            ].map((item) => ([m
+[31m-              <div[m
+[31m-                key={item.title}[m
+[31m-                className="flex flex-col gap-3 rounded-2xl bg-white/65 border border-white/80 shadow-soft p-5 hover:-translate-y-1 transition"[m
+[31m-              >[m
+[31m-                <span className="text-3xl">{item.emoji}</span>[m
+[31m-                <div>[m
+[31m-                  <div className="font-display font-semibold text-base">{item.title}</div>[m
+[31m-                  <div className="text-sm text-foreground/70 mt-1 leading-snug">{item.body}</div>[m
+[31m-                </div>[m
+[31m-              </div>[m
+[31m-            ))}[m
+[31m-          </div>[m
+[31m-        </Chapter>[m
+[31m-[m
+[31m-        {/* HACKATHON — DoraHack 2.0 (dark, split layout) */}[m
+[31m-        <section id="hack" className="relative">[m
+[31m-          <Stars />[m
+[31m-          <Chapter[m
+[31m-            kicker="---all girls hackathon---"[m
+[31m-            dark[m
+[31m-            wide[m
+[31m-            title={<> <span className="text-coral">Dora Hack 2.0</span> </>}[m
+[31m-          >[m
+[31m-            <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">[m
+[31m-              <div className="relative">[m
+[31m-                <div className="relative overflow-hidden rounded-3xl shadow-glow border border-white/15">[m
+[31m-                  <img[m
+[31m-                    src={hackCollage}[m
+[31m-                    alt="Women building together at a sunset beach hackathon"[m
+[31m-                    width={1024} height={1024} loading="lazy"[m
+[31m-                    className="w-full h-auto object-cover"[m
+[31m-                  />[m
+[31m-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />[m
+[31m-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-white/90 font-mono">[m
+[31m-                    <span className="rounded-full bg-white/15 backdrop-blur px-2.5 py-1 border border-white/20">building · cohort 2.0</span>[m
+[31m-                    <span className="rounded-full bg-coral text-primary-foreground px-2.5 py-1 shadow-glow">72-hour sprint</span>[m
+[31m-                  </div>[m
+[31m-                </div>[m
+[31m-                <div className="mt-3 grid grid-cols-3 gap-2 text-[10px] text-white/70 font-mono uppercase tracking-widest">[m
+[31m-                  <span className="rounded-xl bg-white/10 border border-white/15 px-2 py-2 text-center">✿ ship</span>[m
+[31m-                  <span className="rounded-xl bg-white/10 border border-white/15 px-2 py-2 text-center">✿ launch</span>[m
+[31m-                  <span className="rounded-xl bg-white/10 border border-white/15 px-2 py-2 text-center">✿ celebrate</span>[m
+[31m-                </div>[m
+[31m-              </div>[m
+[31m-              <div>[m
+[31m-                <p className="text-white/80 max-w-md">[m
+[31m-                  A 72 hour women-first build sprint inside the cohort. Form pods, ship on Product Hunt,[m
+[31m-                  hype each other's launches — and win chunky prizes.[m
+[31m-                </p>[m
+[31m-                <ul className="mt-5 space-y-2.5">[m
+[31m-                  {[[m
+[31m-                    { i: Trophy, t: "Open tracks", d: "Agents, tools, content, commerce — anything useful." },[m
+[31m-                    { i: Zap, t: "Product Hunt launch day", d: "We ship together. Threads, demos, comments — full hype mode." },[m
+[31m-                    { i: Gift, t: "Prizes & perks", d: "Cash, credits, creator perks — partners stack soon." },[m
+[31m-                    { i: Heart, t: "Mentor office hours", d: "Founders & engineers on-call across the 7 days." },[m
+[31m-                  ].map((d) => ([m
+[31m-                    <li key={d.t} className="flex gap-3 rounded-2xl bg-white/10 border border-white/15 p-4">[m
+[31m-                      <div className="shrink-0 h-9 w-9 rounded-full bg-coral grid place-items-center text-primary-foreground shadow-glow">[m
+[31m-                        <d.i className="h-4 w-4" />[m
+[31m-                      </div>[m
+[31m-                      <div>[m
+[31m-                        <div className="font-display font-semibold text-base text-white">{d.t}</div>[m
+[31m-                        <div className="text-xs text-white/70 mt-0.5 leading-snug">{d.d}</div>[m
+[31m-                      </div>[m
+[31m-                    </li>[m
+[31m-                  ))}[m
+[31m-                </ul>[m
+[31m-                <div className="mt-6 flex flex-wrap gap-3">[m
+[31m-                  <a[m
+[31m-                    href="https://luma.com/1o24ny1d" target="_blank" rel="noreferrer"[m
+[31m-                    className="inline-flex items-center gap-2 rounded-full bg-coral text-primary-foreground shadow-glow hover:scale-[1.03] transition px-6 py-3 text-sm font-semibold"[m
+[31m-                  >[m
+[31m-                    Register for DoraHack <ArrowRight className="h-4 w-4" />[m
+[31m-                  </a>[m
+[31m-                  <a[m
+[31m-                    href="/hack-with-dora"[m
+[31m-                    className="inline-flex items-center gap-2 rounded-full bg-coral text-primary-foreground shadow-glow hover:scale-[1.03] transition px-6 py-3 text-sm font-semibold"[m
+[31m-                  >[m
+[31m-                    More About Hackathon <ArrowRight className="h-4 w-4" />[m
+[31m-                  </a>[m
+[31m-                </div>[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-          </Chapter>[m
+[31m-        </section>[m
+[31m-[m
+[31m-        {/* CHAPTER 04 — Numbers from last year (still dark — depth of night) */}[m
+[31m-        <Chapter[m
+[31m-          kicker="last year, by the numbers"[m
+[31m-          dark[m
+[31m-          title={<>A year of <span className="text-coral">loud beginnings</span>.</>}[m
+[31m-        >[m
+[31m-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">[m
+[31m-            {stats.map((s) => ([m
+[31m-              <div key={s.v}>[m
+[31m-                <div className="font-display font-bold text-4xl md:text-6xl text-coral leading-none">{s.k}</div>[m
+[31m-                <div className="mt-2 text-xs uppercase tracking-widest text-white/65 font-mono">{s.v}</div>[m
+[31m-              </div>[m
+[31m-            ))}[m
+[31m-          </div>[m
+[31m-          <p className="mt-8 text-white/70 max-w-xl text-sm">[m
+[31m-            280+ institutional collabs · 10K+ curated posts in &lt;1 year · 10+ APAC countries plus India, USA &amp; EMEA · one flagship Women-in-Tech conference.[m
+[31m-          </p>[m
+[31m-        </Chapter>[m
+[31m-[m
+[31m-        {/* PEEK — moments band (still in night, transitioning) */}[m
+[31m-        <section className="relative overflow-hidden py-12">[m
+[31m-          <div className="mx-auto w-[min(94%,1100px)] mb-6">[m
+[31m-            <span className="chapter-num text-white/70">interlude · moments</span>[m
+[31m-            <h3 className="mt-2 font-display font-bold text-2xl md:text-3xl text-white max-w-xl">[m
+[31m-              Snapshots from <span className="text-coral">our members</span>.[m
+[31m-            </h3>[m
+[31m-          </div>[m
+[31m-          <div className="space-y-4">[m
+[31m-            {[0, 1].map((row) => ([m
+[31m-              <div[m
+[31m-                key={row}[m
+[31m-                className="flex gap-4 animate-marquee whitespace-nowrap"[m
+[31m-                style={row % 2 === 1 ? { animationDirection: "reverse" } : undefined}[m
+[31m-              >[m
+[31m-                {[...peek, ...peek, ...peek].map((p, i) => ([m
+[31m-                  <div[m
+[31m-                      key={`${row}-${i}`}[m
+[31m-                      className="group relative h-36 w-56 md:h-44 md:w-72 shrink-0 overflow-hidden rounded-2xl shadow-card bg-gradient-to-br"[m
+[31m-                    >[m
+[31m-                    {p.img && ([m
+[31m-                      <img[m
+[31m-                        src={p.img}[m
+[31m-                        alt={p.cap}[m
+[31m-                        className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition"[m
+[31m-                      />[m
+[31m-                    )}[m
+[31m-                    {/* <div className="absolute inset-0 grid-lines opacity-30" /> */}[m
+[31m-                    <div className="absolute top-3 left-3 text-3xl md:text-4xl drop-shadow-lg">{p.emoji}</div>[m
+[31m-                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />[m
+[31m-                    <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between">[m
+[31m-                      <span className="rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-semibold text-foreground truncate">[m
+[31m-                        {p.cap}[m
+[31m-                      </span>[m
+[31m-                      <ArrowUpRight className="h-3.5 w-3.5 text-white shrink-0 ml-2" />[m
+[31m-                    </div>[m
+[31m-                  </div>[m
+[31m-                ))}[m
+[31m-              </div>[m
+[31m-            ))}[m
+[31m-          </div>[m
+[31m-        </section>[m
+[31m-[m
+[31m-        {/* CHAPTER 05 — Voices (dark, approaching dawn) */}[m
+[31m-        <Chapter[m
+[31m-          id="speakers"[m
+[31m-          kicker="the voices"[m
+[31m-          dark[m
+[31m-          title={<>Speakers &amp; <span className="text-coral">mentors</span>.</>}[m
+[31m-        >[m
+[31m-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">[m
+[31m-            {speakers.map((s, i) => {[m
+[31m-              return ([m
+[31m-                  <a[m
+[31m-                    key={s.n} href="/voices"[m
+[31m-                    className="group rounded-2xl bg-white/10 border border-white/15 p-4 transition-all duration-300 hover:-translate-y-2 hover:bg-white/15 shadow-soft hover:shadow-glow animate-fade-in"[m
+[31m-                    style={{ animationDelay: `${i * 0.05}s` }}[m
+[31m-                  >[m
+[31m-                    <div className={`aspect-square rounded-xl bg-gradient-to-br ${speakerGrads[i % speakerGrads.length]} grid place-items-center text-white font-display text-3xl font-bold shadow-glow relative overflow-hidden group-hover:scale-105 transition-transform duration-300`}>[m
+[31m-                      {s.img ? ([m
+[31m-                      <img[m
+[31m-                        src={s.img}[m
+[31m-                        alt={s.n}[m
+[31m-                        className="absolute inset-0 w-full h-full object-cover object-top"[m
+[31m-                      />[m
+[31m-                    ) : ([m
+[31m-                      <>[m
+[31m-                      <div className="absolute inset-0 grid-lines opacity-25" />[m
+[31m-                      <span className="relative drop-shadow-md">{getInitials(s.n)}</span>[m
+[31m-                       </>[m
+[31m-                    )}[m
+[31m-                    </div>[m
+[31m-                    <div className="mt-3 flex items-center justify-between text-[10px] text-white/50 font-mono">[m
+[31m-                      <span>#0{i + 1}</span>[m
+[31m-                      <ArrowUpRight className="h-3.5 w-3.5 group-hover:text-coral group-hover:rotate-45 transition-all duration-300" />[m
+[31m-                    </div>[m
+[31m-                    <div className="mt-0.5 font-display font-semibold text-sm text-white group-hover:text-coral transition-colors">{s.n}</div>[m
+[31m-                    <div className="text-xs text-white/65">{s.r}</div>[m
+[31m-                  </a>[m
+[31m-                );[m
+[31m-            })}[m
+[31m-          </div>[m
+[31m-          <div className="mt-8">[m
+[31m-            <a[m
+[31m-              href="/voices"[m
+[31m-              className="inline-flex items-center gap-2 rounded-full bg-white/15 border border-white/25 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/25 transition"[m
+[31m-            >[m
+[31m-              See more voices <ArrowRight className="h-4 w-4" />[m
+[31m-            </a>[m
+[31m-          </div>[m
+[31m-        </Chapter>[m
+[31m-[m
+[31m-        {/* CHAPTER 06 — Partners (back to warm pre-dawn)[m
+[31m-        <Chapter[m
+[31m-          id="partners"[m
+[31m-          kicker="the crew"[m
+[31m-          title={<>Powered by an <span className="text-coral">incredible crew</span>.</>}[m
+[31m-        >[m
+[31m-          <p className="text-foreground/70 max-w-xl text-sm">Company partners + community partners making GWY happen.</p>[m
+[31m-          <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5">[m
+[31m-            {partnersList.map((p, i) => {[m
+[31m-              const initial = p.n[0];[m
+[31m-              const kindColor =[m
+[31m-                p.kind === "Company" ? "text-coral" :[m
+[31m-                p.kind === "Investor" ? "text-[oklch(0.55_0.2_290)]" :[m
+[31m-                "text-[oklch(0.62_0.18_340)]";[m
+[31m-              return ([m
+[31m-                <div key={p.n} className="group aspect-[3/2] rounded-2xl bg-white/65 border border-white/80 flex flex-col items-center justify-center text-center px-3 hover:-translate-y-1 hover:bg-white/85 transition relative overflow-hidden">[m
+[31m-                  <div className={`absolute -top-4 -right-4 h-14 w-14 rounded-full bg-gradient-to-br ${speakerGrads[i % speakerGrads.length]} opacity-30 blur-xl`} />[m
+[31m-                  <div className="font-display font-bold text-lg md:text-xl text-foreground/90 leading-tight">[m
+[31m-                    <span className="text-coral">{initial}</span>{p.n.slice(1)}[m
+[31m-                  </div>[m
+[31m-                  <div className={`text-[9px] uppercase tracking-wider mt-1 font-mono font-semibold ${kindColor}`}>[m
+[31m-                    ✿ {p.kind}[m
+[31m-                  </div>[m
+[31m-                </div>[m
+[31m-              );[m
+[31m-            })}[m
+[31m-          </div>[m
+[31m-        </Chapter> */}[m
+[31m-[m
+[31m-        {/* PAST SPONSORS SECTION — Creative sliding effect with mouse parallax */}[m
+[31m-        <Chapter[m
+[31m-          kicker="champions who believed"[m
+[31m-          title={<>Our <span className="text-coral">past sponsors</span> & partners.</>}[m
+[31m-        >[m
+[31m-          <p className="text-foreground/70 max-w-2xl mb-8">[m
+[31m-            The incredible organizations that powered our earlier cohorts and are shaping the future of creators and builders.[m
+[31m-          </p>[m
+[31m-          <div className="relative overflow-hidden">[m
+[31m-            {/* Background accent */}[m
+[31m-            <div className="absolute inset-0 bg-gradient-to-r from-coral/5 via-transparent to-coral/5 rounded-3xl pointer-events-none" />[m
+[31m-            [m
+[31m-            {/* Sponsors grid with staggered animations */}[m
+[31m-            <SponsorsSection sponsors={pastSponsors} />[m
+[31m-          </div>[m
+[31m-          [m
+[31m-          {/* Interactive note */}[m
+[31m-          <div className="mt-8 flex items-center gap-2 text-xs text-foreground/60 font-mono">[m
+[31m-            <span className="inline-block h-2 w-2 rounded-full bg-coral animate-pulse" />[m
+[31m-            Hover to bloom our sponsors' minds with love and gratitude ✿[m
+[31m-          </div>[m
+[31m-        </Chapter>[m
+[31m-[m
+[31m-        {/* CHAPTER 07 — Timeline[m
+[31m-        <Chapter[m
+[31m-          id="timeline"[m
+[31m-          kicker="the journey"[m
+[31m-          title={<>Your <span className="text-coral">4-week</span> horizon.</>}[m
+[31m-        >[m
+[31m-          <div className="relative mt-4">[m
+[31m-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-coral/40 via-foreground/15 to-coral/40 md:-translate-x-1/2" />[m
+[31m-            <ol className="space-y-6 md:space-y-10">[m
+[31m-              {timeline.map((t, i) => ([m
+[31m-                <li key={t.title} className="relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-10 md:items-start">[m
+[31m-                  <div className="absolute left-2.5 md:left-1/2 top-2 h-4 w-4 rounded-full bg-coral shadow-glow md:-translate-x-1/2 ring-4 ring-background" />[m
+[31m-                  <div className={i % 2 === 1 ? "md:order-2 md:pl-10" : "md:pr-10 md:text-right"}>[m
+[31m-                    <div className="font-mono text-[11px] uppercase tracking-widest text-coral">{t.when}</div>[m
+[31m-                    <h3 className="mt-1 font-display font-bold text-xl md:text-2xl">{t.title}</h3>[m
+[31m-                  </div>[m
+[31m-                  <div className={i % 2 === 1 ? "md:order-1 md:pr-10 md:text-right mt-2 md:mt-0" : "md:pl-10 mt-2 md:mt-0"}>[m
+[31m-                    <p className="text-sm text-foreground/75">{t.body}</p>[m
+[31m-                  </div>[m
+[31m-                </li>[m
+[31m-              ))}[m
+[31m-            </ol>[m
+[31m-          </div>[m
+[31m-        </Chapter> */}[m
+[31m-        {/* TIMELINE SECTION */}[m
+[31m-        <Chapter[m
+[31m-          kicker="the timeline"[m
+[31m-          wide[m
+[31m-          title={<>Mark your <span className="text-coral">calendar</span>.</>}[m
+[31m-        >[m
+[31m-        {/* Timeline Container */}[m
+[31m-          <div className="relative py-8">[m
+[31m-            <svg className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-full w-[120px] overflow-visible" viewBox="0 0 100 760" preserveAspectRatio="none" aria-hidden="true">[m
+[31m-              <path[m
+[31m-                d="M50 40 C72 120, 28 200, 50 260 S 82 380, 50 440 S 18 540, 50 620 S 78 720, 50 760"[m
+[31m-                className="timeline-curve"[m
+[31m-              />[m
+[31m-            </svg>[m
+[31m-[m
+[31m-            {/* Timeline items */}[m
+[31m-            <div className="space-y-12">[m
+[31m-              {timelineEvents.map((event, i) => {[m
+[31m-                const isLeft = i % 2 === 0;[m
+[31m-                return ([m
+[31m-                  <div[m
+[31m-                    key={event.title}[m
+[31m-                    className="animate-fade-in relative"[m
+[31m-                    style={{ animationDelay: `${i * 0.15}s` }}[m
+[31m-                  >[m
+[31m-                    <div className={`grid md:grid-cols-2 gap-8 items-center`}>[m
+[31m-                      {/* Left side content */}[m
+[31m-                      <div className={isLeft ? "md:col-span-1" : "md:col-span-1 md:col-start-2"}>[m
+[31m-                        {isLeft && ([m
+[31m-                          <div className="rounded-3xl bg-sunrise-soft border border-white/50 p-6 shadow-soft hover:shadow-lg hover:-translate-y-1 transition">[m
+[31m-                            <div className="text-xs uppercase tracking-widest font-bold text-amber-700 mb-2 font-mono">{event.date}</div>[m
+[31m-                            <h3 className="font-display font-bold text-xl md:text-2xl text-foreground mb-3">{event.title}</h3>[m
+[31m-                            <p className="text-sm text-foreground/80 leading-relaxed">{event.desc}</p>[m
+[31m-                          </div>[m
+[31m-                        )}[m
+[31m-                      </div>[m
+[31m-[m
+[31m-                      {/* Center timeline dot */}[m
+[31m-                      <div className="hidden md:flex md:col-span-1 justify-center">[m
+[31m-                        <div className="relative">[m
+[31m-                          {/* Pulse effect */}[m
+[31m-                          <div className="absolute inset-0 bg-coral rounded-full animate-pulse" style={{ width: "20px", height: "20px" }} />[m
+[31m-                          {/* Main dot */}[m
+[31m-                          <div className="h-5 w-5 rounded-full bg-white border-4 border-coral shadow-glow relative z-10" />[m
+[31m-                        </div>[m
+[31m-                      </div>[m
+[31m-[m
+[31m-                      {/* Right side content */}[m
+[31m-                      <div className={!isLeft ? "md:col-span-1" : "md:col-span-1 md:col-start-1"}>[m
+[31m-                        {!isLeft && ([m
+[31m-                          <div className="rounded-3xl bg-sunrise-soft border border-white/50 p-6 shadow-soft hover:shadow-lg hover:-translate-y-1 transition">[m
+[31m-                            <div className="text-xs uppercase tracking-widest font-bold text-amber-700 mb-2 font-mono">{event.date}</div>[m
+[31m-                            <h3 className="font-display font-bold text-xl md:text-2xl text-foreground mb-3">{event.title}</h3>[m
+[31m-                            <p className="text-sm text-foreground/80 leading-relaxed">{event.desc}</p>[m
+[31m-                          </div>[m
+[31m-                        )}[m
+[31m-                      </div>[m
+[31m-                    </div>[m
+[31m-[m
+[31m-                    {/* Mobile timeline dot */}[m
+[31m-                    <div className="md:hidden absolute left-0 top-6 h-5 w-5 rounded-full bg-white border-4 border-coral shadow-glow -translate-x-2" />[m
+[31m-                  </div>[m
+[31m-                );[m
+[31m-              })}[m
+[31m-            </div>[m
+[31m-          </div>[m
+[31m-        </Chapter>[m
+[31m-[m
+[31m-        {/* CHAPTER 08 — FAQ */}[m
+[31m-        <Chapter[m
+[31m-          id="faq"[m
+[31m-          kicker="the small print"[m
+[31m-          title={<>Questions, <span className="text-coral">answered</span>.</>}[m
+[31m-        >[m
+[31m-          <div className="mt-2 divide-y divide-foreground/10 rounded-3xl bg-white/55 border border-white/70 px-6 md:px-8">[m
+[31m-            {faqs.map((f) => ([m
+[31m-              <details key={f.q} className="group py-5">[m
+[31m-                <summary className="flex cursor-pointer items-center justify-between gap-4 list-none">[m
+[31m-                  <span className="font-display font-semibold text-base md:text-lg text-foreground">{f.q}</span>[m
+[31m-                  <span className="h-7 w-7 shrink-0 rounded-full bg-coral text-primary-foreground grid place-items-center text-lg leading-none transition-transform group-open:rotate-45">+</span>[m
+[31m-                </summary>[m
+[31m-                <p className="mt-3 text-sm text-foreground/75 leading-relaxed">{f.a}</p>[m
+[31m-              </details>[m
+[31m-            ))}[m
+[31m-          </div>[m
+[31m-        </Chapter>[m
+[31m-[m
+[31m-        {/* FINAL CHAPTER — dawn / last call */}[m
+[31m-        <section id="apply" className="relative mx-auto w-[min(94%,1100px)] py-10 md:py-16">[m
+[31m-          <div className="chapter-glass relative overflow-hidden px-8 md:px-16 py-14 md:py-20 text-center">[m
+[31m-            <Moon className="absolute right-8 top-8 h-8 w-8 text-foreground/30" strokeWidth={1.5} />[m
+[31m-            <Sun className="absolute left-8 bottom-8 h-10 w-10 text-coral animate-spin-slow" strokeWidth={1.5} />[m
+[31m-[m
+[31m-            <span className="font-hand text-3xl md:text-4xl text-coral">last call ✿</span>[m
+[31m-            <h2 className="mt-2 font-display font-bold text-4xl md:text-6xl leading-[1.05]">[m
+[31m-              Catch the <span className="bg-coral text-primary-foreground rounded-2xl px-3 inline-block -rotate-1 shadow-glow">sunrise</span> cohort.[m
+[31m-            </h2>[m
+[31m-            <p className="mt-4 max-w-lg mx-auto text-foreground/75">[m
+[31m-              Applications close July 15. Join the community and follow along — we'd love you in the room.[m
+[31m-            </p>[m
+[31m-[m
+[31m-            <div className="mt-6 flex justify-center [&_*]:!text-foreground/90">[m
+[31m-              <div className="rounded-2xl bg-white/60 border border-white/80 px-3 py-2.5 backdrop-blur-md">[m
+[31m-                <Countdown />[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-[m
+[31m-            <div className="mt-8 flex flex-wrap justify-center gap-3">[m
+[31m-              {/* <a[m
+[31m-                href="https://discord.gg/CRaEtrtZ2v" target="_blank" rel="noreferrer"[m
+[31m-                className="inline-flex items-center gap-2 rounded-full bg-coral text-primary-foreground shadow-glow hover:scale-[1.03] transition px-6 py-3 text-sm font-semibold"[m
+[31m-              >[m
+[31m-                <Rocket className="h-4 w-4" /> Join the Discord[m
+[31m-              </a> */}[m
+[31m-              <a[m
+[31m-                href="https://lu.ma/Doradao" target="_blank" rel="noreferrer"[m
+[31m-                className="inline-flex items-center gap-2 rounded-full bg-foreground/90 text-background hover:bg-foreground transition px-6 py-3 text-sm font-semibold"[m
+[31m-              >[m
+[31m-                <Gift className="h-4 w-4" /> Upcoming events[m
+[31m-              </a>[m
+[31m-            </div>[m
+[31m-[m
+[31m-            <div className="mt-8 flex flex-wrap justify-center gap-2 text-xs">[m
+[31m-              {socials.map((s) => ([m
+[31m-                <a[m
+[31m-                  key={s.label} href={s.href} target="_blank" rel="noreferrer"[m
+[31m-                  className="inline-flex items-center gap-1.5 rounded-full bg-white/60 border border-white/80 px-3.5 py-1.5 hover:bg-white/80 transition text-foreground/80"[m
+[31m-                >[m
+[31m-                  {s.label} <ArrowUpRight className="h-3 w-3" />[m
+[31m-                </a>[m
+[31m-              ))}[m
+[31m-            </div>[m
+[31m-          </div>[m
+[31m-        </section>[m
+[31m-[m
+[31m-        <SiteFooter />[m
+[31m-[m
+[31m-         {/* Scroll to Top Button */}[m
+[31m-        <ScrollToTop />[m
+[31m-[m
+[31m-[m
+[31m-        <Sparkles className="hidden" />[m
+[31m-      </div>[m
+[31m-      <ApplyBar label="Applications close July 15 · Cohort 2.0" ctaLabel="Apply now" />[m
+[31m-    </div>[m
+[32m+[m[32m    <>[m
+[32m+[m[32m      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-[60] focus:rounded focus:bg-background focus:p-2">Skip to content</a>[m
+[32m+[m[32m      <Navbar />[m
+[32m+[m[32m      <main id="main">[m
+[32m+[m[32m        <Hero />[m
+[32m+[m[32m        <About />[m
+[32m+[m[32m        <TourMapSection />[m
+[32m+[m[32m        <Programs />[m
+[32m+[m[32m        <FindYourPlace />[m
+[32m+[m[32m        <Testimonials />[m
+[32m+[m[32m        <Sessions />[m
+[32m+[m[32m        <Products />[m
+[32m+[m[32m        <Island />[m
+[32m+[m[32m        <ImportantDays />[m
+[32m+[m[32m        <UpcomingEvents />[m
+[32m+[m[32m        <WorkWithUs />[m
+[32m+[m[32m        <Faq />[m
+[32m+[m[32m      </main>[m
+[32m+[m[32m      <Footer />[m
+[32m+[m[32m    </>[m
+   );[m
+ }[m
+[1mdiff --git a/src/routes/partner.index.tsx b/src/routes/partner.index.tsx[m
+[1mindex 2daf3180..7248089f 100644[m
+[1m--- a/src/routes/partner.index.tsx[m
+[1m+++ b/src/routes/partner.index.tsx[m
+[36m@@ -457,7 +457,7 @@[m [mfunction PartnerPage() {[m
+                 </div>[m
+                 <div>[m
+                   <span className="font-semibold">Are you a builder?</span>{" "}[m
+[31m-                  <Link to="/" className="text-coral underline-offset-2 hover:underline">[m
+[32m+[m[32m                  <Link to="/fellowship" className="text-coral underline-offset-2 hover:underline">[m
+                     Join the GWY 2.0 cohort[m
+                   </Link>[m
+                 </div>[m
+[1mdiff --git a/src/routes/programs.gwy-25.tsx b/src/routes/programs.gwy-25.tsx[m
+[1mindex a5893565..f955e8dd 100644[m
+[1m--- a/src/routes/programs.gwy-25.tsx[m
+[1m+++ b/src/routes/programs.gwy-25.tsx[m
+[36m@@ -384,7 +384,7 @@[m [mfunction Page() {[m
+             </p>[m
+             <div className="mt-7 flex flex-wrap items-center justify-center gap-3">[m
+               <Link[m
+[31m-                to="/"[m
+[32m+[m[32m                to="/fellowship"[m
+                 className="inline-flex items-center gap-2 rounded-full bg-coral px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow hover:opacity-95"[m
+               >[m
+                 Apply to Fellowship 2.0 <ArrowUpRight className="h-4 w-4" />[m
+[1mdiff --git a/src/styles.css b/src/styles.css[m
+[1mindex 3ad296bb..6902ddb6 100644[m
+[1m--- a/src/styles.css[m
+[1m+++ b/src/styles.css[m
+[36m@@ -4,6 +4,20 @@[m
+ [m
+ @custom-variant dark (&:is(.dark *));[m
+ [m
+[32m+[m[32m@theme {[m
+[32m+[m[32m  --font-sans: "Nunito", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;[m
+[32m+[m[32m  --font-display: "Caveat", "Bricolage Grotesque", cursive;[m
+[32m+[m[32m  --spacing-section: 5rem;[m
+[32m+[m[32m  --container-content: 72rem;[m
+[32m+[m[32m  --radius-token: 0.75rem;[m
+[32m+[m[32m  --animate-pop: pop 1.8s ease-in-out forwards;[m
+[32m+[m[32m  @keyframes pop {[m
+[32m+[m[32m    0% { opacity: 0; transform: scale(0.6); }[m
+[32m+[m[32m    20%, 75% { opacity: 1; transform: scale(1); }[m
+[32m+[m[32m    100% { opacity: 0; transform: scale(0.9); }[m
+[32m+[m[32m  }[m
+[32m+[m[32m}[m
+[32m+[m
+ @theme inline {[m
+   --radius-sm: calc(var(--radius) - 4px);[m
+   --radius-md: calc(var(--radius) - 2px);[m
+[36m@@ -11,6 +25,7 @@[m
+   --radius-xl: calc(var(--radius) + 4px);[m
+   --radius-2xl: calc(var(--radius) + 8px);[m
+   --radius-3xl: calc(var(--radius) + 12px);[m
+[32m+[m[32m  --radius-4xl: calc(var(--radius) + 16px);[m
+   --color-background: var(--background);[m
+   --color-foreground: var(--foreground);[m
+   --color-card: var(--card);[m
+[36m@@ -30,47 +45,66 @@[m
+   --color-border: var(--border);[m
+   --color-input: var(--input);[m
+   --color-ring: var(--ring);[m
+[32m+[m[32m  --color-ring-offset-background: var(--background);[m
+[32m+[m[32m  --color-chart-1: var(--chart-1);[m
+[32m+[m[32m  --color-chart-2: var(--chart-2);[m
+[32m+[m[32m  --color-chart-3: var(--chart-3);[m
+[32m+[m[32m  --color-chart-4: var(--chart-4);[m
+[32m+[m[32m  --color-chart-5: var(--chart-5);[m
+[32m+[m[32m  --color-sidebar: var(--sidebar);[m
+[32m+[m[32m  --color-sidebar-foreground: var(--sidebar-foreground);[m
+[32m+[m[32m  --color-sidebar-primary: var(--sidebar-primary);[m
+[32m+[m[32m  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);[m
+[32m+[m[32m  --color-sidebar-accent: var(--sidebar-accent);[m
+[32m+[m[32m  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);[m
+[32m+[m[32m  --color-sidebar-border: var(--sidebar-border);[m
+[32m+[m[32m  --color-sidebar-ring: var(--sidebar-ring);[m
+   --color-holo: var(--holo);[m
+   --color-ocean: var(--ocean);[m
+   --color-sand: var(--sand);[m
+   --color-sunset: var(--sunset);[m
+[31m-  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;[m
+[31m-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;[m
+[32m+[m[32m  --font-display: "Caveat", "Bricolage Grotesque", cursive;[m
+[32m+[m[32m  --font-bricolage: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;[m
+[32m+[m[32m  --font-sans: "Nunito", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;[m
+   --font-hand: "Caveat", "Bradley Hand", cursive;[m
+   --font-mono: "JetBrains Mono", ui-monospace, monospace;[m
+   --font-editorial: "Fraunces", ui-serif, Georgia, serif;[m
+ }[m
+ [m
+ :root {[m
+[31m-  --radius: 1.25rem;[m
+[31m-[m
+[31m-  /* Color psychology system:[m
+[31m-     - Cream background = warmth, accessibility, breathing room[m
+[31m-     - Sunset coral primary = courage, energy, action (drives the "apply" reflex)[m
+[31m-     - Deep aubergine foreground = trust, depth, premium (anchors the page)[m
+[31m-     - Magenta accent = creativity, community, spark[m
+[31m-  */[m
+[31m-  --background: oklch(0.972 0.025 75);                /* warm cream */[m
+[31m-  --foreground: oklch(0.23 0.08 350);                 /* deep aubergine */[m
+[31m-[m
+[31m-  --card: oklch(0.995 0.012 75);[m
+[31m-  --card-foreground: oklch(0.23 0.08 350);[m
+[31m-  --popover: oklch(1 0 0);[m
+[31m-  --popover-foreground: oklch(0.23 0.08 350);[m
+[31m-[m
+[31m-  --primary: oklch(0.68 0.22 32);                     /* bold sunset orange */[m
+[31m-  --primary-foreground: oklch(0.99 0.01 75);[m
+[31m-  --secondary: oklch(0.94 0.05 70);                   /* soft peach */[m
+[31m-  --secondary-foreground: oklch(0.25 0.09 350);[m
+[31m-  --muted: oklch(0.95 0.025 70);[m
+[31m-  --muted-foreground: oklch(0.42 0.08 350);[m
+[31m-  --accent: oklch(0.65 0.22 350);                     /* hot magenta */[m
+[31m-  --accent-foreground: oklch(0.99 0.01 75);[m
+[31m-  --destructive: oklch(0.6 0.22 25);[m
+[31m-  --destructive-foreground: oklch(0.99 0 0);[m
+[31m-  --border: oklch(0.82 0.05 30 / 0.6);[m
+[31m-  --input: oklch(0.92 0.03 50);[m
+[31m-  --ring: oklch(0.68 0.22 32);[m
+[32m+[m[32m  --radius: 0.625rem;[m
+[32m+[m[32m  --background: oklch(0.955 0.025 85);[m
+[32m+[m[32m  --foreground: oklch(0.25 0.03 60);[m
+[32m+[m[32m  --card: oklch(0.975 0.018 85);[m
+[32m+[m[32m  --card-foreground: oklch(0.25 0.03 60);[m
+[32m+[m[32m  --popover: oklch(0.985 0.012 85);[m
+[32m+[m[32m  --popover-foreground: oklch(0.25 0.03 60);[m
+[32m+[m[32m  --primary: oklch(0.32 0.055 160);[m
+[32m+[m[32m  --primary-foreground: oklch(0.97 0.02 85);[m
+[32m+[m[32m  --secondary: oklch(0.86 0.12 85);[m
+[32m+[m[32m  --secondary-foreground: oklch(0.25 0.03 60);[m
+[32m+[m[32m  --muted: oklch(0.92 0.03 80);[m
+[32m+[m[32m  --muted-foreground: oklch(0.47 0.04 60);[m
+[32m+[m[32m  --accent: oklch(0.72 0.15 55);[m
+[32m+[m[32m  --accent-foreground: oklch(0.2 0.03 60);[m
+[32m+[m[32m  --destructive: oklch(0.577 0.245 27.325);[m
+[32m+[m[32m  --destructive-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --border: oklch(0.86 0.035 75);[m
+[32m+[m[32m  --input: oklch(0.86 0.035 75);[m
+[32m+[m[32m  --ring: oklch(0.55 0.1 160);[m
+[32m+[m[32m  --chart-1: oklch(0.646 0.222 41.116);[m
+[32m+[m[32m  --chart-2: oklch(0.6 0.118 184.704);[m
+[32m+[m[32m  --chart-3: oklch(0.398 0.07 227.392);[m
+[32m+[m[32m  --chart-4: oklch(0.828 0.189 84.429);[m
+[32m+[m[32m  --chart-5: oklch(0.769 0.188 70.08);[m
+[32m+[m[32m  --sidebar: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --sidebar-foreground: oklch(0.129 0.042 264.695);[m
+[32m+[m[32m  --sidebar-primary: oklch(0.208 0.042 265.755);[m
+[32m+[m[32m  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --sidebar-accent: oklch(0.968 0.007 247.896);[m
+[32m+[m[32m  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);[m
+[32m+[m[32m  --sidebar-border: oklch(0.929 0.013 255.508);[m
+[32m+[m[32m  --sidebar-ring: oklch(0.704 0.04 256.788);[m
+ [m
+   --sunset: oklch(0.76 0.21 35);[m
+   --ocean: oklch(0.7 0.15 320);[m
+[36m@@ -114,17 +148,60 @@[m
+ }[m
+ [m
+ .dark {[m
+[31m-  --background: oklch(0.18 0.04 340);[m
+[31m-  --foreground: oklch(0.97 0.02 30);[m
+[32m+[m[32m  --background: oklch(0.129 0.042 264.695);[m
+[32m+[m[32m  --foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --card: oklch(0.208 0.042 265.755);[m
+[32m+[m[32m  --card-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --popover: oklch(0.208 0.042 265.755);[m
+[32m+[m[32m  --popover-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --primary: oklch(0.929 0.013 255.508);[m
+[32m+[m[32m  --primary-foreground: oklch(0.208 0.042 265.755);[m
+[32m+[m[32m  --secondary: oklch(0.279 0.041 260.031);[m
+[32m+[m[32m  --secondary-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --muted: oklch(0.279 0.041 260.031);[m
+[32m+[m[32m  --muted-foreground: oklch(0.704 0.04 256.788);[m
+[32m+[m[32m  --accent: oklch(0.279 0.041 260.031);[m
+[32m+[m[32m  --accent-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --destructive: oklch(0.704 0.191 22.216);[m
+[32m+[m[32m  --destructive-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --border: oklch(1 0 0 / 10%);[m
+[32m+[m[32m  --input: oklch(1 0 0 / 15%);[m
+[32m+[m[32m  --ring: oklch(0.551 0.027 264.364);[m
+[32m+[m[32m  --chart-1: oklch(0.488 0.243 264.376);[m
+[32m+[m[32m  --chart-2: oklch(0.696 0.17 162.48);[m
+[32m+[m[32m  --chart-3: oklch(0.769 0.188 70.08);[m
+[32m+[m[32m  --chart-4: oklch(0.627 0.265 303.9);[m
+[32m+[m[32m  --chart-5: oklch(0.645 0.246 16.439);[m
+[32m+[m[32m  --sidebar: oklch(0.208 0.042 265.755);[m
+[32m+[m[32m  --sidebar-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --sidebar-primary: oklch(0.488 0.243 264.376);[m
+[32m+[m[32m  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --sidebar-accent: oklch(0.279 0.041 260.031);[m
+[32m+[m[32m  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);[m
+[32m+[m[32m  --sidebar-border: oklch(1 0 0 / 10%);[m
+[32m+[m[32m  --sidebar-ring: oklch(0.551 0.027 264.364);[m
+ }[m
+ [m
+ @layer base {[m
+   * { border-color: var(--color-border); }[m
+   html { scroll-behavior: smooth; }[m
+[32m+[m[32m  @media (prefers-reduced-motion: reduce) {[m
+[32m+[m[32m    html {[m
+[32m+[m[32m      scroll-behavior: auto;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    *,[m
+[32m+[m[32m    *::before,[m
+[32m+[m[32m    *::after {[m
+[32m+[m[32m      animation-duration: 0.01ms !important;[m
+[32m+[m[32m      transition-duration: 0.01ms !important;[m
+[32m+[m[32m    }[m
+[32m+[m[32m  }[m
+   body {[m
+[31m-    background: var(--background);[m
+[31m-    color: var(--foreground);[m
+[32m+[m[32m    background-color: var(--color-background);[m
+[32m+[m[32m    color: var(--color-foreground);[m
+     font-family: var(--font-sans);[m
+[32m+[m[32m    background-image: radial-gradient(circle at 10% 20%, oklch(0.9 0.06 80 / 0.5), transparent 40%), radial-gradient(circle at 90% 70%, oklch(0.88 0.08 70 / 0.4), transparent 45%);[m
+[32m+[m[32m    background-attachment: fixed;[m
+     -webkit-font-smoothing: antialiased;[m
+   }[m
+   h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }[m

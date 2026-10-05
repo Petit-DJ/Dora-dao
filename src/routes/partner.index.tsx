@@ -457,7 +457,7 @@ function PartnerPage() {
                 </div>
                 <div>
                   <span className="font-semibold">Are you a builder?</span>{" "}
-                  <Link to="/" className="text-coral underline-offset-2 hover:underline">
+                  <Link to="/fellowship" className="text-coral underline-offset-2 hover:underline">
                     Join the GWY 2.0 cohort
                   </Link>
                 </div>
