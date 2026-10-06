@@ -44,7 +44,35 @@ export function ImportantDays() {
                   <li key={s} className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs text-primary-foreground">{i + 1}</span>{s}</li>
                 ))}
               </ol>
-              <Button className="mt-5">Join the celebration</Button>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Button asChild>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSckfcmx1HuCc9RWeMunvgPOzOIyVcP_sdJRd_bJMRYWqNcHqA/viewform?usp=publish-editor"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Join the Team
+                  </a>
+                </Button>
+                <Button variant="outline" asChild>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSckfcmx1HuCc9RWeMunvgPOzOIyVcP_sdJRd_bJMRYWqNcHqA/viewform?usp=publish-editor"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Become a Volunteer
+                  </a>
+                </Button>
+                <Button variant="outline" asChild>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSckfcmx1HuCc9RWeMunvgPOzOIyVcP_sdJRd_bJMRYWqNcHqA/viewform?usp=publish-editor"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Become a Mentor
+                  </a>
+                </Button>
+              </div>
             </div>
           </article>
         )}

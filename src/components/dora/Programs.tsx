@@ -65,7 +65,7 @@ export function Programs() {
           ))}
         </ul>
       </div>
-      <h3 className="mb-3 mt-8 font-semibold">Community highlights</h3>
+      <h3 className="mb-4 mt-10 font-display text-2xl font-bold">Community highlights</h3>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         {selected.lastEdition.map((d) => (
           <div key={d.label} className="rounded-token border bg-card p-4">

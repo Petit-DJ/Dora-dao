@@ -20,30 +20,32 @@ export function Products() {
       </ul>
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {products.map((p) => (
-          <li key={p.slug} className="flex flex-col rounded-token border bg-card p-5">
-            <div className="flex items-center gap-3">
+        <li key={p.slug} className="flex flex-col overflow-hidden rounded-token border bg-card">
+            <div className="flex items-center gap-3 p-5 pb-4">
               <span
-                className="flex h-12 w-12 items-center justify-center rounded-token bg-primary text-xl font-bold text-primary-foreground"
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-token bg-primary p-2 text-xl font-bold text-primary-foreground"
                 aria-hidden="true"
               >
                 {p.logo}
               </span>
-              <div>
-                <p className="font-semibold">{p.name}</p>
-                <p className="text-sm text-muted-foreground">{p.oneLiner}</p>
+              <div className="min-w-0">
+                <p className="font-semibold leading-snug">{p.name}</p>
+                <p className="mt-0.5 text-sm text-muted-foreground">{p.oneLiner}</p>
               </div>
             </div>
-            <Button asChild className="mt-auto pt-6">
-              <a
-                href={p.launchUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5"
-              >
-                <Rocket className="h-4 w-4" />
-                Support the Launch
-              </a>
-            </Button>
+            <div className="mt-auto flex items-center justify-center bg-primary/10 px-5 py-4">
+              <Button asChild>
+                <a
+                  href={p.launchUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5"
+                >
+                  <Rocket className="h-4 w-4" />
+                  Support the Launch
+                </a>
+              </Button>
+            </div>
           </li>
         ))}
       </ul>

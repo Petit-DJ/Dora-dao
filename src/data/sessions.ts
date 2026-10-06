@@ -1,4 +1,12 @@
 import { img } from "./site";
+import sp1 from "@/assets/speakers2/speaker1.jpg";
+import sp2 from "@/assets/speakers2/speaker2.jpg";
+import sp3 from "@/assets/speakers2/speaker3.jpg";
+import sp4 from "@/assets/speakers2/speaker4.jpg";
+import sp5 from "@/assets/speakers2/speaker5.jpg";
+import sp6 from "@/assets/speakers2/speaker6.jpg";
+import sp7 from "@/assets/speakers2/speaker7.jpg";
+import sp8 from "@/assets/speakers2/speaker8.jpg";
 
 export const featuredSession = {
   title: "Building for the Next Billion",
@@ -87,26 +95,80 @@ export type Speaker = {
   url: string;
 };
 
-export const speakers: Speaker[] = (
-  [
-    ["Aisha Khan", "Product Lead", "Google"],
-    ["Rohan Mehta", "Engineering Manager", "Meta"],
-    ["Priya Sharma", "Design Director", "Canva"],
-    ["Daniel Lee", "Founder", "Stealth"],
-    ["Maria Lopez", "Community Lead", "Notion"],
-    ["James Wilson", "Tech Lead", "Amazon"],
-    ["Arjun Nair", "Product Manager", "Microsoft"],
-    ["Fatima Bello", "Researcher", "Stripe"],
-  ] as string[][]
-).map(([name, role, company]: string[], i) => ({
-  id: `sp${i}`,
-  name: name!,
-  role: role!,
-  company: company!,
-  type: (i % 2 ? "Mentor" : "Speaker") as "Speaker" | "Mentor",
-  photo: `https://i.pravatar.cc/240?img=${i + 10}`,
-  url: i % 2 ? "https://linkedin.com" : "https://x.com",
-}));
+export const speakers: Speaker[] = [
+  {
+    id: "sp0",
+    name: "Yulia Pichugina",
+    role: "CPC, ELI-MP",
+    company: "",
+    type: "Speaker",
+    photo: sp1,
+    url: "https://linkedin.com",
+  },
+  {
+    id: "sp1",
+    name: "Himanshi Singh",
+    role: "Founder ALTR | Miss Universe India Finalist",
+    company: "",
+    type: "Mentor",
+    photo: sp2,
+    url: "https://linkedin.com",
+  },
+  {
+    id: "sp2",
+    name: "Einat Graitser",
+    role: "Film Educator",
+    company: "",
+    type: "Speaker",
+    photo: sp3,
+    url: "https://linkedin.com",
+  },
+  {
+    id: "sp3",
+    name: "Anshita S.",
+    role: "Member of Technical Staff at OpenAI",
+    company: "",
+    type: "Mentor",
+    photo: sp4,
+    url: "https://linkedin.com",
+  },
+  {
+    id: "sp4",
+    name: "Stephan Bugaj",
+    role: "Generative AI Content & Technology at JioStar",
+    company: "",
+    type: "Speaker",
+    photo: sp5,
+    url: "https://linkedin.com",
+  },
+  {
+    id: "sp5",
+    name: "Abirami Sukumaran",
+    role: "Staff Developer Advocate at Google",
+    company: "",
+    type: "Mentor",
+    photo: sp6,
+    url: "https://linkedin.com",
+  },
+  {
+    id: "sp6",
+    name: "Kaavya Prasad",
+    role: "Founder of Scribble Network",
+    company: "",
+    type: "Speaker",
+    photo: sp7,
+    url: "https://linkedin.com",
+  },
+  {
+    id: "sp7",
+    name: "Esha Lalwani",
+    role: "Global Product Marketing Manager at Meta",
+    company: "",
+    type: "Mentor",
+    photo: sp8,
+    url: "https://linkedin.com",
+  },
+];
 
 /** Download options for the featured video. Replace each url with your own hosted file per quality. */
 export type VideoQuality = { label: string; url: string };

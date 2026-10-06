@@ -303,7 +303,7 @@ export function Sessions() {
               />
               <p className="mt-3 font-medium">{p.name}</p>
               <p className="text-sm text-muted-foreground">
-                {p.role}, {p.company}
+                {p.role}{p.company ? `, ${p.company}` : ""}
               </p>
               <p className="mt-1 text-xs text-muted-foreground">{p.type}</p>
             </a>
