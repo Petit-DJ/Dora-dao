@@ -1,0 +1,1 @@
+var e=`/assets/mentoring-coffee-D_BSP1zm.png`;export{e as t};

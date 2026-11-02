@@ -1,0 +1,1 @@
+var e=`/assets/portrait-7-Cbq3Heqe.jpg`;export{e as t};

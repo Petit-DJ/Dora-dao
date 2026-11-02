@@ -10,140 +10,96 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ChaptersRouteImport } from './routes/chapters'
-import { Route as CodeOfConductRouteImport } from './routes/code-of-conduct'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ContributorsRouteImport } from './routes/contributors'
-import { Route as DoradaoRouteImport } from './routes/doradao'
-import { Route as Doradao1RouteImport } from './routes/doradao-1'
-import { Route as FellowshipRouteImport } from './routes/fellowship'
-import { Route as HackWithDoraRouteImport } from './routes/hack-with-dora'
-import { Route as PastInitiativesRouteImport } from './routes/past-initiatives'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as ReferRouteImport } from './routes/refer'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as VoicesRouteImport } from './routes/voices'
-import { Route as PartnerIndexRouteImport } from './routes/partner.index'
-import { Route as PartnerCorporateRouteImport } from './routes/partner.corporate'
-import { Route as PartnerCsrRouteImport } from './routes/partner.csr'
-import { Route as PartnerEcosystemRouteImport } from './routes/partner.ecosystem'
-import { Route as PartnerVolunteerRouteImport } from './routes/partner.volunteer'
-import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
-import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
-import { Route as ProgramsBuildspaceRouteImport } from './routes/programs.buildspace'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as HiringRouteImport } from './routes/hiring'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as PartnersCorporateRouteImport } from './routes/partners.corporate'
+import { Route as PartnersCsrRouteImport } from './routes/partners.csr'
+import { Route as PartnersDonateRouteImport } from './routes/partners.donate'
+import { Route as PartnersPhilanthropicRouteImport } from './routes/partners.philanthropic'
+import { Route as ProgramsAifestRouteImport } from './routes/programs.aifest'
+import { Route as ProgramsBuildwithusRouteImport } from './routes/programs.buildwithus'
+import { Route as ProgramsCommunityweekRouteImport } from './routes/programs.communityweek'
 import { Route as ProgramsDorahacksRouteImport } from './routes/programs.dorahacks'
-import { Route as ProgramsGwy25RouteImport } from './routes/programs.gwy-25'
-import { Route as ProgramsGwy26RouteImport } from './routes/programs.gwy-26'
+import { Route as ProgramsDwocRouteImport } from './routes/programs.dwoc'
+import { Route as ProgramsGwyConferenceRouteImport } from './routes/programs.gwy-conference'
+import { Route as ProgramsGwyFellowshipRouteImport } from './routes/programs.gwy-fellowship'
+import { Route as ProgramsHoomanRouteImport } from './routes/programs.hooman'
+import { Route as ProgramsM2mMentorshipRouteImport } from './routes/programs.m2m-mentorship'
 import { Route as ProgramsW3mRouteImport } from './routes/programs.w3m'
+import { Route as SectorsTechnologyRouteImport } from './routes/sectors.technology'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ChaptersRoute = ChaptersRouteImport.update({
-  id: '/chapters',
-  path: '/chapters',
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CodeOfConductRoute = CodeOfConductRouteImport.update({
-  id: '/code-of-conduct',
-  path: '/code-of-conduct',
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContributorsRoute = ContributorsRouteImport.update({
-  id: '/contributors',
-  path: '/contributors',
+const HiringRoute = HiringRouteImport.update({
+  id: '/hiring',
+  path: '/hiring',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DoradaoRoute = DoradaoRouteImport.update({
-  id: '/doradao',
-  path: '/doradao',
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Doradao1Route = Doradao1RouteImport.update({
-  id: '/doradao-1',
-  path: '/doradao-1',
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FellowshipRoute = FellowshipRouteImport.update({
-  id: '/fellowship',
-  path: '/fellowship',
+const PartnersCorporateRoute = PartnersCorporateRouteImport.update({
+  id: '/partners/corporate',
+  path: '/partners/corporate',
   getParentRoute: () => rootRouteImport,
 } as any)
-const HackWithDoraRoute = HackWithDoraRouteImport.update({
-  id: '/hack-with-dora',
-  path: '/hack-with-dora',
+const PartnersCsrRoute = PartnersCsrRouteImport.update({
+  id: '/partners/csr',
+  path: '/partners/csr',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PastInitiativesRoute = PastInitiativesRouteImport.update({
-  id: '/past-initiatives',
-  path: '/past-initiatives',
+const PartnersDonateRoute = PartnersDonateRouteImport.update({
+  id: '/partners/donate',
+  path: '/partners/donate',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
+const PartnersPhilanthropicRoute = PartnersPhilanthropicRouteImport.update({
+  id: '/partners/philanthropic',
+  path: '/partners/philanthropic',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ReferRoute = ReferRouteImport.update({
-  id: '/refer',
-  path: '/refer',
+const ProgramsAifestRoute = ProgramsAifestRouteImport.update({
+  id: '/programs/aifest',
+  path: '/programs/aifest',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
+const ProgramsBuildwithusRoute = ProgramsBuildwithusRouteImport.update({
+  id: '/programs/buildwithus',
+  path: '/programs/buildwithus',
   getParentRoute: () => rootRouteImport,
 } as any)
-const VoicesRoute = VoicesRouteImport.update({
-  id: '/voices',
-  path: '/voices',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnerIndexRoute = PartnerIndexRouteImport.update({
-  id: '/partner/',
-  path: '/partner/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnerCorporateRoute = PartnerCorporateRouteImport.update({
-  id: '/partner/corporate',
-  path: '/partner/corporate',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnerCsrRoute = PartnerCsrRouteImport.update({
-  id: '/partner/csr',
-  path: '/partner/csr',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnerEcosystemRoute = PartnerEcosystemRouteImport.update({
-  id: '/partner/ecosystem',
-  path: '/partner/ecosystem',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnerVolunteerRoute = PartnerVolunteerRouteImport.update({
-  id: '/partner/volunteer',
-  path: '/partner/volunteer',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProductsSlugRoute = ProductsSlugRouteImport.update({
-  id: '/products/$slug',
-  path: '/products/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgramsIndexRoute = ProgramsIndexRouteImport.update({
-  id: '/programs/',
-  path: '/programs/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProgramsBuildspaceRoute = ProgramsBuildspaceRouteImport.update({
-  id: '/programs/buildspace',
-  path: '/programs/buildspace',
+const ProgramsCommunityweekRoute = ProgramsCommunityweekRouteImport.update({
+  id: '/programs/communityweek',
+  path: '/programs/communityweek',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramsDorahacksRoute = ProgramsDorahacksRouteImport.update({
@@ -151,14 +107,29 @@ const ProgramsDorahacksRoute = ProgramsDorahacksRouteImport.update({
   path: '/programs/dorahacks',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProgramsGwy25Route = ProgramsGwy25RouteImport.update({
-  id: '/programs/gwy-25',
-  path: '/programs/gwy-25',
+const ProgramsDwocRoute = ProgramsDwocRouteImport.update({
+  id: '/programs/dwoc',
+  path: '/programs/dwoc',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProgramsGwy26Route = ProgramsGwy26RouteImport.update({
-  id: '/programs/gwy-26',
-  path: '/programs/gwy-26',
+const ProgramsGwyConferenceRoute = ProgramsGwyConferenceRouteImport.update({
+  id: '/programs/gwy-conference',
+  path: '/programs/gwy-conference',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsGwyFellowshipRoute = ProgramsGwyFellowshipRouteImport.update({
+  id: '/programs/gwy-fellowship',
+  path: '/programs/gwy-fellowship',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsHoomanRoute = ProgramsHoomanRouteImport.update({
+  id: '/programs/hooman',
+  path: '/programs/hooman',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsM2mMentorshipRoute = ProgramsM2mMentorshipRouteImport.update({
+  id: '/programs/m2m-mentorship',
+  path: '/programs/m2m-mentorship',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramsW3mRoute = ProgramsW3mRouteImport.update({
@@ -166,206 +137,183 @@ const ProgramsW3mRoute = ProgramsW3mRouteImport.update({
   path: '/programs/w3m',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SectorsTechnologyRoute = SectorsTechnologyRouteImport.update({
+  id: '/sectors/technology',
+  path: '/sectors/technology',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/chapters': typeof ChaptersRoute
-  '/code-of-conduct': typeof CodeOfConductRoute
-  '/contact': typeof ContactRoute
-  '/contributors': typeof ContributorsRoute
-  '/doradao': typeof DoradaoRoute
-  '/doradao-1': typeof Doradao1Route
-  '/fellowship': typeof FellowshipRoute
-  '/hack-with-dora': typeof HackWithDoraRoute
-  '/past-initiatives': typeof PastInitiativesRoute
-  '/privacy': typeof PrivacyRoute
-  '/refer': typeof ReferRoute
-  '/terms': typeof TermsRoute
-  '/voices': typeof VoicesRoute
-  '/partner/corporate': typeof PartnerCorporateRoute
-  '/partner/csr': typeof PartnerCsrRoute
-  '/partner/ecosystem': typeof PartnerEcosystemRoute
-  '/partner/volunteer': typeof PartnerVolunteerRoute
-  '/products/$slug': typeof ProductsSlugRoute
-  '/programs/buildspace': typeof ProgramsBuildspaceRoute
+  '/about': typeof AboutRoute
+  '/events': typeof EventsRoute
+  '/faq': typeof FaqRoute
+  '/hiring': typeof HiringRoute
+  '/pricing': typeof PricingRoute
+  '/products': typeof ProductsRoute
+  '/partners/corporate': typeof PartnersCorporateRoute
+  '/partners/csr': typeof PartnersCsrRoute
+  '/partners/donate': typeof PartnersDonateRoute
+  '/partners/philanthropic': typeof PartnersPhilanthropicRoute
+  '/programs/aifest': typeof ProgramsAifestRoute
+  '/programs/buildwithus': typeof ProgramsBuildwithusRoute
+  '/programs/communityweek': typeof ProgramsCommunityweekRoute
   '/programs/dorahacks': typeof ProgramsDorahacksRoute
-  '/programs/gwy-25': typeof ProgramsGwy25Route
-  '/programs/gwy-26': typeof ProgramsGwy26Route
+  '/programs/dwoc': typeof ProgramsDwocRoute
+  '/programs/gwy-conference': typeof ProgramsGwyConferenceRoute
+  '/programs/gwy-fellowship': typeof ProgramsGwyFellowshipRoute
+  '/programs/hooman': typeof ProgramsHoomanRoute
+  '/programs/m2m-mentorship': typeof ProgramsM2mMentorshipRoute
   '/programs/w3m': typeof ProgramsW3mRoute
-  '/partner/': typeof PartnerIndexRoute
-  '/programs/': typeof ProgramsIndexRoute
+  '/sectors/technology': typeof SectorsTechnologyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/chapters': typeof ChaptersRoute
-  '/code-of-conduct': typeof CodeOfConductRoute
-  '/contact': typeof ContactRoute
-  '/contributors': typeof ContributorsRoute
-  '/doradao': typeof DoradaoRoute
-  '/doradao-1': typeof Doradao1Route
-  '/fellowship': typeof FellowshipRoute
-  '/hack-with-dora': typeof HackWithDoraRoute
-  '/past-initiatives': typeof PastInitiativesRoute
-  '/privacy': typeof PrivacyRoute
-  '/refer': typeof ReferRoute
-  '/terms': typeof TermsRoute
-  '/voices': typeof VoicesRoute
-  '/partner/corporate': typeof PartnerCorporateRoute
-  '/partner/csr': typeof PartnerCsrRoute
-  '/partner/ecosystem': typeof PartnerEcosystemRoute
-  '/partner/volunteer': typeof PartnerVolunteerRoute
-  '/products/$slug': typeof ProductsSlugRoute
-  '/programs/buildspace': typeof ProgramsBuildspaceRoute
+  '/about': typeof AboutRoute
+  '/events': typeof EventsRoute
+  '/faq': typeof FaqRoute
+  '/hiring': typeof HiringRoute
+  '/pricing': typeof PricingRoute
+  '/products': typeof ProductsRoute
+  '/partners/corporate': typeof PartnersCorporateRoute
+  '/partners/csr': typeof PartnersCsrRoute
+  '/partners/donate': typeof PartnersDonateRoute
+  '/partners/philanthropic': typeof PartnersPhilanthropicRoute
+  '/programs/aifest': typeof ProgramsAifestRoute
+  '/programs/buildwithus': typeof ProgramsBuildwithusRoute
+  '/programs/communityweek': typeof ProgramsCommunityweekRoute
   '/programs/dorahacks': typeof ProgramsDorahacksRoute
-  '/programs/gwy-25': typeof ProgramsGwy25Route
-  '/programs/gwy-26': typeof ProgramsGwy26Route
+  '/programs/dwoc': typeof ProgramsDwocRoute
+  '/programs/gwy-conference': typeof ProgramsGwyConferenceRoute
+  '/programs/gwy-fellowship': typeof ProgramsGwyFellowshipRoute
+  '/programs/hooman': typeof ProgramsHoomanRoute
+  '/programs/m2m-mentorship': typeof ProgramsM2mMentorshipRoute
   '/programs/w3m': typeof ProgramsW3mRoute
-  '/partner': typeof PartnerIndexRoute
-  '/programs': typeof ProgramsIndexRoute
+  '/sectors/technology': typeof SectorsTechnologyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/chapters': typeof ChaptersRoute
-  '/code-of-conduct': typeof CodeOfConductRoute
-  '/contact': typeof ContactRoute
-  '/contributors': typeof ContributorsRoute
-  '/doradao': typeof DoradaoRoute
-  '/doradao-1': typeof Doradao1Route
-  '/fellowship': typeof FellowshipRoute
-  '/hack-with-dora': typeof HackWithDoraRoute
-  '/past-initiatives': typeof PastInitiativesRoute
-  '/privacy': typeof PrivacyRoute
-  '/refer': typeof ReferRoute
-  '/terms': typeof TermsRoute
-  '/voices': typeof VoicesRoute
-  '/partner/corporate': typeof PartnerCorporateRoute
-  '/partner/csr': typeof PartnerCsrRoute
-  '/partner/ecosystem': typeof PartnerEcosystemRoute
-  '/partner/volunteer': typeof PartnerVolunteerRoute
-  '/products/$slug': typeof ProductsSlugRoute
-  '/programs/buildspace': typeof ProgramsBuildspaceRoute
+  '/about': typeof AboutRoute
+  '/events': typeof EventsRoute
+  '/faq': typeof FaqRoute
+  '/hiring': typeof HiringRoute
+  '/pricing': typeof PricingRoute
+  '/products': typeof ProductsRoute
+  '/partners/corporate': typeof PartnersCorporateRoute
+  '/partners/csr': typeof PartnersCsrRoute
+  '/partners/donate': typeof PartnersDonateRoute
+  '/partners/philanthropic': typeof PartnersPhilanthropicRoute
+  '/programs/aifest': typeof ProgramsAifestRoute
+  '/programs/buildwithus': typeof ProgramsBuildwithusRoute
+  '/programs/communityweek': typeof ProgramsCommunityweekRoute
   '/programs/dorahacks': typeof ProgramsDorahacksRoute
-  '/programs/gwy-25': typeof ProgramsGwy25Route
-  '/programs/gwy-26': typeof ProgramsGwy26Route
+  '/programs/dwoc': typeof ProgramsDwocRoute
+  '/programs/gwy-conference': typeof ProgramsGwyConferenceRoute
+  '/programs/gwy-fellowship': typeof ProgramsGwyFellowshipRoute
+  '/programs/hooman': typeof ProgramsHoomanRoute
+  '/programs/m2m-mentorship': typeof ProgramsM2mMentorshipRoute
   '/programs/w3m': typeof ProgramsW3mRoute
-  '/partner/': typeof PartnerIndexRoute
-  '/programs/': typeof ProgramsIndexRoute
+  '/sectors/technology': typeof SectorsTechnologyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/chapters'
-    | '/code-of-conduct'
-    | '/contact'
-    | '/contributors'
-    | '/doradao'
-    | '/doradao-1'
-    | '/fellowship'
-    | '/hack-with-dora'
-    | '/past-initiatives'
-    | '/privacy'
-    | '/refer'
-    | '/terms'
-    | '/voices'
-    | '/partner/corporate'
-    | '/partner/csr'
-    | '/partner/ecosystem'
-    | '/partner/volunteer'
-    | '/products/$slug'
-    | '/programs/buildspace'
+    | '/about'
+    | '/events'
+    | '/faq'
+    | '/hiring'
+    | '/pricing'
+    | '/products'
+    | '/partners/corporate'
+    | '/partners/csr'
+    | '/partners/donate'
+    | '/partners/philanthropic'
+    | '/programs/aifest'
+    | '/programs/buildwithus'
+    | '/programs/communityweek'
     | '/programs/dorahacks'
-    | '/programs/gwy-25'
-    | '/programs/gwy-26'
+    | '/programs/dwoc'
+    | '/programs/gwy-conference'
+    | '/programs/gwy-fellowship'
+    | '/programs/hooman'
+    | '/programs/m2m-mentorship'
     | '/programs/w3m'
-    | '/partner/'
-    | '/programs/'
+    | '/sectors/technology'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/chapters'
-    | '/code-of-conduct'
-    | '/contact'
-    | '/contributors'
-    | '/doradao'
-    | '/doradao-1'
-    | '/fellowship'
-    | '/hack-with-dora'
-    | '/past-initiatives'
-    | '/privacy'
-    | '/refer'
-    | '/terms'
-    | '/voices'
-    | '/partner/corporate'
-    | '/partner/csr'
-    | '/partner/ecosystem'
-    | '/partner/volunteer'
-    | '/products/$slug'
-    | '/programs/buildspace'
+    | '/about'
+    | '/events'
+    | '/faq'
+    | '/hiring'
+    | '/pricing'
+    | '/products'
+    | '/partners/corporate'
+    | '/partners/csr'
+    | '/partners/donate'
+    | '/partners/philanthropic'
+    | '/programs/aifest'
+    | '/programs/buildwithus'
+    | '/programs/communityweek'
     | '/programs/dorahacks'
-    | '/programs/gwy-25'
-    | '/programs/gwy-26'
+    | '/programs/dwoc'
+    | '/programs/gwy-conference'
+    | '/programs/gwy-fellowship'
+    | '/programs/hooman'
+    | '/programs/m2m-mentorship'
     | '/programs/w3m'
-    | '/partner'
-    | '/programs'
+    | '/sectors/technology'
   id:
     | '__root__'
     | '/'
-    | '/chapters'
-    | '/code-of-conduct'
-    | '/contact'
-    | '/contributors'
-    | '/doradao'
-    | '/doradao-1'
-    | '/fellowship'
-    | '/hack-with-dora'
-    | '/past-initiatives'
-    | '/privacy'
-    | '/refer'
-    | '/terms'
-    | '/voices'
-    | '/partner/corporate'
-    | '/partner/csr'
-    | '/partner/ecosystem'
-    | '/partner/volunteer'
-    | '/products/$slug'
-    | '/programs/buildspace'
+    | '/about'
+    | '/events'
+    | '/faq'
+    | '/hiring'
+    | '/pricing'
+    | '/products'
+    | '/partners/corporate'
+    | '/partners/csr'
+    | '/partners/donate'
+    | '/partners/philanthropic'
+    | '/programs/aifest'
+    | '/programs/buildwithus'
+    | '/programs/communityweek'
     | '/programs/dorahacks'
-    | '/programs/gwy-25'
-    | '/programs/gwy-26'
+    | '/programs/dwoc'
+    | '/programs/gwy-conference'
+    | '/programs/gwy-fellowship'
+    | '/programs/hooman'
+    | '/programs/m2m-mentorship'
     | '/programs/w3m'
-    | '/partner/'
-    | '/programs/'
+    | '/sectors/technology'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ChaptersRoute: typeof ChaptersRoute
-  CodeOfConductRoute: typeof CodeOfConductRoute
-  ContactRoute: typeof ContactRoute
-  ContributorsRoute: typeof ContributorsRoute
-  DoradaoRoute: typeof DoradaoRoute
-  Doradao1Route: typeof Doradao1Route
-  FellowshipRoute: typeof FellowshipRoute
-  HackWithDoraRoute: typeof HackWithDoraRoute
-  PastInitiativesRoute: typeof PastInitiativesRoute
-  PrivacyRoute: typeof PrivacyRoute
-  ReferRoute: typeof ReferRoute
-  TermsRoute: typeof TermsRoute
-  VoicesRoute: typeof VoicesRoute
-  PartnerCorporateRoute: typeof PartnerCorporateRoute
-  PartnerCsrRoute: typeof PartnerCsrRoute
-  PartnerEcosystemRoute: typeof PartnerEcosystemRoute
-  PartnerVolunteerRoute: typeof PartnerVolunteerRoute
-  ProductsSlugRoute: typeof ProductsSlugRoute
-  ProgramsBuildspaceRoute: typeof ProgramsBuildspaceRoute
+  AboutRoute: typeof AboutRoute
+  EventsRoute: typeof EventsRoute
+  FaqRoute: typeof FaqRoute
+  HiringRoute: typeof HiringRoute
+  PricingRoute: typeof PricingRoute
+  ProductsRoute: typeof ProductsRoute
+  PartnersCorporateRoute: typeof PartnersCorporateRoute
+  PartnersCsrRoute: typeof PartnersCsrRoute
+  PartnersDonateRoute: typeof PartnersDonateRoute
+  PartnersPhilanthropicRoute: typeof PartnersPhilanthropicRoute
+  ProgramsAifestRoute: typeof ProgramsAifestRoute
+  ProgramsBuildwithusRoute: typeof ProgramsBuildwithusRoute
+  ProgramsCommunityweekRoute: typeof ProgramsCommunityweekRoute
   ProgramsDorahacksRoute: typeof ProgramsDorahacksRoute
-  ProgramsGwy25Route: typeof ProgramsGwy25Route
-  ProgramsGwy26Route: typeof ProgramsGwy26Route
+  ProgramsDwocRoute: typeof ProgramsDwocRoute
+  ProgramsGwyConferenceRoute: typeof ProgramsGwyConferenceRoute
+  ProgramsGwyFellowshipRoute: typeof ProgramsGwyFellowshipRoute
+  ProgramsHoomanRoute: typeof ProgramsHoomanRoute
+  ProgramsM2mMentorshipRoute: typeof ProgramsM2mMentorshipRoute
   ProgramsW3mRoute: typeof ProgramsW3mRoute
-  PartnerIndexRoute: typeof PartnerIndexRoute
-  ProgramsIndexRoute: typeof ProgramsIndexRoute
+  SectorsTechnologyRoute: typeof SectorsTechnologyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -377,151 +325,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/chapters': {
-      id: '/chapters'
-      path: '/chapters'
-      fullPath: '/chapters'
-      preLoaderRoute: typeof ChaptersRouteImport
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/code-of-conduct': {
-      id: '/code-of-conduct'
-      path: '/code-of-conduct'
-      fullPath: '/code-of-conduct'
-      preLoaderRoute: typeof CodeOfConductRouteImport
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/contributors': {
-      id: '/contributors'
-      path: '/contributors'
-      fullPath: '/contributors'
-      preLoaderRoute: typeof ContributorsRouteImport
+    '/hiring': {
+      id: '/hiring'
+      path: '/hiring'
+      fullPath: '/hiring'
+      preLoaderRoute: typeof HiringRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/doradao': {
-      id: '/doradao'
-      path: '/doradao'
-      fullPath: '/doradao'
-      preLoaderRoute: typeof DoradaoRouteImport
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/doradao-1': {
-      id: '/doradao-1'
-      path: '/doradao-1'
-      fullPath: '/doradao-1'
-      preLoaderRoute: typeof Doradao1RouteImport
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/fellowship': {
-      id: '/fellowship'
-      path: '/fellowship'
-      fullPath: '/fellowship'
-      preLoaderRoute: typeof FellowshipRouteImport
+    '/partners/corporate': {
+      id: '/partners/corporate'
+      path: '/partners/corporate'
+      fullPath: '/partners/corporate'
+      preLoaderRoute: typeof PartnersCorporateRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/hack-with-dora': {
-      id: '/hack-with-dora'
-      path: '/hack-with-dora'
-      fullPath: '/hack-with-dora'
-      preLoaderRoute: typeof HackWithDoraRouteImport
+    '/partners/csr': {
+      id: '/partners/csr'
+      path: '/partners/csr'
+      fullPath: '/partners/csr'
+      preLoaderRoute: typeof PartnersCsrRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/past-initiatives': {
-      id: '/past-initiatives'
-      path: '/past-initiatives'
-      fullPath: '/past-initiatives'
-      preLoaderRoute: typeof PastInitiativesRouteImport
+    '/partners/donate': {
+      id: '/partners/donate'
+      path: '/partners/donate'
+      fullPath: '/partners/donate'
+      preLoaderRoute: typeof PartnersDonateRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
+    '/partners/philanthropic': {
+      id: '/partners/philanthropic'
+      path: '/partners/philanthropic'
+      fullPath: '/partners/philanthropic'
+      preLoaderRoute: typeof PartnersPhilanthropicRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/refer': {
-      id: '/refer'
-      path: '/refer'
-      fullPath: '/refer'
-      preLoaderRoute: typeof ReferRouteImport
+    '/programs/aifest': {
+      id: '/programs/aifest'
+      path: '/programs/aifest'
+      fullPath: '/programs/aifest'
+      preLoaderRoute: typeof ProgramsAifestRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
+    '/programs/buildwithus': {
+      id: '/programs/buildwithus'
+      path: '/programs/buildwithus'
+      fullPath: '/programs/buildwithus'
+      preLoaderRoute: typeof ProgramsBuildwithusRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/voices': {
-      id: '/voices'
-      path: '/voices'
-      fullPath: '/voices'
-      preLoaderRoute: typeof VoicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partner/': {
-      id: '/partner/'
-      path: '/partner'
-      fullPath: '/partner/'
-      preLoaderRoute: typeof PartnerIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partner/corporate': {
-      id: '/partner/corporate'
-      path: '/partner/corporate'
-      fullPath: '/partner/corporate'
-      preLoaderRoute: typeof PartnerCorporateRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partner/csr': {
-      id: '/partner/csr'
-      path: '/partner/csr'
-      fullPath: '/partner/csr'
-      preLoaderRoute: typeof PartnerCsrRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partner/ecosystem': {
-      id: '/partner/ecosystem'
-      path: '/partner/ecosystem'
-      fullPath: '/partner/ecosystem'
-      preLoaderRoute: typeof PartnerEcosystemRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partner/volunteer': {
-      id: '/partner/volunteer'
-      path: '/partner/volunteer'
-      fullPath: '/partner/volunteer'
-      preLoaderRoute: typeof PartnerVolunteerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/products/$slug': {
-      id: '/products/$slug'
-      path: '/products/$slug'
-      fullPath: '/products/$slug'
-      preLoaderRoute: typeof ProductsSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/programs/': {
-      id: '/programs/'
-      path: '/programs'
-      fullPath: '/programs/'
-      preLoaderRoute: typeof ProgramsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/programs/buildspace': {
-      id: '/programs/buildspace'
-      path: '/programs/buildspace'
-      fullPath: '/programs/buildspace'
-      preLoaderRoute: typeof ProgramsBuildspaceRouteImport
+    '/programs/communityweek': {
+      id: '/programs/communityweek'
+      path: '/programs/communityweek'
+      fullPath: '/programs/communityweek'
+      preLoaderRoute: typeof ProgramsCommunityweekRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programs/dorahacks': {
@@ -531,18 +423,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgramsDorahacksRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/programs/gwy-25': {
-      id: '/programs/gwy-25'
-      path: '/programs/gwy-25'
-      fullPath: '/programs/gwy-25'
-      preLoaderRoute: typeof ProgramsGwy25RouteImport
+    '/programs/dwoc': {
+      id: '/programs/dwoc'
+      path: '/programs/dwoc'
+      fullPath: '/programs/dwoc'
+      preLoaderRoute: typeof ProgramsDwocRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/programs/gwy-26': {
-      id: '/programs/gwy-26'
-      path: '/programs/gwy-26'
-      fullPath: '/programs/gwy-26'
-      preLoaderRoute: typeof ProgramsGwy26RouteImport
+    '/programs/gwy-conference': {
+      id: '/programs/gwy-conference'
+      path: '/programs/gwy-conference'
+      fullPath: '/programs/gwy-conference'
+      preLoaderRoute: typeof ProgramsGwyConferenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/gwy-fellowship': {
+      id: '/programs/gwy-fellowship'
+      path: '/programs/gwy-fellowship'
+      fullPath: '/programs/gwy-fellowship'
+      preLoaderRoute: typeof ProgramsGwyFellowshipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/hooman': {
+      id: '/programs/hooman'
+      path: '/programs/hooman'
+      fullPath: '/programs/hooman'
+      preLoaderRoute: typeof ProgramsHoomanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs/m2m-mentorship': {
+      id: '/programs/m2m-mentorship'
+      path: '/programs/m2m-mentorship'
+      fullPath: '/programs/m2m-mentorship'
+      preLoaderRoute: typeof ProgramsM2mMentorshipRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programs/w3m': {
@@ -552,36 +465,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgramsW3mRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sectors/technology': {
+      id: '/sectors/technology'
+      path: '/sectors/technology'
+      fullPath: '/sectors/technology'
+      preLoaderRoute: typeof SectorsTechnologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ChaptersRoute: ChaptersRoute,
-  CodeOfConductRoute: CodeOfConductRoute,
-  ContactRoute: ContactRoute,
-  ContributorsRoute: ContributorsRoute,
-  DoradaoRoute: DoradaoRoute,
-  Doradao1Route: Doradao1Route,
-  FellowshipRoute: FellowshipRoute,
-  HackWithDoraRoute: HackWithDoraRoute,
-  PastInitiativesRoute: PastInitiativesRoute,
-  PrivacyRoute: PrivacyRoute,
-  ReferRoute: ReferRoute,
-  TermsRoute: TermsRoute,
-  VoicesRoute: VoicesRoute,
-  PartnerCorporateRoute: PartnerCorporateRoute,
-  PartnerCsrRoute: PartnerCsrRoute,
-  PartnerEcosystemRoute: PartnerEcosystemRoute,
-  PartnerVolunteerRoute: PartnerVolunteerRoute,
-  ProductsSlugRoute: ProductsSlugRoute,
-  ProgramsBuildspaceRoute: ProgramsBuildspaceRoute,
+  AboutRoute: AboutRoute,
+  EventsRoute: EventsRoute,
+  FaqRoute: FaqRoute,
+  HiringRoute: HiringRoute,
+  PricingRoute: PricingRoute,
+  ProductsRoute: ProductsRoute,
+  PartnersCorporateRoute: PartnersCorporateRoute,
+  PartnersCsrRoute: PartnersCsrRoute,
+  PartnersDonateRoute: PartnersDonateRoute,
+  PartnersPhilanthropicRoute: PartnersPhilanthropicRoute,
+  ProgramsAifestRoute: ProgramsAifestRoute,
+  ProgramsBuildwithusRoute: ProgramsBuildwithusRoute,
+  ProgramsCommunityweekRoute: ProgramsCommunityweekRoute,
   ProgramsDorahacksRoute: ProgramsDorahacksRoute,
-  ProgramsGwy25Route: ProgramsGwy25Route,
-  ProgramsGwy26Route: ProgramsGwy26Route,
+  ProgramsDwocRoute: ProgramsDwocRoute,
+  ProgramsGwyConferenceRoute: ProgramsGwyConferenceRoute,
+  ProgramsGwyFellowshipRoute: ProgramsGwyFellowshipRoute,
+  ProgramsHoomanRoute: ProgramsHoomanRoute,
+  ProgramsM2mMentorshipRoute: ProgramsM2mMentorshipRoute,
   ProgramsW3mRoute: ProgramsW3mRoute,
-  PartnerIndexRoute: PartnerIndexRoute,
-  ProgramsIndexRoute: ProgramsIndexRoute,
+  SectorsTechnologyRoute: SectorsTechnologyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

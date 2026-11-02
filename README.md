@@ -1,99 +1,54 @@
-# 🌸 GWY Fellowship 2.0 — Girls Who Yap × AI
+# Dora World Atlas
 
-> **"Soft skies. Bold algorithms. Build, yap, ship & earn."**
-
-A women-first, creator-led fellowship and ecosystem platform demystifying Artificial Intelligence. **GWY Fellowship 2.0** empowers women builders, creators, product managers, marketers, and designers to harness AI, collaborate on high-impact projects, participate in hackathons, and earn bounties.
+A community-led global atlas and ecosystem platform for **DoraDAO**, connecting builders, creators, and organizers worldwide.
 
 ---
 
-## 🌟 Concept & Vision
+## 🛠 Technology Stack
 
-In an era dominated by rapid AI evolution, technical barriers often exclude non-traditional builders. **Girls Who Yap (GWY) × AI** bridges this gap by blending storytelling ("yapping") with cutting-edge artificial intelligence, creating an inclusive, high-energy environment for women to ideate, prototype, and launch real-world applications.
-
-### Core Pillars
-
-- 💡 **Demystifying AI**: Hands-on workshops, prompt engineering, agentic workflow building, and no-code/low-code/full-stack AI integration.
-- 🎨 **Creator & Builder Synergy**: Bringing together developers, designers, PMs, and marketers to build cross-functional products.
-- 🚀 **Build, Yap, Ship & Earn**: Earn micro-grants, hackathon prizes, and bounties while showcasing products to industry leaders.
-- 🌐 **Global Chapters & Community**: Fostering inclusive tech communities across global regions and university campuses through **Dora DAO**.
-
----
-
-## ⚡ Key Features & Initiatives
-
-### 1. 🎓 Fellowship Cohorts (`/programs/gwy-26`, `/programs/gwy-25`)
-- Structured **4-week immersive learning tracks** tailored for beginner to advanced AI builders.
-- Live workshops, fireside yaps with industry mentors, and hands-on capstone projects.
-- Interactive countdown timers, application tracking, and cohort referral incentives.
-
-### 2. ⚡ Hack with Dora (`/hack-with-dora`)
-- Community hackathons featuring multi-track challenges:
-  - **AI & Autonomous Agents**
-  - **Creator Economy & Content Tools**
-  - **Web3 & Open Source Protocols**
-  - **Design & User Experience**
-
-### 3. 🤝 Partner & Ecosystem Portal (`/partner`)
-- Tailored onboarding pathways for partners:
-  - **Corporate Sponsorships**: Mentorship, API credits, talent scouting.
-  - **CSR & Impact**: Driving diversity in tech and AI accessibility.
-  - **Ecosystem & Community**: Cross-community events, co-hosted hackathons.
-  - **Volunteers**: Mentor, judge, and facilitate cohort sessions.
-
-### 4. 🌍 Regional Chapters & Dora DAO (`/chapters`, `/doradao`)
-- Local meetup organization, campus ambassadors, and decentralized community governance.
-
-### 5. 🎙️ Voices & Community Showcase (`/voices`, `/contributors`)
-- Highlighting alumni stories, speaker showcases, sponsor carousels, and community contributors.
+- **Framework**: [TanStack Start](https://tanstack.com/start) with [TanStack Router](https://tanstack.com/router)
+- **UI Library**: [React 19](https://react.dev)
+- **State & Data**: [TanStack Query v5](https://tanstack.com/query)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com) with CSS Variables design tokens
+- **Build & Server**: [Vite 8](https://vite.dev), [Nitro](https://nitro.unjs.io)
+- **Mapping & Graphics**: [D3 Geo](https://d3js.org/d3-geo), [react-zoom-pan-pinch](https://github.com/BetterTyped/react-zoom-pan-pinch)
+- **Components**: [Radix UI](https://www.radix-ui.com), [Lucide React](https://lucide.dev)
+- **Testing**: [Vitest](https://vitest.dev), [Testing Library](https://testing-library.com)
+- **Package Manager**: npm
 
 ---
 
-## 🏗️ Technology Stack
-
-This application is built on a modern, high-performance web architecture:
-
-| Component | Technology | Description |
-| :--- | :--- | :--- |
-| **Framework** | [TanStack Start](https://tanstack.com/start) | SSR & Full-stack framework built on Vite & TanStack Router |
-| **Routing** | [TanStack Router](https://tanstack.com/router) | Fully type-safe router with auto-generated route trees |
-| **UI Library** | [React 19](https://react.dev/) | Component architecture & state management |
-| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) | Modern utility-first styling engine with glassmorphism & gradients |
-| **Primitives** | [Radix UI](https://www.radix-ui.com/) | Unstyled, accessible UI components |
-| **Icons & Visuals** | [Lucide React](https://lucide.dev/) | Modern vector icons |
-| **Build & Dev** | [Vite 7](https://vitejs.dev/) | Next-generation frontend tooling |
-| **Server / Engine** | [Nitro Engine](https://nitro.unjs.io/) | Server engine targeting Cloudflare Pages & Netlify |
-
----
-
-## 📂 Project Structure
+## 🏗 Architecture Overview
 
 ```
-Dreamwave-Digital/
-├── public/                # Static assets, logos, and program media
+├── public/
+│   ├── media/          # Local static media (WebP images, SVG vectors, WebM videos)
+│   ├── templates/      # Static document templates
+│   ├── favicon.png
+│   └── robots.txt
 ├── src/
-│   ├── assets/            # Component-imported images, graphics, and icons
-│   ├── components/        # Reusable UI components
-│   │   ├── ui/            # Radix UI & primitive elements
-│   │   ├── ApplyBar.tsx   # Fixed bottom application bar
-│   │   ├── Countdown.tsx  # Dynamic event/fellowship timer
-│   │   ├── SiteNav.tsx    # Header & responsive navigation
-│   │   └── SiteFooter.tsx # Footer with social links & sitemap
-│   ├── hooks/             # Custom React hooks (theme, scroll, analytics)
-│   ├── lib/               # Utility functions & data models (speakers, sponsors)
-│   ├── routes/            # TanStack Router file-based pages
-│   │   ├── index.tsx      # Main Landing Page (GWY 2.0)
-│   │   ├── chapters.tsx   # Global & Campus Chapters
-│   │   ├── contributors.tsx # Community Builders & Alumni
-│   │   ├── doradao.tsx    # Dora DAO Overview
-│   │   ├── hack-with-dora.tsx # Hackathon Hub
-│   │   ├── partner.*.tsx  # Partner Onboarding Portal
-│   │   └── programs.*.tsx # Fellowship & Program Details
-│   ├── router.tsx         # TanStack Router configuration
-│   └── styles.css         # Global design system & Tailwind setup
-├── vite.config.ts         # Vite configuration with TanStack Start integration
-├── wrangler.jsonc         # Cloudflare Workers/Pages configuration
-└── package.json           # Project dependencies & scripts
+│   ├── assets/         # Typed asset pointer manifests (.asset.json) resolving to /media
+│   ├── components/     # Reusable UI components, sections, and feature modules
+│   │   ├── ui/         # Radix-based accessible UI primitives
+│   │   ├── world-*     # Interactive world map, geography calculations, and city dossiers
+│   │   └── ...
+│   ├── hooks/          # Custom React hooks (e.g., use-mobile)
+│   ├── lib/            # Utilities, translations, and SSR error handlers
+│   ├── routes/         # File-based routing via TanStack Router
+│   ├── routeTree.gen.ts # Auto-generated route tree
+│   ├── router.tsx      # TanStack Router configuration
+│   ├── server.ts       # SSR server entry and error normalization wrapper
+│   ├── start.ts        # TanStack Start instance with CSRF protection and error middleware
+│   └── styles.css      # Core styles, design tokens, and theme definitions
+├── docs/               # Integration guides and Apps Script handlers
+├── vercel.json         # Vercel deployment cache and routing config
+└── vite.config.ts      # Standalone Vite, TanStack Start, and Nitro configuration
 ```
+
+### Key Integrations
+1. **Spreadsheet-Driven Map Data**: Directly queries public Google Sheets exports in the browser for `Locations` and `Hotspots` (defined in `src/components/world-sheet.ts`). Bundled geography acts as an offline fallback without requiring API keys or third-party databases.
+2. **Event Submissions**: Direct submission to a configured Google Apps Script endpoint (`docs/events-apps-script.gs`), appending pending events with zero credential exposure.
+3. **Local Self-Contained Media**: All image and video pointers resolve to local static files in `/media`, removing dependencies on external CDN infrastructure.
 
 ---
 
@@ -101,36 +56,76 @@ Dreamwave-Digital/
 
 ### Prerequisites
 
-Ensure you have **Node.js (v18+)** and **npm** installed on your system.
+- **Node.js**: `v20.x` or `v22.x` (LTS recommended)
+- **npm**: `v10.x` or newer
 
-### 1. Clone the Repository
+### Installation
 
-```bash
-git clone https://github.com/Petit-DJ/Dora-dao.git
-cd Dreamwave-Digital
-```
-
-### 2. Install Dependencies
+Clone the repository and install dependencies using npm:
 
 ```bash
-npm install --legacy-peer-deps
+git clone <repository-url>
+cd dora-world-atlas
+npm install
 ```
 
-### 3. Start the Development Server
+---
+
+## 💻 Local Development
+
+Run the Vite development server:
 
 ```bash
 npm run dev
 ```
 
-The application will be accessible at `http://localhost:8080` (or `http://localhost:5173`).
+The application will start at `http://localhost:8080`.
 
-### 4. Build for Production
+---
+
+## 🧪 Testing and Quality Checks
+
+Run test suites via Vitest:
+
+```bash
+npm run test
+```
+
+Watch mode for development:
+
+```bash
+npm run test:watch
+```
+
+Run ESLint for code analysis:
+
+```bash
+npm run lint
+```
+
+Format code with Prettier:
+
+```bash
+npm run format
+```
+
+---
+
+## 📦 Production Build
+
+To build the application for production deployment:
 
 ```bash
 npm run build
 ```
 
-To preview the production build locally:
+This compiles:
+- Client-side assets via Vite and Tailwind CSS.
+- Server function bundle using Nitro with the configured Vercel preset (in `.vercel/output`).
+
+### Previewing Production Build Locally
+
+Preview the production server locally with Nitro:
 
 ```bash
 npm run preview
@@ -138,24 +133,32 @@ npm run preview
 
 ---
 
-## 🌐 Deployment Options
+## 🌐 Deployment
 
-- **Cloudflare Pages**: Configured via [`wrangler.jsonc`](file:///g:/Project/doradaomain/Dreamwave-Digital/wrangler.jsonc).
-- **Netlify**: Configured via [`netlify.toml`](file:///g:/Project/doradaomain/Dreamwave-Digital/netlify.toml).
+### Vercel Deployment
+
+1. Connect this repository to your Vercel project.
+2. Ensure framework preset is left to default / **Other**.
+3. Build command: `npm run build`
+4. Output directory: Leave override unset (Nitro automatically targets `.vercel/output`).
+5. Root directory: `./`
+
+### Other Platforms
+
+Nitro supports multiple deployment presets (Cloudflare Pages, Netlify, Node server, etc.). To target a different platform, adjust the preset in `vite.config.ts`:
+
+```ts
+nitro({ preset: "node-server" }) // or cloudflare-pages, etc.
+```
 
 ---
 
-## 💬 Community & Support
+## ⚙️ Environment Variables
 
-Join the Girls Who Yap & Dora DAO movements!
+The core functionality (map data, events, media) requires no mandatory environment variables for basic operation. Optional variables include:
 
-- 🌐 **Website**: [GWY Fellowship](http://localhost:8080)
-- 🐤 **Twitter / X**: [@GirlsWhoYap](https://x.com)
-- 💬 **Discord**: Community Chat & Support
-- 📧 **Contact**: `fellowship@doradao.org`
+| Variable | Description | Default |
+| :--- | :--- | :--- |
+| `VITE_SITE_URL` | Canonical origin URL for OpenGraph metadata and JSON-LD structured data | `https://doradao.lovable.app` |
 
----
-
-<p center>
-  Made with 💖 by <b>Girls Who Yap × Dora DAO</b>
-</p>
+Create a `.env` file in the root directory to define local overrides if needed.
