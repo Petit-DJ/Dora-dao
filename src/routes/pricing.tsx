@@ -4,7 +4,7 @@ const title = "DoraDAO Sponsorship & Partnerships | Reach Builders, Creators & D
 const description =
   "Partner with DoraDAO to reach builders, developers, founders, and creators through technology events, newsletters, community programs, marketing campaigns, and talent opportunities.";
 const siteOrigin =
-  (typeof process !== "undefined" && process.env?.VITE_SITE_URL) || "https://doradao.lovable.app";
+  (typeof process !== "undefined" && process.env?.["VITE_SITE_URL"]) || "https://doradao.lovable.app";
 const url = `${siteOrigin}/pricing`;
 export const Route = createFileRoute("/pricing")({
   head: () => ({

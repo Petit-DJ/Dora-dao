@@ -5,11 +5,11 @@ import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
-import { nitro } from "nitro/vite";
+import netlify from "@netlify/vite-plugin-tanstack-start";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -51,7 +51,7 @@ export default defineConfig(({ command }) => ({
         },
       },
     }),
-    ...(command === "build" ? [nitro({ preset: "vercel" })] : []),
+    netlify(),
     viteReact(),
   ],
-}));
+});
