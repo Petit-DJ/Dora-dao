@@ -14,12 +14,8 @@ test("every folder opens distinct pictures and the participate gallery draws one
   for (const folder of programFolders) {
     expect(folder.pictures.length).toBeGreaterThanOrEqual(1);
     expect(folder.pictures.length).toBeLessThanOrEqual(20);
-    expect(new Set(folder.pictures.map((picture) => picture.src)).size).toBe(
-      folder.pictures.length,
-    );
+    expect(new Set(folder.pictures.map((picture) => picture.src)).size).toBe(folder.pictures.length);
   }
   expect(participatePhotos.length).toBe(programFolders.length);
-  expect(new Set(participatePhotos.map((picture) => picture.src)).size).toBe(
-    participatePhotos.length,
-  );
+  expect(new Set(participatePhotos.map((picture) => picture.src)).size).toBe(participatePhotos.length);
 });

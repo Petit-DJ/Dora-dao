@@ -1,61 +1,9 @@
-import { describe, expect, it } from "vitest";
-import {
-  partnershipDraft,
-  planningAllocation,
-  sponsorshipPackages,
-  sponsorshipOpportunities,
-} from "./sponsorship-data";
-describe("Sponsorship rules", () => {
-  it("uses a request-only model for all four unvalidated packages", () => {
-    expect(sponsorshipPackages.map((p) => p.name)).toEqual([
-      "Community",
-      "Growth",
-      "Ecosystem",
-      "Strategic Partner",
-    ]);
-    expect(sponsorshipPackages.some((p) => "price" in p)).toBe(false);
-  });
-  it("retains newsletter format limits", () => {
-    const formats = sponsorshipOpportunities[0].formats;
-    expect(formats[0]).toContain("15 words");
-    expect(formats[1]).toContain("45 words");
-    expect(formats[2]).toContain("500-700 words");
-  });
-  it("calculates a planning split, not an invented quote", () => {
-    expect(planningAllocation(1000, 3)).toBe(333);
-    expect(planningAllocation(1000, 0)).toBe(0);
-  });
-  it("emails the team with every selected activation and the USD budget", () => {
-    const href = partnershipDraft({
-      name: "Test Hooman",
-      email: "test@example.com",
-      company: "Example",
-      objective: "Developer adoption",
-      activations: ["Content & newsletter", "Events & experiences"],
-      budget: 1000,
-      timeline: "Within 1 month",
-      note: "Support accessible workshops",
-    });
-    expect(href.startsWith("mailto:Connectdoradao@gmail.com?")).toBe(true);
-    const decoded = decodeURIComponent(href);
-    expect(decoded).toContain("Content & newsletter, Events & experiences");
-    expect(decoded).toContain("Planning budget (USD): $1,000");
-    expect(decoded).toContain("test@example.com");
-  });
-  it("does not substitute a numerical budget when the user is unsure", () => {
-    expect(
-      decodeURIComponent(
-        partnershipDraft({
-          name: "Test",
-          email: "test@example.com",
-          company: "Example",
-          objective: "Hiring",
-          activations: ["Jobs & talent"],
-          budget: null,
-          timeline: "Flexible",
-          note: "",
-        }),
-      ),
-    ).toContain("Planning budget (USD): Not sure yet");
-  });
+import { describe, expect, it } from 'vitest';
+import { partnershipDraft, planningAllocation, sponsorshipPackages, sponsorshipOpportunities } from './sponsorship-data';
+describe('Sponsorship rules', () => {
+ it('uses a request-only model for all four unvalidated packages', () => { expect(sponsorshipPackages.map(p => p.name)).toEqual(['Community','Growth','Ecosystem','Strategic Partner']); expect(sponsorshipPackages.some(p => 'price' in p)).toBe(false); });
+ it('retains newsletter format limits', () => { const formats = sponsorshipOpportunities[0].formats; expect(formats[0]).toContain('15 words'); expect(formats[1]).toContain('45 words'); expect(formats[2]).toContain('500-700 words'); });
+ it('calculates a planning split, not an invented quote', () => { expect(planningAllocation(1000,3)).toBe(333); expect(planningAllocation(1000,0)).toBe(0); });
+ it('emails the team with every selected activation and the USD budget', () => { const href = partnershipDraft({name:'Test Hooman',email:'test@example.com',company:'Example',objective:'Developer adoption',activations:['Content & newsletter','Events & experiences'],budget:1000,timeline:'Within 1 month',note:'Support accessible workshops'}); expect(href.startsWith('mailto:Connectdoradao@gmail.com?')).toBe(true); const decoded = decodeURIComponent(href); expect(decoded).toContain('Content & newsletter, Events & experiences');expect(decoded).toContain('Planning budget (USD): $1,000');expect(decoded).toContain('test@example.com'); });
+ it('does not substitute a numerical budget when the user is unsure', () => { expect(decodeURIComponent(partnershipDraft({name:'Test',email:'test@example.com',company:'Example',objective:'Hiring',activations:['Jobs & talent'],budget:null,timeline:'Flexible',note:''}))).toContain('Planning budget (USD): Not sure yet'); });
 });

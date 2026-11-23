@@ -1,164 +1,65 @@
-# Dora World Atlas
+# Welcome to your Lovable project
 
-A community-led global atlas and ecosystem platform for **DoraDAO**, connecting builders, creators, and organizers worldwide.
+This project was built with [Lovable](https://lovable.dev).
 
----
+## Build with Lovable
 
-## 🛠 Technology Stack
+Open your project in the [Lovable editor](https://lovable.dev) and keep building.
 
-- **Framework**: [TanStack Start](https://tanstack.com/start) with [TanStack Router](https://tanstack.com/router)
-- **UI Library**: [React 19](https://react.dev)
-- **State & Data**: [TanStack Query v5](https://tanstack.com/query)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com) with CSS Variables design tokens
-- **Build & Server**: [Vite 8](https://vite.dev), [Nitro](https://nitro.unjs.io)
-- **Mapping & Graphics**: [D3 Geo](https://d3js.org/d3-geo), [react-zoom-pan-pinch](https://github.com/BetterTyped/react-zoom-pan-pinch)
-- **Components**: [Radix UI](https://www.radix-ui.com), [Lucide React](https://lucide.dev)
-- **Testing**: [Vitest](https://vitest.dev), [Testing Library](https://testing-library.com)
-- **Package Manager**: npm
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
+- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
 
----
+## Development
 
-## 🏗 Architecture Overview
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-```
-├── public/
-│   ├── media/          # Local static media (WebP images, SVG vectors, WebM videos)
-│   ├── templates/      # Static document templates
-│   ├── favicon.png
-│   └── robots.txt
-├── src/
-│   ├── assets/         # Typed asset pointer manifests (.asset.json) resolving to /media
-│   ├── components/     # Reusable UI components, sections, and feature modules
-│   │   ├── ui/         # Radix-based accessible UI primitives
-│   │   ├── world-*     # Interactive world map, geography calculations, and city dossiers
-│   │   └── ...
-│   ├── hooks/          # Custom React hooks (e.g., use-mobile)
-│   ├── lib/            # Utilities, translations, and SSR error handlers
-│   ├── routes/         # File-based routing via TanStack Router
-│   ├── routeTree.gen.ts # Auto-generated route tree
-│   ├── router.tsx      # TanStack Router configuration
-│   ├── server.ts       # SSR server entry and error normalization wrapper
-│   ├── start.ts        # TanStack Start instance with CSRF protection and error middleware
-│   └── styles.css      # Core styles, design tokens, and theme definitions
-├── docs/               # Integration guides and Apps Script handlers
-├── vercel.json         # Vercel deployment cache and routing config
-└── vite.config.ts      # Standalone Vite, TanStack Start, and Nitro configuration
-```
-
-### Key Integrations
-1. **Spreadsheet-Driven Map Data**: Directly queries public Google Sheets exports in the browser for `Locations` and `Hotspots` (defined in `src/components/world-sheet.ts`). Bundled geography acts as an offline fallback without requiring API keys or third-party databases.
-2. **Event Submissions**: Direct submission to a configured Google Apps Script endpoint (`docs/events-apps-script.gs`), appending pending events with zero credential exposure.
-3. **Local Self-Contained Media**: All image and video pointers resolve to local static files in `/media`, removing dependencies on external CDN infrastructure.
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Node.js**: `v20.x` or `v22.x` (LTS recommended)
-- **npm**: `v10.x` or newer
-
-### Installation
-
-Clone the repository and install dependencies using npm:
-
-```bash
-git clone <repository-url>
-cd dora-world-atlas
-npm install
-```
-
----
-
-## 💻 Local Development
-
-Run the Vite development server:
-
-```bash
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
 npm run dev
 ```
 
-The application will start at `http://localhost:8080`.
+## Built with
 
----
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS
 
-## 🧪 Testing and Quality Checks
+## Live map spreadsheet
 
-Run test suites via Vitest:
+The map reads the public `Locations` and `Hotspots` tabs from the configured Google Sheet in `src/components/world-sheet.ts` directly in the visitor's browser. No Google API key, OAuth connection or Lovable Cloud is used. Keep the sheet shared as **Anyone with the link can view** and do not put private contact information in it.
 
-```bash
-npm run test
-```
+- `Locations`: Continent, Country, CountryCode, State, City, Latitude, Longitude, ChapterName, ChapterStatus, ChapterLink.
+- `Hotspots`: City, Country, Category, Name, Role, Link. Match City and Country to Locations; Category can be University, Corporate Partner or Leader.
+- Use decimal coordinates and two-letter country codes. One location row per city; one hotspot row per university, company or leader.
+- New locations are added to bundled geography; matching locations update their coordinates and chapter. Removing a row removes its sheet-only additions on the next reload, but does not remove a bundled city.
+- Search includes chapter and hotspot names without changing the existing city panel. Their details are not displayed in that panel.
+- Visitors reload to fetch edits; Google's cache may delay changes. If the sheet is unavailable, the map keeps its bundled geography. Both tabs currently contain only column headings.
 
-Watch mode for development:
+## Community gallery spreadsheet
 
-```bash
-npm run test:watch
-```
-
-Run ESLint for code analysis:
-
-```bash
-npm run lint
-```
-
-Format code with Prettier:
+The gallery reads its links live from the participant sheet (one row per submission; a row can hold several links). New rows appear straight away; to add their pictures and captions, refresh the snapshot:
 
 ```bash
-npm run format
+bun scripts/gallery-snapshot.ts && python3 scripts/gallery-images.py
 ```
 
----
+## Deploy on Vercel
 
-## 📦 Production Build
+Import this repository into Vercel, choose **Other** if the framework is not detected, and use `npm run build` as the build command. The configured Nitro Vercel preset produces Vercel Build Output in `.vercel/output`; leave the output directory override unset. The Google Sheet integration needs no environment variables and works on either host.
 
-To build the application for production deployment:
+Deployment to a real Vercel project has not been tested here. Existing image pointer files (`.asset.json`) still rely on Lovable asset hosting; this spreadsheet change does not make those images portable. Replace them with bundled image files before expecting a fully hosting-independent site.
 
-```bash
-npm run build
-```
+## Speakers spreadsheet
+Speakers come live from https://docs.google.com/spreadsheets/d/1-6u8NnQx-0R47QcuX3l8mqHo-ecKhGjeCMupksh8t5w (keep it "Anyone with the link can view").
+Columns (row 1): Name, Designation, Company, Photo, LinkedIn, Twitter, Topic (optional), Featured, Status.
+- Status must be `Approved` for a row to appear.
+- Featured `Yes` puts the speaker on the homepage (up to 8, featured first).
+- Photo: a number 1 to 18 picks a bundled portrait, or paste a Google Drive share link / any https image link.
+- While no rows are approved, the site lists the mentors named in the YouTube recordings.
 
-This compiles:
-- Client-side assets via Vite and Tailwind CSS.
-- Server function bundle using Nitro with the configured Vercel preset (in `.vercel/output`).
-
-### Previewing Production Build Locally
-
-Preview the production server locally with Nitro:
-
-```bash
-npm run preview
-```
-
----
-
-## 🌐 Deployment
-
-### Vercel Deployment
-
-1. Connect this repository to your Vercel project.
-2. Ensure framework preset is left to default / **Other**.
-3. Build command: `npm run build`
-4. Output directory: Leave override unset (Nitro automatically targets `.vercel/output`).
-5. Root directory: `./`
-
-### Other Platforms
-
-Nitro supports multiple deployment presets (Cloudflare Pages, Netlify, Node server, etc.). To target a different platform, adjust the preset in `vite.config.ts`:
-
-```ts
-nitro({ preset: "node-server" }) // or cloudflare-pages, etc.
-```
-
----
-
-## ⚙️ Environment Variables
-
-The core functionality (map data, events, media) requires no mandatory environment variables for basic operation. Optional variables include:
-
-| Variable | Description | Default |
-| :--- | :--- | :--- |
-| `VITE_SITE_URL` | Canonical origin URL for OpenGraph metadata and JSON-LD structured data | `https://doradao.lovable.app` |
-
-Create a `.env` file in the root directory to define local overrides if needed.
+## Knowledge base
+`/recordings` lists the DoraDAO YouTube channel recordings from `src/components/recordings-data.ts`. Add new videos there (id, title, seconds, views).

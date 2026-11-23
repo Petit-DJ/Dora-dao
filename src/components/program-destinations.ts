@@ -7,10 +7,7 @@ export const programDestinations = [
   { name: "WORLD TOUR ft. Dora", label: "WORLD TOUR ft. Dora", to: "/programs/w3m" },
   { name: "AiFest", label: "AiFest", to: "/programs/aifest" },
   { name: "CommunityWeek", label: "CommunityWeek", to: "/programs/communityweek" },
-  {
-    name: "M2M Mentorship program",
-    label: "M2M Mentorship program",
-    to: "/programs/m2m-mentorship",
-  },
+  { name: "M2M Mentorship program", label: "M2M Mentorship program", to: "/programs/m2m-mentorship" },
   { name: "Hooman", label: "Hooman", to: "/programs/hooman" },
 ] as const;
+

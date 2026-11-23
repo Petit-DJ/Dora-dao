@@ -1,4 +1,13 @@
-# Dora World Atlas - Engineering Guidelines
+<!-- LOVABLE:BEGIN -->
+> [!IMPORTANT]
+> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
+> published git history — force pushing, or rebasing/amending/squashing commits
+> that are already pushed — as it rewrites history on Lovable's side and the
+> user will likely lose their project history.
+>
+> Commits you push to the connected branch sync back to Lovable and show up in
+> the editor, so keep the branch in a working state.
+<!-- LOVABLE:END -->
 
 - Keep hero scenery and transparent characters as separate image layers so the characters can bridge the scrolling sections independently of the headline.
 - Use shared SiteNavbar and SiteFooter on all pages for consistent compact navigation; keep footer art separate from live links.
@@ -41,3 +50,6 @@
 - Use Nitro's Vercel preset for external builds; managed builds retain their platform target so hosting changes need no sheet credentials.
 - Image pointer files reference compressed WebP copies in public/media, so images ship with the build and work on any host (Vercel included) without Lovable CDN.
 - Events read from the workbook's Events tab (public CSV); submissions go to a Google Apps Script web app (docs/events-apps-script.gs) that appends Status=Pending, keeping hosting credential-free.
+- Gallery reads participant links live from its own public sheet (headerless, one row per submission) and enriches them from a bundled snapshot (src/components/gallery-previews.json + public/media/gallery), refreshed with scripts/gallery-snapshot.ts then scripts/gallery-images.py; browsers can't unfurl LinkedIn/X/Instagram, so new rows show as link cards until the next snapshot.
+- Speakers read live from their own public sheet (Status = Approved, Featured = Yes for the homepage) and fall back to guests named in recording titles; the knowledge base lists channel recordings from browser-safe recordings-data.ts, so both need no hosting credentials.
+- Load deferred homepage sections through lazyRetry and let the root error screen call reloadForStaleChunk, so tabs left open across a redeploy or preview restart reload once instead of going blank.

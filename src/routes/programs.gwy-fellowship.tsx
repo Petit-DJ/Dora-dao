@@ -2,8 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { FellowshipPage } from "@/components/fellowship-page";
 
 const title = "GWY Fellowship, DoraDAO";
-const description =
-  "The GirlsWhoYap Fellowship helps women learn, build and grow through workshops, mentorship and real-world projects.";
+const description = "The GirlsWhoYap Fellowship helps women learn, build and grow through workshops, mentorship and real-world projects.";
 
 export const Route = createFileRoute("/programs/gwy-fellowship")({
   head: () => ({

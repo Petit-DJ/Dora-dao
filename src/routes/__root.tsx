@@ -12,6 +12,8 @@ import { useEffect, type ReactNode } from "react";
 
 import { LanguageProvider } from "@/components/language-provider";
 import appCss from "../styles.css?url";
+import { reportLovableError } from "../lib/lovable-error-reporting";
+import { reloadForStaleChunk } from "../lib/lazy-retry";
 
 function NotFoundComponent() {
   return (
@@ -36,8 +38,12 @@ function NotFoundComponent() {
 }
 
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
-  console.error("Application runtime error:", error);
+  console.error(error);
   const router = useRouter();
+  useEffect(() => {
+    if (reloadForStaleChunk(error)) return;
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -77,12 +83,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "DoraDAO" },
       { name: "description", content: "Global qualitative market research" },
-      { name: "author", content: "DoraDAO" },
+      { name: "author", content: "Lovable" },
       { property: "og:title", content: "DoraDAO" },
       { property: "og:description", content: "Global qualitative market research" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@DoraDAO" },
+      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -91,10 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400..800;1,400..800&family=Kalam:wght@400;700&display=swap",
-      },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400..800;1,400..800&family=Kalam:wght@400;700&display=swap" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
@@ -124,9 +127,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <LanguageProvider><Outlet /></LanguageProvider> breaks all child routes. */}
-      <LanguageProvider>
-        <Outlet />
-      </LanguageProvider>
+      <LanguageProvider><Outlet /></LanguageProvider>
     </QueryClientProvider>
   );
 }

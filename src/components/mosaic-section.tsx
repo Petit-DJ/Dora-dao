@@ -4,23 +4,10 @@ import { speakerPortraits } from "@/components/speaker-portraits";
 
 type Tile =
   | { kind: "photo"; image: string; alt: string }
-  | {
-      kind: "stat";
-      icon: "play" | "globe" | "users" | "lightbulb" | "handshake" | "sparkles";
-      value: string;
-      label: string;
-      tone: "green" | "peach" | "lilac" | "cream" | "gold";
-    }
+  | { kind: "stat"; icon: "play" | "globe" | "users" | "lightbulb" | "handshake" | "sparkles"; value: string; label: string; tone: "green" | "peach" | "lilac" | "cream" | "gold" }
   | { kind: "quote"; text: string; tone: "cream" | "green" | "mint" };
 
-const icons = {
-  play: Play,
-  globe: Globe,
-  users: Users,
-  lightbulb: Lightbulb,
-  handshake: Handshake,
-  sparkles: Sparkles,
-};
+const icons = { play: Play, globe: Globe, users: Users, lightbulb: Lightbulb, handshake: Handshake, sparkles: Sparkles };
 
 const rows: { direction: "left" | "right"; tiles: Tile[] }[] = [
   {
@@ -31,13 +18,7 @@ const rows: { direction: "left" | "right"; tiles: Tile[] }[] = [
       { kind: "photo", ...speakerPortraits[1] },
       { kind: "quote", text: "Ideas grow here.", tone: "cream" },
       { kind: "photo", ...speakerPortraits[2] },
-      {
-        kind: "stat",
-        icon: "sparkles",
-        value: "600+",
-        label: "pieces of community-made content",
-        tone: "peach",
-      },
+      { kind: "stat", icon: "sparkles", value: "600+", label: "pieces of community-made content", tone: "peach" },
       { kind: "photo", ...speakerPortraits[3] },
       { kind: "photo", ...speakerPortraits[4] },
       { kind: "photo", ...speakerPortraits[5] },
@@ -50,13 +31,7 @@ const rows: { direction: "left" | "right"; tiles: Tile[] }[] = [
       { kind: "photo", ...speakerPortraits[6] },
       { kind: "stat", icon: "users", value: "1.5K+", label: "community members", tone: "lilac" },
       { kind: "photo", ...speakerPortraits[7] },
-      {
-        kind: "stat",
-        icon: "lightbulb",
-        value: "30+",
-        label: "sessions & workshops",
-        tone: "cream",
-      },
+      { kind: "stat", icon: "lightbulb", value: "30+", label: "sessions & workshops", tone: "cream" },
       { kind: "quote", text: "Bring your ideas to life.", tone: "green" },
       { kind: "photo", ...speakerPortraits[8] },
       { kind: "photo", ...speakerPortraits[9] },
@@ -84,14 +59,7 @@ function TileCard({ tile }: { tile: Tile }) {
   if (tile.kind === "photo") {
     return (
       <li className="mosaic-tile mosaic-photo">
-        <img
-          src={tile.image}
-          alt={tile.alt}
-          loading="lazy"
-          decoding="async"
-          width={480}
-          height={480}
-        />
+        <img src={tile.image} alt={tile.alt} loading="lazy" decoding="async" width={480} height={480} />
       </li>
     );
   }
@@ -115,19 +83,13 @@ function TileCard({ tile }: { tile: Tile }) {
 
 export function MosaicSection() {
   return (
-    <section
-      id="community-mosaic"
-      aria-labelledby="mosaic-title"
-      className="mosaic-section relative z-10 text-community-ink"
-    >
+    <section id="community-mosaic" aria-labelledby="mosaic-title" className="mosaic-section relative z-10 text-community-ink">
       <div className="mosaic-heading">
         <p className="mosaic-eyebrow">· Our people ·</p>
         <h2 id="mosaic-title" className="mosaic-title">
           18 voices, 35+ nations, <span className="text-hero-orange">one shared warmth</span>.
         </h2>
-        <p className="home-story-people-note">
-          High school students, university researchers, seasoned mentors, and creative minds.
-        </p>
+        <p className="home-story-people-note">High school students, university researchers, seasoned mentors, and creative minds.</p>
       </div>
       <div className="mosaic-rows">
         {rows.map((row, index) => (

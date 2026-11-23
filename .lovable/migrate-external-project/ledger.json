@@ -1,0 +1,3 @@
+[{"capability":"code","source":"TanStack Start site","outcome":"migrate","status":"verified","next_action":"none"},
+{"capability":"schema/records/auth","source":"none detected","outcome":"not applicable","status":"verified","next_action":"none"},
+{"capability":"assets","source":"bundled + CDN pointers","outcome":"migrate","status":"verified","next_action":"none"}]

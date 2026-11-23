@@ -13,9 +13,12 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as HiringRouteImport } from './routes/hiring'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ProductsRouteImport } from './routes/products'
+import { Route as RecordingsRouteImport } from './routes/recordings'
+import { Route as SpeakersRouteImport } from './routes/speakers'
 import { Route as PartnersCorporateRouteImport } from './routes/partners.corporate'
 import { Route as PartnersCsrRouteImport } from './routes/partners.csr'
 import { Route as PartnersDonateRouteImport } from './routes/partners.donate'
@@ -52,6 +55,11 @@ const FaqRoute = FaqRouteImport.update({
   path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HiringRoute = HiringRouteImport.update({
   id: '/hiring',
   path: '/hiring',
@@ -65,6 +73,16 @@ const PricingRoute = PricingRouteImport.update({
 const ProductsRoute = ProductsRouteImport.update({
   id: '/products',
   path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecordingsRoute = RecordingsRouteImport.update({
+  id: '/recordings',
+  path: '/recordings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SpeakersRoute = SpeakersRouteImport.update({
+  id: '/speakers',
+  path: '/speakers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PartnersCorporateRoute = PartnersCorporateRouteImport.update({
@@ -148,9 +166,12 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/events': typeof EventsRoute
   '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
   '/hiring': typeof HiringRoute
   '/pricing': typeof PricingRoute
   '/products': typeof ProductsRoute
+  '/recordings': typeof RecordingsRoute
+  '/speakers': typeof SpeakersRoute
   '/partners/corporate': typeof PartnersCorporateRoute
   '/partners/csr': typeof PartnersCsrRoute
   '/partners/donate': typeof PartnersDonateRoute
@@ -172,9 +193,12 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/events': typeof EventsRoute
   '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
   '/hiring': typeof HiringRoute
   '/pricing': typeof PricingRoute
   '/products': typeof ProductsRoute
+  '/recordings': typeof RecordingsRoute
+  '/speakers': typeof SpeakersRoute
   '/partners/corporate': typeof PartnersCorporateRoute
   '/partners/csr': typeof PartnersCsrRoute
   '/partners/donate': typeof PartnersDonateRoute
@@ -197,9 +221,12 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/events': typeof EventsRoute
   '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
   '/hiring': typeof HiringRoute
   '/pricing': typeof PricingRoute
   '/products': typeof ProductsRoute
+  '/recordings': typeof RecordingsRoute
+  '/speakers': typeof SpeakersRoute
   '/partners/corporate': typeof PartnersCorporateRoute
   '/partners/csr': typeof PartnersCsrRoute
   '/partners/donate': typeof PartnersDonateRoute
@@ -223,9 +250,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/events'
     | '/faq'
+    | '/gallery'
     | '/hiring'
     | '/pricing'
     | '/products'
+    | '/recordings'
+    | '/speakers'
     | '/partners/corporate'
     | '/partners/csr'
     | '/partners/donate'
@@ -247,9 +277,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/events'
     | '/faq'
+    | '/gallery'
     | '/hiring'
     | '/pricing'
     | '/products'
+    | '/recordings'
+    | '/speakers'
     | '/partners/corporate'
     | '/partners/csr'
     | '/partners/donate'
@@ -271,9 +304,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/events'
     | '/faq'
+    | '/gallery'
     | '/hiring'
     | '/pricing'
     | '/products'
+    | '/recordings'
+    | '/speakers'
     | '/partners/corporate'
     | '/partners/csr'
     | '/partners/donate'
@@ -296,9 +332,12 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   EventsRoute: typeof EventsRoute
   FaqRoute: typeof FaqRoute
+  GalleryRoute: typeof GalleryRoute
   HiringRoute: typeof HiringRoute
   PricingRoute: typeof PricingRoute
   ProductsRoute: typeof ProductsRoute
+  RecordingsRoute: typeof RecordingsRoute
+  SpeakersRoute: typeof SpeakersRoute
   PartnersCorporateRoute: typeof PartnersCorporateRoute
   PartnersCsrRoute: typeof PartnersCsrRoute
   PartnersDonateRoute: typeof PartnersDonateRoute
@@ -346,6 +385,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/hiring': {
       id: '/hiring'
       path: '/hiring'
@@ -365,6 +411,20 @@ declare module '@tanstack/react-router' {
       path: '/products'
       fullPath: '/products'
       preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recordings': {
+      id: '/recordings'
+      path: '/recordings'
+      fullPath: '/recordings'
+      preLoaderRoute: typeof RecordingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/speakers': {
+      id: '/speakers'
+      path: '/speakers'
+      fullPath: '/speakers'
+      preLoaderRoute: typeof SpeakersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/partners/corporate': {
@@ -480,9 +540,12 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   EventsRoute: EventsRoute,
   FaqRoute: FaqRoute,
+  GalleryRoute: GalleryRoute,
   HiringRoute: HiringRoute,
   PricingRoute: PricingRoute,
   ProductsRoute: ProductsRoute,
+  RecordingsRoute: RecordingsRoute,
+  SpeakersRoute: SpeakersRoute,
   PartnersCorporateRoute: PartnersCorporateRoute,
   PartnersCsrRoute: PartnersCsrRoute,
   PartnersDonateRoute: PartnersDonateRoute,

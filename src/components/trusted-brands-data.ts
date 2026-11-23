@@ -1,8 +1,5 @@
 type Pointer = { url: string };
-const files = import.meta.glob<Pointer>("../assets/partners/*.png.asset.json", {
-  eager: true,
-  import: "default",
-});
+const files = import.meta.glob<Pointer>("../assets/partners/*.png.asset.json", { eager: true, import: "default" });
 const logo = (slug: string) => files[`../assets/partners/${slug}.png.asset.json`]?.url ?? "";
 
 export type PartnerCategory = "academia" | "tech" | "consumer";
@@ -58,12 +55,7 @@ const list: [string, string, PartnerCategory][] = [
   ["o2", "O2", "consumer"],
 ];
 
-export const partners = list.map(([slug, name, category]) => ({
-  slug,
-  name,
-  category,
-  image: logo(slug),
-}));
+export const partners = list.map(([slug, name, category]) => ({ slug, name, category, image: logo(slug) }));
 
 export function partnerRows(category: "all" | PartnerCategory, rowCount = 3) {
   const items = category === "all" ? partners : partners.filter((p) => p.category === category);

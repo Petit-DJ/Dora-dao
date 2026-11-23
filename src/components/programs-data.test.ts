@@ -3,27 +3,16 @@ import { formatHighlightValue, programs } from "./programs-data";
 
 test("the ecosystem contains exactly the ten supplied programs in order", () => {
   expect(programs.map((program) => program.name)).toEqual([
-    "GirlsWhoYap Fellowship",
-    "GirlsWhoYap Conference",
-    "DoraHacks",
-    "Buildwithus",
-    "DoraWinterofCode ( DWoC )",
-    "WORLD TOUR ft. Dora",
-    "AiFest",
-    "CommunityWeek",
-    "M2M Mentorship program",
-    "Hooman",
+    "GirlsWhoYap Fellowship", "GirlsWhoYap Conference", "DoraHacks", "Buildwithus",
+    "DoraWinterofCode ( DWoC )", "WORLD TOUR ft. Dora", "AiFest", "CommunityWeek",
+    "M2M Mentorship program", "Hooman",
   ]);
 });
 
 test("the Fellowship keeps the supplied community-highlight counts", () => {
   const fellowship = programs[0];
   expect(Object.fromEntries(fellowship.highlights.map((h) => [h.icon, h.value]))).toMatchObject({
-    people: 5000,
-    reach: 600000,
-    posts: 2000,
-    globe: 11,
-    heart: 50,
+    people: 5000, reach: 600000, posts: 2000, globe: 11, heart: 50,
   });
 });
 

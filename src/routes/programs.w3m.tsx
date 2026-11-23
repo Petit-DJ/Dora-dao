@@ -6,16 +6,14 @@ const program = getProgramPage(5);
 const title = `${program.name}, DoraDAO`;
 
 export const Route = createFileRoute("/programs/w3m")({
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: program.description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: program.description },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => ({ meta: [
+    { title },
+    { name: "description", content: program.description },
+    { property: "og:title", content: title },
+    { property: "og:description", content: program.description },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
   component: ProgramRoute,
 });
 

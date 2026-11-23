@@ -1,329 +1,45 @@
 export const sponsorshipOpportunities = [
-  {
-    id: "content",
-    category: "Content & newsletter",
-    title: "Get your story in front of the right audience.",
-    description:
-      "Share your product, research, ecosystem, or ideas through dedicated editorial content and newsletter placements.",
-    best: "Brand awareness, thought leadership, product education and ecosystem announcements.",
-    formats: [
-      "Newsletter mention: up to 15 words, a product link and CTA",
-      "Dedicated feature: one image and up to 45 words",
-      "Deep dive: 500-700 words of editorial storytelling",
-    ],
-    deliverables: [
-      "Agreed editorial placement",
-      "Product and campaign links",
-      "Relevant call to action",
-    ],
-    cta: "Explore Content Sponsorship",
-    tone: "gold",
-  },
-  {
-    id: "events",
-    category: "Events & experiences",
-    title: "Don’t just reach the community. Meet them.",
-    description:
-      "Put your brand at the centre of real conversations, experiences, and community gatherings.",
-    best: "Developer adoption, product launches, ecosystem expansion and community building.",
-    formats: [
-      "Event, main-stage or session sponsorship",
-      "Panels, workshops and masterclasses",
-      "Hackathons, prizes and builder challenges",
-      "Meetups, product demos and conference activations",
-    ],
-    deliverables: [
-      "Brand visibility across agreed event assets",
-      "Speaking or demonstration opportunities",
-      "Event-related social coverage and a recap",
-      "Registration attribution where consent permits",
-    ],
-    cta: "Explore Event Sponsorship",
-    tone: "peach",
-  },
-  {
-    id: "programs",
-    category: "Community & programs",
-    title: "Build relationships that last beyond a campaign.",
-    description:
-      "Become part of programs that help people learn, build, collaborate, and access new opportunities.",
-    best: "Ecosystem development, developer relations, education and community growth.",
-    formats: [
-      "Fellowships and learning cohorts",
-      "Builder, developer and creator programs",
-      "Workshops, mentorship and ambassador initiatives",
-      "Grants and opportunity programs",
-    ],
-    deliverables: [
-      "Program association and community announcements",
-      "Educational or technical sessions",
-      "Co-created resources",
-      "Agreed participant engagement",
-    ],
-    cta: "Explore Program Partnerships",
-    tone: "sage",
-  },
-  {
-    id: "creators",
-    category: "Creator & marketing campaigns",
-    title: "Let people experience what you’re building.",
-    description:
-      "Collaborate with creators and community voices through authentic product and campaign storytelling.",
-    best: "Product launches, brand awareness, user acquisition and campaign distribution.",
-    formats: [
-      "Creator collaborations and sponsored content",
-      "Product reviews and demonstrations",
-      "Interviews, founder stories and social campaigns",
-      "User-generated content initiatives",
-    ],
-    deliverables: [
-      "Relevant creator discovery",
-      "Coordinated content and campaign messaging",
-      "Custom calls to action",
-      "Available performance reporting",
-    ],
-    cta: "Explore Marketing Campaigns",
-    tone: "peach",
-  },
-  {
-    id: "talent",
-    category: "Jobs & talent",
-    title: "Meet the people who can build your next big thing.",
-    description:
-      "Connect with emerging and experienced talent across technology, AI, Web3, product, design, and community operations.",
-    best: "Hiring, talent discovery and employer visibility.",
-    formats: [
-      "Standard and featured job listings",
-      "Hiring campaigns and employer branding",
-      "Career events and talent-focused sessions",
-      "Recruitment partnerships",
-    ],
-    deliverables: [
-      "Relevant role visibility and targeted promotion",
-      "Interested applicant engagement with consent",
-      "Employer branding opportunities",
-      "Campaign delivery recap",
-    ],
-    cta: "Explore Talent Partnerships",
-    tone: "gold",
-  },
-  {
-    id: "custom",
-    category: "Custom ecosystem campaigns",
-    title: "Have a bigger goal? Let’s design around it.",
-    description:
-      "Combine multiple activations into a campaign designed around your company’s objectives.",
-    best: "Integrated campaigns, sustained visibility and strategic collaboration.",
-    formats: [
-      "Newsletter + social campaign",
-      "Hackathon + developer workshop",
-      "Product launch + creator activation",
-      "Event sponsorship + content coverage",
-      "Hiring campaign + job promotion",
-      "Quarterly or annual ecosystem partnership",
-    ],
-    deliverables: [
-      "Custom campaign strategy",
-      "Itemised cross-channel deliverables",
-      "Agreed timeline and review cadence",
-      "Campaign performance report",
-    ],
-    cta: "Build a Custom Campaign",
-    tone: "sage",
-  },
+  { id: 'content', category: 'Content & newsletter', title: 'Get your story in front of the right audience.', description: 'Share your product, research, ecosystem, or ideas through dedicated editorial content and newsletter placements.', best: 'Brand awareness, thought leadership, product education and ecosystem announcements.', formats: ['Newsletter mention: up to 15 words, a product link and CTA', 'Dedicated feature: one image and up to 45 words', 'Deep dive: 500-700 words of editorial storytelling'], deliverables: ['Agreed editorial placement', 'Product and campaign links', 'Relevant call to action'], cta: 'Explore Content Sponsorship', tone: 'gold' },
+  { id: 'events', category: 'Events & experiences', title: 'Don’t just reach the community. Meet them.', description: 'Put your brand at the centre of real conversations, experiences, and community gatherings.', best: 'Developer adoption, product launches, ecosystem expansion and community building.', formats: ['Event, main-stage or session sponsorship', 'Panels, workshops and masterclasses', 'Hackathons, prizes and builder challenges', 'Meetups, product demos and conference activations'], deliverables: ['Brand visibility across agreed event assets', 'Speaking or demonstration opportunities', 'Event-related social coverage and a recap', 'Registration attribution where consent permits'], cta: 'Explore Event Sponsorship', tone: 'peach' },
+  { id: 'programs', category: 'Community & programs', title: 'Build relationships that last beyond a campaign.', description: 'Become part of programs that help people learn, build, collaborate, and access new opportunities.', best: 'Ecosystem development, developer relations, education and community growth.', formats: ['Fellowships and learning cohorts', 'Builder, developer and creator programs', 'Workshops, mentorship and ambassador initiatives', 'Grants and opportunity programs'], deliverables: ['Program association and community announcements', 'Educational or technical sessions', 'Co-created resources', 'Agreed participant engagement'], cta: 'Explore Program Partnerships', tone: 'sage' },
+  { id: 'creators', category: 'Creator & marketing campaigns', title: 'Let people experience what you’re building.', description: 'Collaborate with creators and community voices through authentic product and campaign storytelling.', best: 'Product launches, brand awareness, user acquisition and campaign distribution.', formats: ['Creator collaborations and sponsored content', 'Product reviews and demonstrations', 'Interviews, founder stories and social campaigns', 'User-generated content initiatives'], deliverables: ['Relevant creator discovery', 'Coordinated content and campaign messaging', 'Custom calls to action', 'Available performance reporting'], cta: 'Explore Marketing Campaigns', tone: 'peach' },
+  { id: 'talent', category: 'Jobs & talent', title: 'Meet the people who can build your next big thing.', description: 'Connect with emerging and experienced talent across technology, AI, Web3, product, design, and community operations.', best: 'Hiring, talent discovery and employer visibility.', formats: ['Standard and featured job listings', 'Hiring campaigns and employer branding', 'Career events and talent-focused sessions', 'Recruitment partnerships'], deliverables: ['Relevant role visibility and targeted promotion', 'Interested applicant engagement with consent', 'Employer branding opportunities', 'Campaign delivery recap'], cta: 'Explore Talent Partnerships', tone: 'gold' },
+  { id: 'custom', category: 'Custom ecosystem campaigns', title: 'Have a bigger goal? Let’s design around it.', description: 'Combine multiple activations into a campaign designed around your company’s objectives.', best: 'Integrated campaigns, sustained visibility and strategic collaboration.', formats: ['Newsletter + social campaign', 'Hackathon + developer workshop', 'Product launch + creator activation', 'Event sponsorship + content coverage', 'Hiring campaign + job promotion', 'Quarterly or annual ecosystem partnership'], deliverables: ['Custom campaign strategy', 'Itemised cross-channel deliverables', 'Agreed timeline and review cadence', 'Campaign performance report'], cta: 'Build a Custom Campaign', tone: 'sage' },
 ] as const;
 export const sponsorshipPackages = [
-  {
-    name: "Community",
-    caption: "A thoughtful introduction.",
-    description: "For teams introducing their brand to the DoraDAO ecosystem.",
-    includes: [
-      "One newsletter mention OR social feature",
-      "Partner recognition for an agreed period",
-      "One community announcement",
-      "Basic delivery recap",
-    ],
-    cta: "Start with Community",
-  },
-  {
-    name: "Growth",
-    caption: "More connection. More context.",
-    description: "For brands seeking stronger visibility and audience engagement.",
-    includes: [
-      "One dedicated feature OR equivalent activation",
-      "Two to three social placements",
-      "Newsletter visibility",
-      "One community engagement activation",
-      "Campaign CTA, tracking links and recap",
-    ],
-    cta: "Choose Growth",
-    featured: true,
-  },
-  {
-    name: "Ecosystem",
-    caption: "Become part of the journey.",
-    description: "For companies seeking deeper, multi-touchpoint involvement.",
-    includes: [
-      "Integrated content and social campaign",
-      "Event or program participation",
-      "Speaking, workshop or showcase where applicable",
-      "Community activation and performance report",
-    ],
-    cta: "Explore Ecosystem",
-  },
-  {
-    name: "Strategic Partner",
-    caption: "Build something lasting.",
-    description: "For long-term or multi-activation partnerships.",
-    includes: [
-      "Quarterly or annual collaboration",
-      "Multiple events and programs",
-      "Co-branded content and ecosystem initiatives",
-      "Talent or developer initiatives",
-      "Custom strategy and agreed review cadence",
-    ],
-    cta: "Discuss a Strategic Partnership",
-  },
+  { name: 'Community', caption: 'A thoughtful introduction.', description: 'For teams introducing their brand to the DoraDAO ecosystem.', includes: ['One newsletter mention OR social feature', 'Partner recognition for an agreed period', 'One community announcement', 'Basic delivery recap'], cta: 'Start with Community' },
+  { name: 'Growth', caption: 'More connection. More context.', description: 'For brands seeking stronger visibility and audience engagement.', includes: ['One dedicated feature OR equivalent activation', 'Two to three social placements', 'Newsletter visibility', 'One community engagement activation', 'Campaign CTA, tracking links and recap'], cta: 'Choose Growth', featured: true },
+  { name: 'Ecosystem', caption: 'Become part of the journey.', description: 'For companies seeking deeper, multi-touchpoint involvement.', includes: ['Integrated content and social campaign', 'Event or program participation', 'Speaking, workshop or showcase where applicable', 'Community activation and performance report'], cta: 'Explore Ecosystem' },
+  { name: 'Strategic Partner', caption: 'Build something lasting.', description: 'For long-term or multi-activation partnerships.', includes: ['Quarterly or annual collaboration', 'Multiple events and programs', 'Co-branded content and ecosystem initiatives', 'Talent or developer initiatives', 'Custom strategy and agreed review cadence'], cta: 'Discuss a Strategic Partnership' },
 ];
 export const sponsorshipDeliverables = [
-  {
-    title: "Brand visibility",
-    items: [
-      "Website and event logo placements",
-      "Sponsor recognition",
-      "Digital banners and posters",
-      "Newsletter and social acknowledgements",
-    ],
-  },
-  {
-    title: "Content & distribution",
-    items: [
-      "Sponsored editorial content",
-      "Newsletter placements",
-      "Interviews and features",
-      "Creator-generated content and social campaigns",
-    ],
-  },
-  {
-    title: "Direct engagement",
-    items: [
-      "Speaking opportunities and product demos",
-      "Workshops and panels",
-      "Hackathon challenges",
-      "Community sessions",
-    ],
-  },
-  {
-    title: "Talent & community",
-    items: [
-      "Job promotions and hiring activations",
-      "Community introductions",
-      "Fellowship participation",
-      "Relevant audience engagement",
-    ],
-  },
-  {
-    title: "Reporting & insights",
-    items: [
-      "Available reach and engagement metrics",
-      "Registrations and participation",
-      "Click-throughs and referrals",
-      "Completed content and delivery recap",
-    ],
-  },
+  { title: 'Brand visibility', items: ['Website and event logo placements', 'Sponsor recognition', 'Digital banners and posters', 'Newsletter and social acknowledgements'] },
+  { title: 'Content & distribution', items: ['Sponsored editorial content', 'Newsletter placements', 'Interviews and features', 'Creator-generated content and social campaigns'] },
+  { title: 'Direct engagement', items: ['Speaking opportunities and product demos', 'Workshops and panels', 'Hackathon challenges', 'Community sessions'] },
+  { title: 'Talent & community', items: ['Job promotions and hiring activations', 'Community introductions', 'Fellowship participation', 'Relevant audience engagement'] },
+  { title: 'Reporting & insights', items: ['Available reach and engagement metrics', 'Registrations and participation', 'Click-throughs and referrals', 'Completed content and delivery recap'] },
 ];
-export const sponsorObjectives = [
-  "Brand awareness",
-  "Developer adoption",
-  "Product launch",
-  "Community growth",
-  "Hiring and talent discovery",
-  "Event participation",
-  "Thought leadership",
-  "Ecosystem expansion",
-];
-export const sponsorTimelines = [
-  "Within 2 weeks",
-  "Within 1 month",
-  "Within 3 months",
-  "Long-term partnership",
-  "Flexible",
-];
+export const sponsorObjectives = ['Brand awareness', 'Developer adoption', 'Product launch', 'Community growth', 'Hiring and talent discovery', 'Event participation', 'Thought leadership', 'Ecosystem expansion'];
+export const sponsorTimelines = ['Within 2 weeks', 'Within 1 month', 'Within 3 months', 'Long-term partnership', 'Flexible'];
 export const sponsorFaqs = [
-  [
-    "What is DoraDAO’s sponsorship program?",
-    "DoraDAO sponsorship connects companies with builders, developers, founders, creators and emerging technology communities through content, events, programs, talent initiatives and custom ecosystem campaigns.",
-  ],
-  [
-    "Who can sponsor DoraDAO?",
-    "AI and technology companies, Web3 protocols, SaaS teams, recruiters, VCs, accelerators, ecosystem funds, and consumer or creator brands can discuss a partnership. CSR teams and philanthropic organizations can support education, mentorship and access through our partnership pathways.",
-  ],
-  [
-    "What audiences can brands reach through DoraDAO?",
-    "Partnerships can engage developers, founders, builders, creators, students and technology enthusiasts. Audience fit and current channel data are discussed when defining the campaign.",
-  ],
-  [
-    "What sponsorship opportunities does DoraDAO offer?",
-    "Options include newsletters and editorial features, events and hackathons, community programs, creator campaigns, job promotion, and custom ecosystem campaigns.",
-  ],
-  [
-    "How much does a DoraDAO sponsorship cost?",
-    "Pricing is provided on request in USD. Costs depend on the activation, deliverables, placement duration, audience, timeline and execution needs. Your selected planning budget is not a quote; applicable taxes and final scope are set out in the proposal.",
-  ],
-  [
-    "Can I sponsor an individual event or hackathon?",
-    "Yes. Discuss an event, workshop, session, hackathon, prize or challenge sponsorship with the team. Availability and benefits depend on the event and agreed scope.",
-  ],
-  [
-    "Can I sponsor a newsletter or content feature?",
-    "Yes. Options include a short newsletter mention, an image-and-text feature, and a 500-700-word deep dive. Placement, editorial scope and campaign links are agreed in the proposal.",
-  ],
-  [
-    "Can DoraDAO help with developer acquisition and ecosystem growth?",
-    "Workshops, demonstrations, hackathon challenges, technical content and builder programs can support developer engagement and product exploration. Adoption, conversions and registrations are not guaranteed.",
-  ],
-  [
-    "Can I create a custom sponsorship package?",
-    "Yes. Combine content, events, creators, community programs or talent opportunities into a campaign designed around your goals, budget and timeline.",
-  ],
-  [
-    "Does DoraDAO offer in-kind or community partnerships?",
-    "In-kind and community collaborations can be considered separately from paid sponsorships, including tools, credits, mentorship and co-created opportunities. The team confirms suitability and terms.",
-  ],
-  [
-    "How are sponsorship results measured?",
-    "Reporting covers agreed deliverables and available metrics such as engagement, registrations, participation, clicks and referrals. Attribution and participant information are shared only where appropriate and with consent.",
-  ],
-  [
-    "How do I become a DoraDAO partner?",
-    "Use the partnership builder to prepare an email brief, email Connectdoradao@gmail.com, or book a conversation at cal.com/doradao/call. The team will discuss fit, availability, deliverables and pricing.",
-  ],
+ ['What is DoraDAO’s sponsorship program?', 'DoraDAO sponsorship connects companies with builders, developers, founders, creators and emerging technology communities through content, events, programs, talent initiatives and custom ecosystem campaigns.'],
+ ['Who can sponsor DoraDAO?', 'AI and technology companies, Web3 protocols, SaaS teams, recruiters, VCs, accelerators, ecosystem funds, and consumer or creator brands can discuss a partnership. CSR teams and philanthropic organizations can support education, mentorship and access through our partnership pathways.'],
+ ['What audiences can brands reach through DoraDAO?', 'Partnerships can engage developers, founders, builders, creators, students and technology enthusiasts. Audience fit and current channel data are discussed when defining the campaign.'],
+ ['What sponsorship opportunities does DoraDAO offer?', 'Options include newsletters and editorial features, events and hackathons, community programs, creator campaigns, job promotion, and custom ecosystem campaigns.'],
+ ['How much does a DoraDAO sponsorship cost?', 'Pricing is provided on request in USD. Costs depend on the activation, deliverables, placement duration, audience, timeline and execution needs. Your selected planning budget is not a quote; applicable taxes and final scope are set out in the proposal.'],
+ ['Can I sponsor an individual event or hackathon?', 'Yes. Discuss an event, workshop, session, hackathon, prize or challenge sponsorship with the team. Availability and benefits depend on the event and agreed scope.'],
+ ['Can I sponsor a newsletter or content feature?', 'Yes. Options include a short newsletter mention, an image-and-text feature, and a 500-700-word deep dive. Placement, editorial scope and campaign links are agreed in the proposal.'],
+ ['Can DoraDAO help with developer acquisition and ecosystem growth?', 'Workshops, demonstrations, hackathon challenges, technical content and builder programs can support developer engagement and product exploration. Adoption, conversions and registrations are not guaranteed.'],
+ ['Can I create a custom sponsorship package?', 'Yes. Combine content, events, creators, community programs or talent opportunities into a campaign designed around your goals, budget and timeline.'],
+ ['Does DoraDAO offer in-kind or community partnerships?', 'In-kind and community collaborations can be considered separately from paid sponsorships, including tools, credits, mentorship and co-created opportunities. The team confirms suitability and terms.'],
+ ['How are sponsorship results measured?', 'Reporting covers agreed deliverables and available metrics such as engagement, registrations, participation, clicks and referrals. Attribution and participant information are shared only where appropriate and with consent.'],
+ ['How do I become a DoraDAO partner?', 'Use the partnership builder to prepare an email brief, email Connectdoradao@gmail.com, or book a conversation at cal.com/doradao/call. The team will discuss fit, availability, deliverables and pricing.'],
 ] as const;
 export function planningAllocation(budget: number, activations: number) {
   return activations > 0 ? Math.floor(Math.max(0, budget) / activations) : 0;
 }
-export interface PartnershipBrief {
-  name: string;
-  email: string;
-  company: string;
-  objective: string;
-  activations: string[];
-  budget: number | null;
-  timeline: string;
-  note: string;
-}
+export interface PartnershipBrief { name: string; email: string; company: string; objective: string; activations: string[]; budget: number | null; timeline: string; note: string }
 export function partnershipDraft(brief: PartnershipBrief) {
-  const body = [
-    `Name: ${brief.name}`,
-    `Business email: ${brief.email}`,
-    `Organization: ${brief.company}`,
-    `Objective: ${brief.objective}`,
-    `Activations: ${brief.activations.join(", ")}`,
-    `Planning budget (USD): ${brief.budget === null ? "Not sure yet" : `$${brief.budget.toLocaleString("en-US")}`}`,
-    `Timeline: ${brief.timeline}`,
-    `Additional context: ${brief.note}`,
-    "",
-    "Please share suitable activations, scoped deliverables, availability, applicable taxes and USD pricing.",
-  ].join("\n");
-  return `mailto:Connectdoradao@gmail.com?subject=${encodeURIComponent(`Partnership enquiry, ${brief.company}`)}&body=${encodeURIComponent(body)}`;
+ const body = [`Name: ${brief.name}`, `Business email: ${brief.email}`, `Organization: ${brief.company}`, `Objective: ${brief.objective}`, `Activations: ${brief.activations.join(', ')}`, `Planning budget (USD): ${brief.budget === null ? 'Not sure yet' : `$${brief.budget.toLocaleString('en-US')}`}`, `Timeline: ${brief.timeline}`, `Additional context: ${brief.note}`, '', 'Please share suitable activations, scoped deliverables, availability, applicable taxes and USD pricing.'].join('\n');
+ return `mailto:Connectdoradao@gmail.com?subject=${encodeURIComponent(`Partnership enquiry, ${brief.company}`)}&body=${encodeURIComponent(body)}`;
 }

@@ -1,8 +1,5 @@
 // Real program photos, grouped by program folder.
-const files = import.meta.glob<{ url: string }>("@/assets/program-photos/*.asset.json", {
-  eager: true,
-  import: "default",
-});
+const files = import.meta.glob<{ url: string }>("@/assets/program-photos/*.asset.json", { eager: true, import: "default" });
 
 const order = (path: string) => Number(path.match(/-(\d+)\.jpg/)?.[1] ?? 0);
 const photosFor = (key: string, label: string) =>
