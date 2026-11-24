@@ -47,7 +47,7 @@
 - Share illustrated PartnershipCards between landing partner destinations and all Partnership cross-links; keep copy and lazy transparent artwork independent so the card pattern stays consistent.
 
 - Fetch public Locations and Hotspots CSV exports directly in the browser and merge with bundled geography; this keeps map updates independent of hosting credentials and preserves the existing UI and offline fallback.
-- Use Nitro's Vercel preset for external builds; managed builds retain their platform target so hosting changes need no sheet credentials.
+- Use Nitro's Netlify preset for external builds; managed builds retain their platform target so hosting changes need no sheet credentials.
 - Image pointer files reference compressed WebP copies in public/media, so images ship with the build and work on any host (Vercel included) without Lovable CDN.
 - Events read from the workbook's Events tab (public CSV); submissions go to a Google Apps Script web app (docs/events-apps-script.gs) that appends Status=Pending, keeping hosting credential-free.
 - Gallery reads participant links live from its own public sheet (headerless, one row per submission) and enriches them from a bundled snapshot (src/components/gallery-previews.json + public/media/gallery), refreshed with scripts/gallery-snapshot.ts then scripts/gallery-images.py; browsers can't unfurl LinkedIn/X/Instagram, so new rows show as link cards until the next snapshot.

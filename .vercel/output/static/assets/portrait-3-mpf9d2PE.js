@@ -1,1 +1,0 @@
-var e=`/assets/portrait-3-ng25qrIp.jpg`;export{e as t};

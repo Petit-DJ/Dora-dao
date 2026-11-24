@@ -1,15 +1,3 @@
 [build]
-  command = "bun run build"
-  publish = "dist/client"
-
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/server"
-  status = 200
-
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-
-[functions."server"]
-  included_files = ["dist/server/**"]
+  command = "npm run build"
+  publish = "dist"

@@ -1,1 +1,0 @@
-import{C as e,r as t}from"./index-7CuYUoIU.js";import{n}from"./fellowship-page-DDutmRQI.js";var r=e();function i(){return(0,r.jsx)(n,{program:t},t.to)}export{i as component};

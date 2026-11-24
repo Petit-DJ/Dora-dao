@@ -7,8 +7,8 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // External builds target Vercel; Lovable keeps its managed preview target.
-  nitro: { preset: "vercel" },
+  // External builds target Netlify; Lovable keeps its managed preview target.
+  nitro: { preset: "netlify" },
   // Prebundle Radix pieces used by pages so first visits don't trigger a mid-load reload.
   vite: { optimizeDeps: { include: ["@radix-ui/react-dialog", "@radix-ui/react-label"] } },
   tanstackStart: {

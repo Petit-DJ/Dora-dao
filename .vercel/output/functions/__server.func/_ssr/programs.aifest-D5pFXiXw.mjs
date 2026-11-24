@@ -1,5 +1,0 @@
-import { n as getProgramPage } from "./program-pages-data-r1cidYKR.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/programs.aifest-D5pFXiXw.js
-var program = getProgramPage(6);
-//#endregion
-export { program as t };

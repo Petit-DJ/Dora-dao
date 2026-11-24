@@ -1,1 +1,0 @@
-var e=`/assets/speaking-speaker-5G7VQfD5.png`;export{e as t};
